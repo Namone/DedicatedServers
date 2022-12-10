@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
     name: barotrauma
-    namespace: barotrauma
+    namespace: servers
 spec:
     selector:
         matchLabels:
@@ -16,7 +16,7 @@ spec:
                 - name: barotrauma
                   image: {{ .Values.barotraumaImage }}
                   command:
-                    - "steamcmd"
+                    - "/usr/games/steamcmd"
                     - "+force_install_dir /home/barotrauma-data" 
                     - "+login anonymous"
                     - "+app_run 1026340"
@@ -30,4 +30,38 @@ spec:
                       name: barotrauma-server-data
             volumes:
                 - name: barotrauma-server-data
+                  emptyDir: { }
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: zomboid
+    namespace: servers
+spec:
+    selector:
+        matchLabels:
+            app: zomboid
+    template:
+        metadata:
+            labels:
+                app: zomboid
+        spec:
+            containers:
+                - name: zomboid
+                  image: {{ .Values.zomboidImage }}
+                  command:
+                    - "/usr/games/steamcmd"
+                    - "+force_install_dir /home/zomboid-data" 
+                    - "+login anonymous"
+                    - "+app_run 380870"
+                  ports:
+                    - containerPort: 16261
+                  resources:
+                      limits:
+                        cpu: "0.1"
+                  volumeMounts:
+                    - mountPath: /home/zomboid-data
+                      name: zomboid-server-data
+            volumes:
+                - name: zomboid-server-data
                   emptyDir: { }

@@ -2,16 +2,16 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
     annotations:
-        meta.helm.sh/release-name: barotrauma-server-endpoint
-        meta.helm.sh/release-namespace: barotrauma-server-endpoint
+        meta.helm.sh/release-name: dedicated-server-endpoint
+        meta.helm.sh/release-namespace: dedicated-server-endpoint
         nginx.ingress.kubernetes.io/rewrite-target: /
         nginx.ingress.kubernetes.io/upstream-vhost: barotrauma.namonesdedicatedserver.com
     generation: 1
     labels:
-        app: barotrauma-server-endpoint
+        app: edicated-server-endpoint
         app.kubernetes.io/managed-by: Helm
-    name: barotrauma-server-endpoint
-    namespace: barotrauma
+    name: dedicated-server-endpoint
+    namespace: servers
 spec:
     ingressClassName: nginx
     rules:
@@ -22,6 +22,16 @@ spec:
                     pathType: Prefix
                     backend:
                         service:
-                            name: barotrauma-server
+                            name: baro-server
                             port:
-                                name: barotrauma-server
+                                name: baro-server
+        - host: zomboid.namonesdedicatedserver.com
+          http:
+              paths:
+                  - path: /
+                    pathType: Prefix
+                    backend:
+                        service:
+                            name: zomboid-server
+                            port:
+                                name: zomboid-server

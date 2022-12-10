@@ -1,1 +1,6 @@
 barotraumaImage: "262580537006.dkr.ecr.us-west-2.amazonaws.com/dedicated-servers:barotrauma"
+zomboidImage: "262580537006.dkr.ecr.us-west-2.amazonaws.com/dedicated-servers:ZOMBOID"
+
+env:
+  ZOMBOID_APP_ID: 380870
+  BAROTRAUMA_APP_ID: 1026340

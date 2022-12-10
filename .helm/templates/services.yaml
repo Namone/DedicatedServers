@@ -2,20 +2,42 @@ apiVersion: v1
 kind: Service
 metadata:
     annotations:
-        meta.helm.sh/release-name: barotrauma-server
-        meta.helm.sh/release-namespace: barotrauma-server
+        meta.helm.sh/release-name: baro-server
+        meta.helm.sh/release-namespace: baro-server
     labels:
         app.kubernetes.io/managed-by: Helm
-    name: barotrauma-server
-    namespace: barotrauma
+    name: baro-server
+    namespace: servers
 spec:
     type: ClusterIP
     ipFamilyPolicy: SingleStack
     ports:
-        - name: barotrauma-server
+        - name: baro-server
           port: 27015
           protocol: TCP
           targetPort: 27015
     selector:
-        app: barotrauma-server
+        app: baro-server
+    sessionAffinity: None
+---
+apiVersion: v1
+kind: Service
+metadata:
+    annotations:
+        meta.helm.sh/release-name: zomboid-server
+        meta.helm.sh/release-namespace: zomboid-server
+    labels:
+        app.kubernetes.io/managed-by: Helm
+    name: zomboid-server
+    namespace: servers
+spec:
+    type: ClusterIP
+    ipFamilyPolicy: SingleStack
+    ports:
+        - name: zomboid-server
+          port: 16261 
+          protocol: TCP
+          targetPort: 16261
+    selector:
+        app: zomboid-server
     sessionAffinity: None
