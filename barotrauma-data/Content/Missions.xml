@@ -1,0 +1,1951 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Missions>
+  <SalvageMission
+    identifier="salvageartifactruins"
+    textidentifier="salvageskyholderartifactruins"
+    tags="salvage,salvageartifact"
+    type="Salvage"
+    difficulty="3"
+    commonness="50"
+    reward="3500"
+    achievementidentifier="artifactmission"
+    sonaricon="artifact"
+    spawntype="ruin"
+    itemtag="alienartifact"
+    existingItemTag="alienartifact"
+    containertag="artifactholder"
+    requireruin="true">
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,0,256,256" color="49,93,233"/>
+    <LocationType from="City" to="Research"/>
+    <LocationType from="City" to="None"/>
+    <LocationType from="City" to="Lair"/>
+    <LocationType from="Outpost" to="Research"/>
+    <LocationType from="Outpost" to="None"/>
+    <LocationType from="Outpost" to="Lair"/>
+    <LocationType from="Research" to="None"/>
+    <LocationType from="Research" to="City"/>
+    <LocationType from="Research" to="Outpost"/>
+    <LocationType from="Research" to="Military"/>
+    <LocationType from="Research" to="Research"/>
+    <LocationType from="Research" to="Mine"/>
+    <LocationType from="Research" to="Lair"/>
+    <message header="missionheader0.salvageskyholderartifactruins" text="missionmessage0.salvageskyholderartifactruins"/>
+  </SalvageMission>
+
+  <SalvageMission
+    identifier="salvageartifactcave"
+    textidentifier="salvagethermalartifactcave"
+    tags="salvage,salvageartifact"
+    type="Salvage"
+    difficulty="3"
+    commonness="50"
+    reward="3500"
+    achievementidentifier="artifactmission"
+    sonaricon="artifact"
+    spawntype="cave"
+    itemtag="alienartifact"
+    existingitemtag="alienartifact"
+    containertag="artifactholder"
+    requireruin="true">
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,0,256,256" color="49,93,233"/>
+    <LocationType from="City" to="Research"/>
+    <LocationType from="City" to="None"/>
+    <LocationType from="City" to="Lair"/>
+    <LocationType from="Outpost" to="Research"/>
+    <LocationType from="Outpost" to="None"/>
+    <LocationType from="Outpost" to="Lair"/>
+    <LocationType from="Research" to="None"/>
+    <LocationType from="Research" to="City"/>
+    <LocationType from="Research" to="Outpost"/>
+    <LocationType from="Research" to="Military"/>
+    <LocationType from="Research" to="Research"/>
+    <LocationType from="Research" to="Mine"/>
+    <LocationType from="Research" to="Lair"/>
+    <message header="missionheader0.salvagethermalartifactcave" text="missionmessage0.salvagethermalartifactcave"/>
+  </SalvageMission>
+  
+  <SalvageMission
+    identifier="badvibrationsartifactruins"
+    tags=""
+    type="Salvage"
+    description=""
+    difficulty="3"
+    commonness="0"
+    reward="3500"
+    achievementidentifier="artifactmission"
+    sonaricon="artifact"
+    spawntype="ruin"
+    itemidentifier="psychosisartifact_event"
+    containertag="artifactholder"
+    requireruin="true">
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,0,256,256" color="49,93,233"/>
+    <LocationType from="City" to="Research"/>
+    <LocationType from="City" to="None"/>
+    <LocationType from="City" to="Lair"/>
+    <LocationType from="Outpost" to="Research"/>
+    <LocationType from="Outpost" to="None"/>
+    <LocationType from="Outpost" to="Lair"/>
+    <LocationType from="Research" to="None"/>
+    <LocationType from="Research" to="City"/>
+    <LocationType from="Research" to="Outpost"/>
+    <LocationType from="Research" to="Military"/>
+    <LocationType from="Research" to="Research"/>
+    <LocationType from="Research" to="Mine"/>
+    <LocationType from="Research" to="Lair"/>
+    <message header="missionheader0.badvibrationsartifactruins" text="missionmessage0.badvibrationsartifactruins"/>
+    <TriggerEvent state="0" delay="5" eventidentifier="badvibrations2" campaignonly="true"/>
+  </SalvageMission>
+  
+
+  <SalvageMission
+    identifier="salvagewreck1"
+    tags="salvage,salvagewreck"
+    type="Salvage"
+    difficulty="3"
+    commonness="100"
+    reward="2800"
+    achievementidentifier="salvagewreckmission"
+    spawntype="wreck"
+    showmessagewhenpickedup="true"
+    itemidentifier="handheldterminal"
+    containertag="locker"
+    requirewreck="true">
+
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+
+    <chooserandom>
+      <StatusEffect target="This" showmessage="Receiving encrypted transmission: cbspusbvnbhbnf.dpn/efsfmjdu/[ERR:_INSERT_PASS].htm"/>
+      <StatusEffect target="This" showmessage="Receiving encrypted transmission: [PASS_1]beweht"/>
+      <StatusEffect target="This" showmessage="Receiving encrypted transmission: [PASS_2]108 101 116 109 101 105 110"/>
+      <StatusEffect target="This" showmessage="Receiving encrypted transmission: [PASS_3]LLL SLS SL LS LLS S LSSS LLL LSLL"/>
+      <StatusEffect target="This" showmessage="Receiving encrypted transmission: [PASS_4]zorxv"/>
+      <StatusEffect target="This" showmessage="Receiving encrypted transmission: [PASS_5]s_m_l_t_d_ _i_i_i_u_e"/>
+      <StatusEffect target="This" showmessage="Receiving encrypted transmission: [PASS_6]DSPERiapa"/>
+      <StatusEffect target="This" showmessage="Receiving encrypted transmission: [PASS_7]4 5 1 4 13 5 14"/>
+    </chooserandom>
+
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="0,512,256,256" color="49,93,233"/>
+
+    <LocationType from="City" to="None"/>
+    <LocationType from="City" to="City"/>
+    <LocationType from="City" to="Outpost"/>
+    <LocationType from="City" to="Military"/>
+    <LocationType from="City" to="Research"/>
+    <LocationType from="City" to="Mine"/>
+
+    <LocationType from="Outpost" to="None"/>
+    <LocationType from="Outpost" to="City"/>
+    <LocationType from="Outpost" to="Outpost"/>
+    <LocationType from="Outpost" to="Military"/>
+    <LocationType from="Outpost" to="Research"/>
+    <LocationType from="Outpost" to="Mine"/>
+
+    <LocationType from="Research" to="None"/>
+    <LocationType from="Research" to="City"/>
+    <LocationType from="Research" to="Outpost"/>
+    <LocationType from="Research" to="Military"/>
+    <LocationType from="Research" to="Research"/>
+    <LocationType from="Research" to="Mine"/>
+
+    <LocationType from="Military" to="None"/>
+    <LocationType from="Military" to="City"/>
+    <LocationType from="Military" to="Outpost"/>
+    <LocationType from="Military" to="Military"/>
+    <LocationType from="Military" to="Research"/>
+    <LocationType from="Military" to="Mine"/>
+
+    <message header="missionheader0.salvagewreck1" text="missionmessage0.salvagewreck1"/>
+  </SalvageMission>
+
+  <MonsterMission
+    identifier="killhammerhead"
+    tags="killmonster,killmonster_set2"
+    type="Monster"
+    difficulty="2"
+    commonness="100"
+    reward="1800"
+    maxsonarmarkerdistance="10000">
+    <monster character="Hammerhead_m" min="2" max="3"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,768,256,256" color="214,50,48"/>
+    <message header="missionheader0.killhammerhead" text="missionmessage0.killhammerhead"/>
+  </MonsterMission>
+
+  <MonsterMission
+    identifier="killhammerhead2"
+    textidentifier="killhammerhead"
+    tags="killmonster,killmonster_set3"
+    type="Monster"
+    difficulty="3"
+    commonness="100"
+    reward="3000"
+    maxsonarmarkerdistance="10000"
+    monsterfile="Hammerheadgold_m">
+    <monster character="Hammerhead_m" min="2" max="3"/>
+    <monster character="Hammerheadgold_m" min="1" max="1"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,768,256,256" color="214,50,48"/>
+    <message header="missionheader0.killhammerhead" text="missionmessage0.killhammerhead"/>
+  </MonsterMission>
+
+  <MonsterMission
+    identifier="killhammerhead_basic"
+    textidentifier="killhammerhead"
+    tags="killmonster,killmonster_set1"
+    type="Monster"
+    difficulty="2"
+    commonness="100"
+    reward="1000"
+    maxsonarmarkerdistance="10000">
+    <monster character="Hammerhead_m" min="1" max="1"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,768,256,256" color="214,50,48"/>
+    <message header="missionheader0.killhammerhead" text="missionmessage0.killhammerhead"/>
+  </MonsterMission>
+
+  <MonsterMission
+    identifier="killlargecrawler"
+    tags="killmonster,killmonster_set1"
+    type="Monster"
+    difficulty="2"
+    commonness="100"
+    reward="1200"
+    maxsonarmarkerdistance="10000"
+    monsterfile="Crawler_large"
+    >
+    <monster character="crawler" min="3" max="4"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48"/>
+    <message header="missionheader0.killcrawlerswarm1" text="missionmessage0.killlargecrawler"/>
+  </MonsterMission>
+  
+  <MonsterMission
+    identifier="killmoloch"
+    tags="killmonster,killmonster_set3"
+    type="Monster"
+    difficulty="3"
+    commonness="100"
+    reward="2800"
+    maxsonarmarkerdistance="10000"
+    monsterfile="Moloch_m">
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,512,256,256" color="214,50,48"/>
+    <message header="missionheader0.killmoloch" text="missionmessage0.killmoloch"/>
+  </MonsterMission>
+
+  <MonsterMission
+    identifier="killmolochblack"
+    tags="killmonster,killmonster_set4"
+    textidentifier="killmoloch"
+    type="Monster"
+    difficulty="4"
+    commonness="100"
+    reward="5000"
+    maxsonarmarkerdistance="10000"
+    monsterfile="Molochblack_m">
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,512,256,256" color="214,50,48"/>
+    <message header="missionheader0.killmoloch" text="missionmessage0.killmoloch"/>
+  </MonsterMission>
+
+  <MonsterMission
+    identifier="killcrawlerbroodmother1"
+    tags="killmonster,killmonster_set2"
+    type="Monster"
+    difficulty="3"
+    commonness="50"
+    reward="3500"
+    maxsonarmarkerdistance="10000"
+    sonarlabel="character.crawler"
+    monsterfile="crawlerbroodmother_m">
+    <monster character="crawler" min="3" max="4"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48"/>
+    <message header="missionheader0.killcrawlerbroodmother1" text="missionmessage0.killcrawlerbroodmother1"/>
+  </MonsterMission>
+
+  <MonsterMission
+    identifier="killcrawlerbroodmother2"
+    tags="killmonster,killmonster_set3"
+    textidentifier="killcrawlerbroodmother1"
+    type="Monster"
+    difficulty="3"
+    commonness="50"
+    reward="4000"
+    maxsonarmarkerdistance="10000"
+    sonarlabel="character.crawler"
+    monsterfile="crawlerbroodmother_m">
+    <monster character="crawler" min="6" max="7"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48"/>
+  </MonsterMission>
+
+   <MonsterMission
+    identifier="killcrawlerbroodmother3"
+    tags="killmonster,killmonster_set4"
+    textidentifier="killcrawlerbroodmother1"
+    type="Monster"
+    difficulty="4"
+    commonness="100"
+    reward="5000"
+    maxsonarmarkerdistance="10000"
+    sonarlabel="character.crawler"
+    monsterfile="crawlerbroodmother_m">
+    <monster character="crawler" min="10" max="12"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48"/>
+    <message header="missionheader0.killcrawlerbroodmother1" text="missionmessage0.killcrawlerbroodmother1"/>
+  </MonsterMission>
+  
+  <MonsterMission
+    identifier="killmatriarch1"
+    tags="killmonster,killmonster_set4"
+    type="Monster"
+    difficulty="4"
+    commonness="100"
+    reward="5000"
+    maxsonarmarkerdistance="10000">
+    <monster character="hammerheadmatriarch" count="1"/>
+    <monster character="hammerhead" min="3" max="5"/>
+    <monster character="hammerheadgold" min="1" max="2"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48"/>
+    <message header="missionheader0.killmatriarch1" text="missionmessage0.killmatriarch1"/>
+  </MonsterMission>
+
+  <MonsterMission
+    identifier="killmatriarch2"
+    tags="killmonster,killmonster_set3"
+    type="Monster"
+    difficulty="3"
+    commonness="50"
+    reward="3500"
+    maxsonarmarkerdistance="10000">
+    <monster character="hammerheadmatriarch" count="1"/>
+    <monster character="hammerhead" min="2" max="2"/>
+    <monster character="hammerheadgold" min="1" max="2"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48"/>
+    <message header="missionheader0.killmatriarch2" text="missionmessage0.killmatriarch2"/>
+  </MonsterMission>
+
+  <MonsterMission
+    identifier="killgiantspineling1"
+    tags="killmonster,killmonster_set2"
+    type="Monster"
+    difficulty="3"
+    commonness="50"
+    reward="3500"
+    maxsonarmarkerdistance="10000"
+    sonarlabel="character.spineling"
+    monsterfile="spineling_giant">
+    <monster character="spineling" min="2" max="3"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="768,768,256,256" color="214,50,48"/>
+    <message header="missionheader0.killgiantspineling1" text="missionmessage0.killgiantspineling1"/>
+  </MonsterMission>
+
+  <MonsterMission
+    identifier="killgiantspineling2"
+    textidentifier="killgiantspineling1"
+    tags="killmonster,killmonster_set3"
+    type="Monster"
+    difficulty="4"
+    commonness="100"
+    reward="5000"
+    maxsonarmarkerdistance="10000"
+    sonarlabel="character.spineling"
+    monsterfile="spineling_giant">
+    <monster character="spineling" min="8" max="10"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="768,768,256,256" color="214,50,48"/>
+    <message header="missionheader0.killgiantspineling1" text="missionmessage0.killgiantspineling1"/>
+  </MonsterMission>
+  
+  <MonsterMission
+    identifier="killthresherswarm1"
+    tags="killmonster,killswarm,killswarm_set4"
+    type="Monster"
+    difficulty="4"
+    commonness="100"
+    reward="5000"
+    maxsonarmarkerdistance="10000">
+    <monster character="tigerthresher" min="8" max="10"/>
+    <monster character="bonethresher" min="2" max="3"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="768,256,256,256" color="214,50,48"/>
+    <message header="missionheader0.killthresherswarm1" text="missionmessage0.killthresherswarm1"/>
+  </MonsterMission>
+
+  <MonsterMission
+    identifier="killthresherswarm2"
+    textidentifier="killthresherswarm1"
+    tags="killmonster,killswarm,killswarm_set3"
+    type="Monster"
+    difficulty="3"
+    commonness="100"
+    reward="3000"
+    maxsonarmarkerdistance="10000">
+    <monster character="tigerthresher" min="3" max="5"/>
+    <monster character="bonethresher" min="1" max="2"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="768,256,256,256" color="214,50,48"/>
+    <message header="missionheader0.killthresherswarm1" text="missionmessage0.killthresherswarm1"/>
+  </MonsterMission>
+
+  <MonsterMission
+    identifier="killcrawlerswarm1"
+    tags="killmonster,killswarm,killswarm_set1"
+    type="Monster"
+    difficulty="2"
+    commonness="100"
+    reward="2500"
+    maxsonarmarkerdistance="10000">
+    <monster character="crawler" min="5" max="8"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48"/>
+    <message header="missionheader0.killcrawlerswarm1" text="missionmessage0.killcrawlerswarm1"/>
+  </MonsterMission>
+
+  <MonsterMission
+    identifier="killcrawlerswarm1large"
+    sonarlabel="character.crawler"
+    name="missionname.killcrawlerswarm1large"
+    description="missiondescription.killcrawlerswarm1large"
+    tags="killmonster,killswarm,killswarm_set1"
+    type="Monster"
+    difficulty="3"
+    commonness="40"
+    reward="3000"
+    successmessage="missionsuccess.killcrawlerswarm1"
+    maxsonarmarkerdistance="10000">
+    <monster character="crawler" min="8" max="10"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48"/>
+    <message header="missionheader0.killcrawlerswarm1" text="missionmessage0.killcrawlerswarm1"/>
+  </MonsterMission>
+  
+  <MonsterMission
+    identifier="killcrawlerswarm1huge"
+    sonarlabel="character.crawler"
+    name="missionname.killcrawlerswarm1huge"
+    description="missiondescription.killcrawlerswarm1huge"
+    tags="killmonster,killswarm,killswarm_set2"
+    type="Monster"
+    difficulty="4"
+    commonness="10"
+    reward="4000"
+    successmessage="missionsuccess.killcrawlerswarm1"
+    maxsonarmarkerdistance="10000">
+    <monster character="crawler" min="14" max="15"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48"/>
+    <message header="missionheader0.killcrawlerswarm1" text="missionmessage0.killcrawlerswarm1"/>
+  </MonsterMission>
+  
+  <MonsterMission
+    identifier="killcrawlerswarm2"
+    name="missionname.killcrawlerswarm1large"
+    tags="killmonster,killswarm,killswarm_set2"
+    type="Monster"
+    difficulty="3"
+    commonness="100"
+    reward="3500"
+    maxsonarmarkerdistance="10000">
+    <monster character="crawler" min="10" max="12"/>
+    <monster character="crawlerbroodmother" min="0" max="1"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48"/>
+    <message header="missionheader0.killcrawlerswarm2" text="missionmessage0.killcrawlerswarm2"/>
+  </MonsterMission>
+
+  <MonsterMission
+    identifier="killcrawlerswarm2b"
+    textidentifier="killcrawlerswarm2"
+    name="missionname.killcrawlerswarm1large"
+    tags="killmonster,killswarm,killswarm_set2"
+    type="Monster"
+    difficulty="3"
+    commonness="75"
+    reward="3500"
+    maxsonarmarkerdistance="10000">
+    <monster character="crawlerhusk" min="10" max="12"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48"/>
+    <message header="missionheader0.killcrawlerswarm2" text="missionmessage0.killcrawlerswarm2"/>
+  </MonsterMission>
+
+  <MonsterMission
+    identifier="killspinelingswarm1"
+    textidentifier="killcrawlerswarm1"
+    name="missionname.killspinelingswarm1"
+    description="missiondescription.killspinelingswarm1"
+    tags="killmonster,killswarm,killswarm_set1"
+    type="Monster"
+    difficulty="2"
+    commonness="40"
+    reward="2000"
+    maxsonarmarkerdistance="10000">
+    <monster character="Spineling" min="5" max="6"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48"/>
+  </MonsterMission>
+  
+  <MonsterMission
+    identifier="killmudraptors1"
+    tags="killmonster,killswarm,killswarm_set2"
+    type="Monster"
+    difficulty="3"
+    commonness="100"
+    reward="3500"
+    sonarlabel="character.mudraptor"
+    maxsonarmarkerdistance="10000">
+    <monster character="mudraptor_unarmored" min="2" max="3"/>
+    <monster character="mudraptor" min="1" max="2"/>
+    <monster character="mudraptor_veteran" min="1" max="1"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,512,256,256" color="214,50,48"/>
+    <message header="missionheader0.killmudraptors1" text="missionmessage0.killmudraptors1"/>
+  </MonsterMission>
+
+  <MonsterMission
+    identifier="killmudraptors_basic"
+    textidentifier="killmudraptors1"
+    tags="killmonster,killswarm,killswarm_set1"
+    type="Monster"
+    difficulty="2"
+    commonness="70"
+    reward="1500"
+    sonarlabel="character.mudraptor"
+    maxsonarmarkerdistance="10000">
+    <monster character="mudraptor_unarmored" min="2" max="3"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,512,256,256" color="214,50,48"/>
+  </MonsterMission>
+
+  <MonsterMission
+    identifier="killmudraptors2"
+    textidentifier="killmudraptors1"
+    tags="killmonster,killswarm,killswarm_set3"
+    type="Monster"
+    difficulty="4"
+    commonness="100"
+    reward="5000"
+    sonarlabel="character.mudraptor"
+    maxsonarmarkerdistance="10000">
+    <monster character="mudraptor_unarmored" min="1" max="2"/>
+    <monster character="mudraptor" min="4" max="5"/>
+    <monster character="mudraptor_veteran" min="1" max="2"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,512,256,256" color="214,50,48"/>
+    <message header="missionheader0.killmudraptors1" text="missionmessage0.killmudraptors1"/>
+  </MonsterMission>
+
+  <MonsterMission
+    identifier="huntinggrounds1"
+    textidentifier="huntinggrounds"
+    tags="huntinggrounds,hard"
+    type="Monster"
+    sideobjective="true"
+    difficulty="4"
+    commonness="0"
+    reward="8500"
+    sonarlabel="target"
+    spawntype="Abyss"
+    maxsonarmarkerdistance="20000"
+    successmessage=""
+    monsterfile="Endworm">
+    <Reputation identifier="location" amount="5" />
+    <Reputation identifier="coalition" amount="10" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48"/>
+    <message header="missionheader0.huntinggrounds1" text="missionmessage0.huntinggrounds1"/>
+  </MonsterMission>
+
+  <MonsterMission
+    identifier="huntinggrounds2"
+    textidentifier="huntinggrounds"
+    tags="huntinggrounds"
+    type="Monster"
+    sideobjective="true"
+    difficulty="4"
+    commonness="0"
+    reward="8500"
+    sonarlabel="target"
+    spawntype="Abyss"
+    maxsonarmarkerdistance="20000"
+    successmessage=""
+    monsterfile="Charybdis">
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48"/>
+    <message header="missionheader0.huntinggrounds1" text="missionmessage0.huntinggrounds1"/>
+  </MonsterMission>
+
+  <MonsterMission
+    identifier="huntinggrounds3"
+    textidentifier="huntinggrounds"
+    tags="huntinggrounds,easy"
+    type="Monster"
+    sideobjective="true"
+    difficulty="4"
+    commonness="0"
+    reward="8500"
+    sonarlabel="target"
+    spawntype="Abyss"
+    maxsonarmarkerdistance="20000"
+    successmessage=""
+    monsterfile="Latcher">
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48"/>
+    <message header="missionheader0.huntinggrounds1" text="missionmessage0.huntinggrounds1"/>
+  </MonsterMission>
+
+  <CargoMission
+    identifier="cargocompoundn"
+    tags="cargo,cargoexplosive"
+    type="Cargo"
+    difficulty="1"
+    commonness="45"
+    achievementidentifier="cargomission">
+    <Items>
+      <Item identifier="explosivecrate" reward="200" maxcount="15">
+        <Item identifier="compoundn" amount="10"/>
+        <Item identifier="detonator" amount="10">
+          <Item identifier="compoundn"/>
+        </Item>
+      </Item>
+    </Items>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="separatists" amount="10" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="0,256,256,256" color="243,146,55"/>
+    <LocationType from="AnyOutpost" to="AnyOutpost" />
+  </CargoMission>
+
+  <CargoMission
+    identifier="cargochemicals"
+    tags="cargo,cargoresearch"
+    type="Cargo"
+    difficulty="1"
+    commonness="50"
+    reward="500"
+    achievementidentifier="cargomission"
+    requireddeliveryamount="0.98">
+    <Items>
+      <Item identifier="chemicalcrate" reward="140" maxcount="20">
+        <Item identifier="antidama2" amount="5"/>
+        <Item identifier="sulphuricacid" amount="5"/>
+        <Item identifier="morbusine" amount="5"/>
+        <Item identifier="flashpowder" amount="3"/>
+        <Item identifier="chloralhydrate" amount="2"/>
+      </Item>
+    </Items>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,256,256,256" color="243,146,55"/>
+    <LocationType from="AnyOutpost" to="AnyOutpost" />
+  </CargoMission>
+
+  <CargoMission
+    identifier="cargohuskeggs"
+    tags="cargo,cargoresearch"
+    type="Cargo"
+    difficulty="1"
+    commonness="33"
+    reward="500"
+    achievementidentifier="cargomission">
+    <Items>
+      <Item identifier="chemicalcrate" reward="250" maxcount="12">
+        <Item identifier="huskeggs" amount="10"/>
+      </Item>
+    </Items>
+    <Reputation identifier="location" amount="5" />
+    <Reputation identifier="huskcult" amount="10" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,256,256,256" color="243,146,55"/>
+    <LocationType from="AnyOutpost" to="AnyOutpost" />
+  </CargoMission>
+
+  <CargoMission
+    identifier="cargonitroglycerin"
+    tags="cargo,cargoexplosive"
+    type="Cargo"
+    difficulty="1"
+    commonness="25"
+    reward="700"
+    achievementidentifier="cargomission">
+    <Items>
+      <Item identifier="explosivecrate" reward="350" maxcount="10">
+        <Item identifier="nitroglycerin" amount="20"/>
+      </Item>
+    </Items>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="0,256,256,256" color="243,146,55"/>
+    <LocationType from="AnyOutpost" to="AnyOutpost" />
+  </CargoMission>
+
+  <CargoMission
+    identifier="cargoclowngear"
+    tags="cargoclown"
+    type="Cargo"
+    difficulty="1"
+    commonness="5"
+    reward="500"
+    achievementidentifier="cargomission"
+    requireddeliveryamount="0.98">
+    <Items>
+      <Item identifier="metalcrate" reward="500" maxcount="10">
+        <Item identifier="clownmask" amount="5"/>
+        <Item identifier="clowncostume" amount="5"/>
+        <Item identifier="bikehorn" amount="10"/>
+      </Item>
+    </Items>
+    <Reputation identifier="clowns" amount="15" />
+    <Reputation identifier="coalition" amount="-5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,256,256,256" color="243,146,55"/>
+    <LocationType from="AnyOutpost" to="AnyOutpost" />
+  </CargoMission>
+
+  <CargoMission
+    identifier="cargoconstructionminerals"
+    tags="cargo,cargomaterials"
+    type="Cargo"
+    difficulty="1"
+    commonness="50"
+    reward="500"
+    achievementidentifier="cargomission"
+    requireddeliveryamount="0.98">
+    <Items>
+      <Item identifier="metalcrate" reward="200" maxcount="25">
+        <Item identifier="iron" amount="10"/>
+        <Item identifier="lead" amount="10"/>
+        <Item identifier="copper" amount="10"/>
+        <Item identifier="titanium" amount="10"/>
+      </Item>
+    </Items>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,0,256,256" color="243,146,55"/>    
+    <LocationType from="AnyOutpost" to="AnyOutpost" />
+  </CargoMission>
+
+  <CargoMission
+    identifier="cargosecurityminerals"
+    tags="cargo,cargomaterials"
+    type="Cargo"
+    difficulty="1"
+    commonness="50"
+    reward="500"
+    achievementidentifier="cargomission"
+    requireddeliveryamount="0.98">
+    <Items>
+      <Item identifier="metalcrate" reward="100" maxcount="25">
+        <Item identifier="magnesium" amount="5"/>
+        <Item identifier="lead" amount="5"/>
+        <Item identifier="sodium" amount="5"/>
+        <Item identifier="potassium" amount="5"/>
+        <Item identifier="aluminium" amount="5"/>
+        <Item identifier="iron" amount="10"/>
+        <Item identifier="titanium" amount="5"/>
+      </Item>
+    </Items>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,0,256,256" color="243,146,55"/>    
+    <LocationType from="AnyOutpost" to="AnyOutpost" />    
+  </CargoMission>
+
+  <CargoMission
+    identifier="cargomeditems"
+    tags="cargo,cargoresearch"
+    type="Cargo"
+    difficulty="1"
+    commonness="50"
+    reward="500"
+    achievementidentifier="cargomission"
+    requireddeliveryamount="0.98">
+    <Items>
+      <Item identifier="mediccrate" reward="120" maxcount="20">
+        <Item identifier="antidama1" amount="5"/>
+        <Item identifier="antidama2" amount="5"/>
+        <Item identifier="antibloodloss1" amount="5"/>
+        <Item identifier="antibiotics" amount="5"/>
+        <Item identifier="antibleeding1" amount="10"/>
+        <Item identifier="antibleeding3" amount="10"/>
+      </Item>
+    </Items>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="0,0,256,256" color="243,146,55"/>
+    <LocationType from="AnyOutpost" to="AnyOutpost" />    
+  </CargoMission>
+
+  <CargoMission
+    identifier="cargomedemergency"
+    type="Cargo"
+    difficulty="1"
+    commonness="50"
+    reward="1000"
+    achievementidentifier="cargomission"
+    requireddeliveryamount="0.98">
+    <Items>
+      <Item identifier="mediccrate" reward="1000" maxcount="1">
+        <Item identifier="morbusineantidote" amount="5"/>
+      </Item>
+    </Items>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="0,0,256,256" color="243,146,55"/>
+    <LocationType from="AnyOutpost" to="AnyOutpost" />
+  </CargoMission>
+
+  <BeaconMission
+    identifier="beacon"
+    textidentifier="beaconmission"
+    tags="beacon"
+    type="Beacon"
+    difficulty="3"
+    commonness="200"
+    reward="2800">
+    <monsters commonness="100">
+      <monster character="Crawler" min="0" max="8"/>      
+    </monsters>
+    <monsters commonness="50">
+      <monster character="Mudraptor" min="0" max="1"/>
+      <monster character="Mudraptor_unarmored" min="0" max="3"/>
+    </monsters>
+    <monsters commonness="40">
+      <monster character="Husk" min="0" max="5"/>
+    </monsters>
+    <monsters commonness="20">
+      <monster character="Tigerthresher" min="0" max="2"/>
+      <monster character="Bonethresher" min="0" max="1"/>
+    </monsters>    
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="0,256,256,256" color="243,146,55"/>
+    <Reputation identifier="coalition" amount="5" />
+    <message text="missionmessage0.beaconmission" />
+  </BeaconMission>
+
+  <BeaconMission
+    identifier="beaconnoreward"
+    tags="beacon,beaconnoreward"
+    type="Beacon"
+    difficulty="3"
+    commonness="0"
+    reward="2200"
+    sideobjective="true">
+    <monsters commonness="100">
+      <monster character="Crawler" min="0" max="8"/>
+    </monsters>
+    <monsters commonness="50">
+      <monster character="Mudraptor" min="0" max="1"/>
+      <monster character="Mudraptor_unarmored" min="0" max="3"/>
+    </monsters>
+    <monsters commonness="40">
+      <monster character="Husk" min="0" max="5"/>
+    </monsters>
+    <monsters commonness="20">
+      <monster character="Tigerthresher" min="0" max="2"/>
+      <monster character="Bonethresher" min="0" max="1"/>
+    </monsters>    
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="0,256,256,256" color="243,146,55"/>
+    <Reputation identifier="coalition" amount="5" />
+    <message text="missionmessage0.beaconmission" />
+  </BeaconMission>
+
+  <OutpostDestroyMission
+    identifier="abandonedoutposthumans"
+    tags="abandonedoutpost"
+    type="OutpostDestroy"
+    reward="3000"
+    difficulty="4"
+    commonness="20"
+    allowretry="true"
+    targetitem="reactor"
+    unhideentitysubcategories="abandonedhuman">
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="512,256,256,256" color="214,50,48"/>
+    <LocationType identifier="Abandoned" />
+    <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
+    <Characters>
+      <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="crewmodule"/>
+      <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="researchmodule"/>
+      <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="engineeringmodule"/>
+      <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="securitymodule"/>
+      <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="seccrewmodule"/>
+      <Character identifier="banditleader" from="abandonedoutpostnpcs" spawnpointtags="banditleader"/>
+    </Characters>
+    <TriggerEvent state="0" delay="5" eventidentifier="heartofgold" campaignonly="true"/>
+    <message header="missionheader0.abandonedoutposthumans" text="missionmessage0.abandonedoutposthumans"/>
+  </OutpostDestroyMission>
+
+
+  <OutpostDestroyMission
+    identifier="abandonedoutpostrescue"
+    tags="abandonedoutpost"
+    type="OutpostRescue"
+    reward="3000"
+    difficulty="4"
+    commonness="20"
+    allowretry="true"
+    hostageskilledmessage="hostageskilled"
+    unhideentitysubcategories="abandonedhuman">
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="512,256,256,256" color="214,50,48"/>
+    <LocationType identifier="Abandoned" />
+    <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
+    <Characters>
+      <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="crewmodule"/>
+      <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="researchmodule"/>
+      <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="engineeringmodule"/>
+      <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="securitymodule"/>
+      <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="securitymodule" multiplayeronly="true"/>
+      <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="seccrewmodule"/>
+      <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="seccrewmodule" multiplayeronly="true"/>
+      <Character identifier="banditleader" from="abandonedoutpostnpcs" spawnpointtags="banditleader"/>
+      <Character identifier="hostage" from="abandonedoutpostnpcs" asfaraspossible="true" requirerescue="true"/>
+      <Character identifier="hostage" from="abandonedoutpostnpcs" asfaraspossible="true" requirerescue="true"/>
+      <Character identifier="hostage" from="abandonedoutpostnpcs" asfaraspossible="true" requirerescue="true" multiplayeronly="true"/>
+    </Characters>
+    <message header="missionheader0.abandonedoutpostrescue" text="missionmessage0.abandonedoutpostrescue"/>
+  </OutpostDestroyMission>
+
+  <OutpostNestMission
+    identifier="abandonedoutpostmudraptor"
+    textidentifier="abandonedoutpostmonsters"
+    tags="abandonedoutpost"
+    type="OutpostDestroy"
+    reward="3000"
+    difficulty="4"
+    commonness="10"
+    allowretry="true"
+    sonarlabel="nest"
+    unhideentitysubcategories="abandonedmonster">
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48"/>
+    <LocationType identifier="Abandoned" />
+    <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
+    <Characters>
+      <Character identifier="husk" min="-2" max="2" />
+      <Character identifier="mudraptor" min="4" max="6"/>
+      <Character identifier="mudraptor" min="2" max="3" multiplayeronly="true"/>
+    </Characters>
+    <Items>
+      <Item identifier="largemudraptoregg" spawnpointtags="nest">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true"/>
+      </Item>
+      <Item identifier="largemudraptoregg" spawnpointtags="nest">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="9" />
+      </Item>
+      <Item identifier="largemudraptoregg" spawnpointtags="nest" />
+      <Item identifier="largemudraptoregg" spawnpointtags="nest" />
+      <Item identifier="largemudraptoregg" spawnpointtags="nest" />
+      <Item identifier="largemudraptoregg" spawnpointtags="nest" />
+    </Items>
+    <TriggerEvent state="0" delay="5" eventidentifier="assassinationofjacovsubra1" campaignonly="true"/>
+    <message header="missionheader0.abandonedoutpostmonsters" text="missionmessage0.abandonedoutpostmonsters"/>
+  </OutpostNestMission>
+
+  <OutpostNestMission
+    identifier="abandonedoutpostcrawler"
+    textidentifier="abandonedoutpostmonsters"
+    tags="abandonedoutpost"
+    type="OutpostDestroy"
+    reward="3000"
+    difficulty="3"
+    commonness="10"
+    allowretry="true"
+    sonarlabel="nest"
+    unhideentitysubcategories="abandonedmonster">
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48"/>
+    <LocationType identifier="Abandoned" />
+    <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
+    <Characters>
+      <Character identifier="husk" min="-2" max="2" />
+      <Character identifier="crawler" min="8" max="10"/>
+    </Characters>
+    <Items>
+      <Item identifier="crawleregg" spawnpointtags="nest">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true"/>
+      </Item>
+      <Item identifier="crawleregg" spawnpointtags="nest">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="9" />
+      </Item>
+      <Item identifier="crawleregg" spawnpointtags="nest" />
+      <Item identifier="crawleregg" spawnpointtags="nest" />
+      <Item identifier="crawleregg" spawnpointtags="nest" />
+      <Item identifier="crawleregg" spawnpointtags="nest" />
+    </Items>
+    <TriggerEvent state="0" delay="5" eventidentifier="assassinationofjacovsubra1" campaignonly="true"/>
+    <message header="missionheader0.abandonedoutpostmonsters" text="missionmessage0.abandonedoutpostmonsters"/>
+  </OutpostNestMission>
+
+  <OutpostDestroyMission
+    identifier="abandonedoutpostassassinate"
+    tags="abandonedoutpost"
+    type="OutpostDestroy"
+    reward="3000"
+    difficulty="4"
+    commonness="20"
+    allowretry="true"
+    sonarlabel="target"
+    unhideentitysubcategories="abandonedhuman">
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="0,512,256,256" color="214,50,48"/>
+    <LocationType identifier="Abandoned" />
+    <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
+    <Characters>
+      <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="crewmodule"/>
+      <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="researchmodule"/>
+      <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="engineeringmodule"/>
+      <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="securitymodule"/>
+      <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="securitymodule" multiplayeronly="true"/>
+      <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="seccrewmodule"/>
+      <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="seccrewmodule" multiplayeronly="true"/>
+      <Character identifier="banditleader_heavy" from="abandonedoutpostnpcs" asfaraspossible="true" requirekill="true"/>
+    </Characters>
+    <TriggerEvent state="0" delay="5" eventidentifier="heartofgold" campaignonly="true"/>
+    <message header="missionheader0.abandonedoutpostassassinate" text="missionmessage0.abandonedoutpostassassinate"/>
+  </OutpostDestroyMission>
+
+  <NestMission
+    identifier="crawlernest"
+    tags="nest,crawlernest"
+    type="Nest"
+    spawntype="cave"
+    reward="3000"
+    itemspawnradius="200"
+    approachitemsradius="800"
+    monsterspawnradius="4000"
+    nestobjectradius="1500"
+    nestobjectamount="20"
+    difficulty="3"
+    commonness="20">
+    <Items>
+      <Item identifier="crawleregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true"/>
+      </Item>
+      <Item identifier="crawleregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="5" />
+      </Item>
+      <Item identifier="crawleregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="11" />
+      </Item>
+      <Item identifier="crawleregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="17" />
+      </Item>
+      <Item identifier="crawleregg" />
+      <Item identifier="crawleregg" />
+      <Item identifier="crawleregg" />
+    </Items>
+    <Monster character="Crawler" min="2" max="3"/>
+    <Monster character="Crawler" min="2" max="3" multiplayeronly="true"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48"/>
+    <LocationType from="City" to="Research"/>
+    <LocationType from="City" to="None"/>
+    <LocationType from="City" to="Lair"/>
+    <LocationType from="Outpost" to="Research"/>
+    <LocationType from="Outpost" to="None"/>
+    <LocationType from="Outpost" to="Lair"/>
+    <LocationType from="Research" to="None"/>
+    <LocationType from="Research" to="City"/>
+    <LocationType from="Research" to="Outpost"/>
+    <LocationType from="Research" to="Military"/>
+    <LocationType from="Research" to="Research"/>
+    <LocationType from="Research" to="Mine"/>
+    <LocationType from="Research" to="Lair"/>
+    <message text="missionmessage0.crawlernest"/>
+  </NestMission>
+
+  <NestMission
+    identifier="mudraptornest"
+    tags="nest,mudraptornest"
+    type="Nest"
+    spawntype="cave"
+    reward="5000"
+    itemspawnradius="200"
+    approachitemsradius="800"
+    monsterspawnradius="4000"
+    nestobjectradius="1500"
+    nestobjectamount="20"
+    difficulty="4"
+    commonness="20">
+    <Items>
+      <Item identifier="largemudraptoregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true"/>
+      </Item>
+      <Item identifier="largemudraptoregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="9" />
+      </Item>
+      <Item identifier="largemudraptoregg" />
+      <Item identifier="largemudraptoregg" />
+    </Items>
+    <Monster character="Mudraptor" min="2" max="3"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48"/>
+    <LocationType from="City" to="Research"/>
+    <LocationType from="City" to="None"/>
+    <LocationType from="City" to="Lair"/>
+    <LocationType from="Outpost" to="Research"/>
+    <LocationType from="Outpost" to="None"/>
+    <LocationType from="Outpost" to="Lair"/>
+    <LocationType from="Research" to="None"/>
+    <LocationType from="Research" to="City"/>
+    <LocationType from="Research" to="Outpost"/>
+    <LocationType from="Research" to="Military"/>
+    <LocationType from="Research" to="Research"/>
+    <LocationType from="Research" to="Mine"/>
+    <LocationType from="Research" to="Lair"/>
+    <message text="missionmessage0.mudraptornest"/>
+  </NestMission>
+
+  <NestMission
+    identifier="tigerthreshernest"
+    tags="nest,tigerthreshernest"
+    type="Nest"
+    spawntype="cave"
+    reward="5000"
+    itemspawnradius="200"
+    approachitemsradius="800"
+    monsterspawnradius="4000"
+    nestobjectradius="1500"
+    nestobjectamount="20"
+    difficulty="4"
+    commonness="20">
+    <Items>
+      <Item identifier="tigerthresheregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true"/>
+      </Item>
+      <Item identifier="tigerthresheregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="8" />
+      </Item>
+      <Item identifier="tigerthresheregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="11" />
+      </Item>
+      <Item identifier="tigerthresheregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="15" />
+      </Item>
+      <Item identifier="tigerthresheregg" />
+      <Item identifier="tigerthresheregg" />
+      <Item identifier="tigerthresheregg" />
+    </Items>
+    <Monster character="Tigerthresher" min="2" max="3"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48"/>
+    <LocationType from="City" to="Research"/>
+    <LocationType from="City" to="None"/>
+    <LocationType from="City" to="Lair"/>
+    <LocationType from="Outpost" to="Research"/>
+    <LocationType from="Outpost" to="None"/>
+    <LocationType from="Outpost" to="Lair"/>
+    <LocationType from="Research" to="None"/>
+    <LocationType from="Research" to="City"/>
+    <LocationType from="Research" to="Outpost"/>
+    <LocationType from="Research" to="Military"/>
+    <LocationType from="Research" to="Research"/>
+    <LocationType from="Research" to="Mine"/>
+    <LocationType from="Research" to="Lair"/>
+    <message text="missionmessage0.tigerthreshernest"/>
+  </NestMission>
+
+  <!--<MineralMission
+    identifier="multimineraltest"
+    tags="collectminerals"
+    type="Mineral"
+    commonness="50"
+    reward="100">
+
+    <Items>
+      <Item identifier="quartz" />
+      <Item identifier="quartz" />
+      <Item identifier="quartz" />
+      <Item identifier="quartz" />
+      <Item identifier="amblygonite" />
+      <Item identifier="amblygonite" />
+      <Item identifier="amblygonite" />
+    </Items>
+
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,0,256,256" color="243,146,55"/>
+
+    <LocationType from="Outpost" to="City"/>
+    <LocationType from="Outpost" to="Outpost"/>
+    <LocationType from="Outpost" to="Military"/>
+    <LocationType from="Outpost" to="Research"/>
+    <LocationType from="Outpost" to="Mine"/>
+
+    <LocationType from="City" to="Mine"/>
+    <LocationType from="Military" to="Mine"/>
+    <LocationType from="Research" to="Mine"/>
+
+    <LocationType from="Mine" to="City"/>
+    <LocationType from="Mine" to="Outpost"/>
+    <LocationType from="Mine" to="Military"/>
+    <LocationType from="Mine" to="Research"/>
+    <LocationType from="Mine" to="Mine"/>
+  </MineralMission>-->
+
+  <MineralMission
+    identifier="quartzcollection"
+    textIdentifier="miningmission1"
+    tags="collectminerals,collectminerals_set1,collectminerals_mainpath"
+    type="Mineral"
+    difficulty="1"
+    commonness="50"
+    resourceHandoverAmount="0.25"
+    positionType="mainpath"
+    reward="1200">
+    <Items>
+      <Item identifier="quartz" />
+      <Item identifier="quartz" />
+      <Item identifier="quartz" />
+      <Item identifier="quartz" />
+      <Item identifier="quartz" />
+      <Item identifier="quartz" />
+      <Item identifier="quartz" />
+      <Item identifier="quartz" />
+    </Items>
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,0,256,256" color="243,146,55"/>
+    <LocationType from="Outpost" to="City"/>
+    <LocationType from="Outpost" to="Outpost"/>
+    <LocationType from="Outpost" to="Military"/>
+    <LocationType from="Outpost" to="Research"/>
+    <LocationType from="Outpost" to="Mine"/>
+    <LocationType from="City" to="Mine"/>
+    <LocationType from="Military" to="Mine"/>
+    <LocationType from="Research" to="Mine"/>
+    <LocationType from="Mine" to="AnyOutpost"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+  </MineralMission>
+
+  <MineralMission
+    identifier="pyromorphitecollection"
+    textIdentifier="miningmission1"
+    tags="collectminerals,collectminerals_set1,collectminerals_mainpath"
+    type="Mineral"
+    difficulty="1"
+    commonness="50"
+    resourceHandoverAmount="0.25"
+    positionType="mainpath"
+    reward="1200">
+    <Items>
+      <Item identifier="pyromorphite" />
+      <Item identifier="pyromorphite" />
+      <Item identifier="pyromorphite" />
+      <Item identifier="pyromorphite" />
+      <Item identifier="pyromorphite" />
+      <Item identifier="pyromorphite" />
+      <Item identifier="pyromorphite" />
+      <Item identifier="pyromorphite" />
+    </Items>
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,0,256,256" color="243,146,55"/>
+    <LocationType from="Outpost" to="City"/>
+    <LocationType from="Outpost" to="Outpost"/>
+    <LocationType from="Outpost" to="Military"/>
+    <LocationType from="Outpost" to="Research"/>
+    <LocationType from="Outpost" to="Mine"/>
+    <LocationType from="City" to="Mine"/>
+    <LocationType from="Military" to="Mine"/>
+    <LocationType from="Research" to="Mine"/>
+    <LocationType from="Mine" to="AnyOutpost"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+  </MineralMission>
+  
+  
+  <MineralMission
+    identifier="diamondcollection"
+    textIdentifier="miningmission1"
+    tags="collectminerals,collectminerals_set1"
+    type="Mineral"
+    difficulty="2"
+    commonness="30"
+    resourceHandoverAmount="0.25"
+    reward="1600">
+    <Items>
+      <Item identifier="diamond" />
+      <Item identifier="diamond" />
+      <Item identifier="diamond" />
+      <Item identifier="diamond" />
+      <Item identifier="diamond" />
+      <Item identifier="diamond" />
+      <Item identifier="diamond" />
+      <Item identifier="diamond" />
+    </Items>
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,0,256,256" color="243,146,55"/>
+    <LocationType from="Outpost" to="City"/>
+    <LocationType from="Outpost" to="Outpost"/>
+    <LocationType from="Outpost" to="Military"/>
+    <LocationType from="Outpost" to="Research"/>
+    <LocationType from="Outpost" to="Mine"/>
+    <LocationType from="City" to="Mine"/>
+    <LocationType from="Military" to="Mine"/>
+    <LocationType from="Research" to="Mine"/>
+    <LocationType from="Mine" to="AnyOutpost"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+  </MineralMission>
+  
+  <MineralMission
+    identifier="galenacollection"
+    textIdentifier="miningmission1"
+    tags="collectminerals,collectminerals_set1"
+    type="Mineral"
+    difficulty="2"
+    commonness="30"
+    resourceHandoverAmount="0.25"
+    reward="1600">
+    <Items>
+      <Item identifier="galena" />
+      <Item identifier="galena" />
+      <Item identifier="galena" />
+      <Item identifier="galena" />
+      <Item identifier="galena" />
+      <Item identifier="galena" />
+      <Item identifier="galena" />
+      <Item identifier="galena" />
+    </Items>
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,0,256,256" color="243,146,55"/>
+    <LocationType from="Outpost" to="City"/>
+    <LocationType from="Outpost" to="Outpost"/>
+    <LocationType from="Outpost" to="Military"/>
+    <LocationType from="Outpost" to="Research"/>
+    <LocationType from="Outpost" to="Mine"/>
+    <LocationType from="City" to="Mine"/>
+    <LocationType from="Military" to="Mine"/>
+    <LocationType from="Research" to="Mine"/>
+    <LocationType from="Mine" to="AnyOutpost"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+  </MineralMission>
+  
+  <MineralMission
+  identifier="uraniumcollection_small"
+  textIdentifier="miningmission1"
+  tags="collectminerals,collectminerals_set1,collectminerals_mainpath"
+  type="Mineral"
+  difficulty="1"
+  commonness="75"
+  resourceHandoverAmount="0.25"
+  positionType="mainpath"
+  reward="1400">
+    <Items>
+      <Item identifier="uraniumore" />
+      <Item identifier="uraniumore" />
+      <Item identifier="uraniumore" />
+      <Item identifier="uraniumore" />
+    </Items>
+
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,0,256,256" color="243,146,55"/>
+
+    <LocationType from="Outpost" to="City"/>
+    <LocationType from="Outpost" to="Outpost"/>
+    <LocationType from="Outpost" to="Military"/>
+    <LocationType from="Outpost" to="Research"/>
+    <LocationType from="Outpost" to="Mine"/>
+
+    <LocationType from="City" to="Mine"/>
+    <LocationType from="Military" to="Mine"/>
+    <LocationType from="Research" to="Mine"/>
+
+    <LocationType from="Mine" to="AnyOutpost"/>
+
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+  </MineralMission>
+
+  <MineralMission
+    identifier="uraniumcollection"
+    textIdentifier="miningmission1"
+    tags="collectminerals,collectminerals_set2"
+    type="Mineral"
+    difficulty="2"
+    commonness="75"
+    resourceHandoverAmount="0.25"
+    reward="2000">
+    <Items>
+      <Item identifier="uraniumore" />
+      <Item identifier="uraniumore" />
+      <Item identifier="uraniumore" />
+      <Item identifier="uraniumore" />
+      <Item identifier="uraniumore" />
+      <Item identifier="uraniumore" />
+      <Item identifier="uraniumore" />
+      <Item identifier="uraniumore" />
+    </Items>
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,0,256,256" color="243,146,55"/>
+    <LocationType from="Outpost" to="City"/>
+    <LocationType from="Outpost" to="Outpost"/>
+    <LocationType from="Outpost" to="Military"/>
+    <LocationType from="Outpost" to="Research"/>
+    <LocationType from="Outpost" to="Mine"/>
+    <LocationType from="City" to="Mine"/>
+    <LocationType from="Military" to="Mine"/>
+    <LocationType from="Research" to="Mine"/>
+    <LocationType from="Mine" to="AnyOutpost"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+  </MineralMission>
+
+  <MineralMission
+    identifier="triphylitecollection"
+    textIdentifier="miningmission1"
+    tags="collectminerals,collectminerals_set2"
+    type="Mineral"
+    difficulty="2"
+    commonness="75"
+    resourceHandoverAmount="0.33"
+    reward="2100">
+    <Items>
+      <Item identifier="triphylite" />
+      <Item identifier="triphylite" />
+      <Item identifier="triphylite" />
+      <Item identifier="triphylite" />
+      <Item identifier="triphylite" />
+      <Item identifier="triphylite" />
+    </Items>
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,0,256,256" color="243,146,55"/>
+    <LocationType from="Outpost" to="City"/>
+    <LocationType from="Outpost" to="Outpost"/>
+    <LocationType from="Outpost" to="Military"/>
+    <LocationType from="Outpost" to="Research"/>
+    <LocationType from="Outpost" to="Mine"/>
+    <LocationType from="City" to="Mine"/>
+    <LocationType from="Military" to="Mine"/>
+    <LocationType from="Research" to="Mine"/>
+    <LocationType from="Mine" to="AnyOutpost"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+  </MineralMission>
+
+  <MineralMission
+    identifier="langbeinitecollection"
+    textIdentifier="miningmission1"
+    tags="collectminerals,collectminerals_set2"
+    type="Mineral"
+    difficulty="2"
+    commonness="75"
+    resourceHandoverAmount="0.33"
+    reward="2100">
+    <Items>
+      <Item identifier="langbeinite" />
+      <Item identifier="langbeinite" />
+      <Item identifier="langbeinite" />
+      <Item identifier="langbeinite" />
+      <Item identifier="langbeinite" />
+      <Item identifier="langbeinite" />
+    </Items>
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,0,256,256" color="243,146,55"/>
+    <LocationType from="Outpost" to="City"/>
+    <LocationType from="Outpost" to="Outpost"/>
+    <LocationType from="Outpost" to="Military"/>
+    <LocationType from="Outpost" to="Research"/>
+    <LocationType from="Outpost" to="Mine"/>
+    <LocationType from="City" to="Mine"/>
+    <LocationType from="Military" to="Mine"/>
+    <LocationType from="Research" to="Mine"/>
+    <LocationType from="Mine" to="AnyOutpost"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+  </MineralMission>
+
+  <MineralMission
+  identifier="ilmenitechamositecollection"
+  textIdentifier="miningmission2"
+  tags="collectminerals,collectminerals_set2"
+  type="Mineral"
+  difficulty="2"
+  commonness="30"
+  resourceHandoverAmount="0.25"
+  reward="2400">
+    <Items>
+      <Item identifier="ilmenite" />
+      <Item identifier="ilmenite" />
+      <Item identifier="ilmenite" />
+      <Item identifier="ilmenite" />
+      <Item identifier="chamosite" />
+      <Item identifier="chamosite" />
+      <Item identifier="chamosite" />
+      <Item identifier="chamosite" />
+    </Items>
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,0,256,256" color="243,146,55"/>
+    <LocationType from="Outpost" to="City"/>
+    <LocationType from="Outpost" to="Outpost"/>
+    <LocationType from="Outpost" to="Military"/>
+    <LocationType from="Outpost" to="Research"/>
+    <LocationType from="Outpost" to="Mine"/>
+    <LocationType from="City" to="Mine"/>
+    <LocationType from="Military" to="Mine"/>
+    <LocationType from="Research" to="Mine"/>
+    <LocationType from="Mine" to="AnyOutpost"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+  </MineralMission>
+  
+  <MineralMission
+    identifier="thorianitecollection"
+    textIdentifier="miningmission1"
+    tags="collectminerals,collectminerals_set3"
+    type="Mineral"
+    difficulty="2"
+    commonness="50"
+    resourceHandoverAmount="0.33"
+    reward="2700">
+    <Items>
+      <Item identifier="thorianite" />
+      <Item identifier="thorianite" />
+      <Item identifier="thorianite" />
+      <Item identifier="thorianite" />
+      <Item identifier="thorianite" />
+      <Item identifier="thorianite" />
+    </Items>
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,0,256,256" color="243,146,55"/>
+    <LocationType from="Outpost" to="City"/>
+    <LocationType from="Outpost" to="Outpost"/>
+    <LocationType from="Outpost" to="Military"/>
+    <LocationType from="Outpost" to="Research"/>
+    <LocationType from="Outpost" to="Mine"/>
+    <LocationType from="City" to="Mine"/>
+    <LocationType from="Military" to="Mine"/>
+    <LocationType from="Research" to="Mine"/>
+    <LocationType from="Mine" to="AnyOutpost"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+  </MineralMission>
+
+  <MineralMission
+    identifier="titanitecollection"
+    textIdentifier="miningmission1"
+    tags="collectminerals,collectminerals_set3"
+    type="Mineral"
+    difficulty="2"
+    commonness="50"
+    resourceHandoverAmount="0.33"
+    reward="2700">
+    <Items>
+      <Item identifier="titanite" />
+      <Item identifier="titanite" />
+      <Item identifier="titanite" />
+      <Item identifier="titanite" />
+      <Item identifier="titanite" />
+      <Item identifier="titanite" />
+    </Items>
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,0,256,256" color="243,146,55"/>
+    <LocationType from="Outpost" to="City"/>
+    <LocationType from="Outpost" to="Outpost"/>
+    <LocationType from="Outpost" to="Military"/>
+    <LocationType from="Outpost" to="Research"/>
+    <LocationType from="Outpost" to="Mine"/>
+    <LocationType from="City" to="Mine"/>
+    <LocationType from="Military" to="Mine"/>
+    <LocationType from="Research" to="Mine"/>
+    <LocationType from="Mine" to="AnyOutpost"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+  </MineralMission>
+
+  <MineralMission
+    identifier="physicoriumcollection"
+    textIdentifier="miningmission1_abyss"
+    tags="collectminerals,collectminerals_set4"
+    type="Mineral"
+    difficulty="4"
+    commonness="40"
+    positionType="abysscave"
+    resourceHandoverAmount="0.33"
+    reward="3600">
+    <Items>
+      <Item identifier="physicorium" />
+      <Item identifier="physicorium" />
+      <Item identifier="physicorium" />
+      <Item identifier="physicorium" />
+      <Item identifier="physicorium" />
+      <Item identifier="physicorium" />
+    </Items>
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,0,256,256" color="243,146,55"/>
+    <LocationType from="Outpost" to="City"/>
+    <LocationType from="Outpost" to="Outpost"/>
+    <LocationType from="Outpost" to="Military"/>
+    <LocationType from="Outpost" to="Research"/>
+    <LocationType from="Outpost" to="Mine"/>
+    <LocationType from="City" to="Mine"/>
+    <LocationType from="Military" to="Mine"/>
+    <LocationType from="Research" to="Mine"/>
+    <LocationType from="Mine" to="AnyOutpost"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+  </MineralMission>
+
+  <MineralMission
+    identifier="fulguriumcollection"
+    textIdentifier="miningmission1_abyss"
+    tags="collectminerals,collectminerals_set4"
+    type="Mineral"
+    difficulty="4"
+    commonness="40"
+    positionType="abysscave"
+    resourceHandoverAmount="0.33"
+    reward="3600">
+    <Items>
+      <Item identifier="fulgurium" />
+      <Item identifier="fulgurium" />
+      <Item identifier="fulgurium" />
+      <Item identifier="fulgurium" />
+      <Item identifier="fulgurium" />
+      <Item identifier="fulgurium" />
+    </Items>
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,0,256,256" color="243,146,55"/>
+    <LocationType from="Outpost" to="City"/>
+    <LocationType from="Outpost" to="Outpost"/>
+    <LocationType from="Outpost" to="Military"/>
+    <LocationType from="Outpost" to="Research"/>
+    <LocationType from="Outpost" to="Mine"/>
+    <LocationType from="City" to="Mine"/>
+    <LocationType from="Military" to="Mine"/>
+    <LocationType from="Research" to="Mine"/>
+    <LocationType from="Mine" to="AnyOutpost"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+  </MineralMission>
+  
+  <CombatMission
+    identifier="pvpmission"
+    type="Combat"
+    achievementidentifier="combatmission"    
+    teamname1="Coalition"
+    teamname2="Renegade"    
+    multiplayeronly="true"
+    commonness="20"
+    reward="2000">
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="0,768,256,256" color="243,146,55"/>
+    <message text="missionmessage0.combatmission"/>
+    <message text="missionmessage1.combatmission"/>
+  </CombatMission>
+
+  <EscortMission
+    identifier="escort1"
+    tags="escortcommoners,escort"
+    type="Escort"
+    difficulty="2"
+    commonness="20"
+    reward="1100"
+    achievementidentifier="escortmission"
+    baseescortedcharacters="1"
+    scalingescortedcharacters="0.35">
+    <Characters>
+      <Item from="escortnpcs1" identifier="commoner" />
+    </Characters>
+    <Reputation identifier="location" amount="20" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="768,512,256,256" color="243,146,55" />
+    <LocationType from="AnyOutpost" to="AnyOutpost" />
+    <message header="missionheader0.escort1" text="missionmessage0.escort1"/>
+  </EscortMission>
+
+  <EscortMission
+    identifier="escort2"
+    tags="escortVIP,escort"
+    type="Escort"
+    difficulty="2"
+    commonness="20"
+    reward="2000"
+    achievementidentifier="escortmission">
+    <Characters>
+      <Item from="escortnpcs1" identifier="vip" escortidentifier="vip" color="238,130,238"/>
+      <Item from="escortnpcs1" identifier="securitynpc"/>
+      <Item from="escortnpcs1" identifier="securitynpc"/>
+    </Characters>
+    <Reputation identifier="location" amount="30" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,512,256,256" color="243,146,55" />
+    <LocationType from="AnyOutpost" to="AnyOutpost" />
+    <message header="missionheader0.escort2" text="missionmessage0.escort2"/>
+  </EscortMission>
+
+  <EscortMission
+    identifier="escort3"
+    tags="escortprisoners,escort"
+    type="Escort"
+    difficulty="3"
+    commonness="15"
+    reward="2500"
+    achievementidentifier="escortmission"
+    baseescortedcharacters="1"
+    scalingescortedcharacters="0.3">
+    <Characters>
+      <Item from="escortnpcs1" identifier="prisoner" color="255,165,0"/>
+    </Characters>
+    <Reputation identifier="location" amount="30" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="512,512,256,256" color="243,146,55" />
+    <LocationType from="AnyOutpost" to="AnyOutpost" />
+    <message header="missionheader0.escort3" text="missionmessage0.escort3"/>
+  </EscortMission>
+
+  <EscortMission
+    identifier="escort4"
+    tags="escortterrorists,escort"
+    type="Escort"
+    difficulty="3"
+    commonness="20"
+    reward="2500"
+    achievementidentifier="escortmission"
+    baseescortedcharacters="1"
+    scalingescortedcharacters="0.35"
+    terroristchance="0.35">    
+    <Characters>
+      <Item from="escortnpcs1" identifier="commoner" />
+    </Characters>
+    <TerroristItems>
+      <Item identifier="divingknife" equip="true" mindifficulty="20"/>
+      <Item identifier="divingknife" equip="true" mindifficulty="20"/>
+      <Item identifier="stungun" equip="true" mindifficulty="40">
+        <Item identifier="stungundart"/>
+      </Item>
+      <Item identifier="revolver" equip="true" mindifficulty="60">
+        <Item identifier="revolverround" />
+        <Item identifier="revolverround" />
+        <Item identifier="revolverround" />
+        <Item identifier="revolverround" />
+        <Item identifier="revolverround" />
+        <Item identifier="revolverround" />
+      </Item>
+    </TerroristItems>
+    <Reputation identifier="location" amount="20" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="0,0,256,256" color="243,146,55" />
+    <LocationType from="AnyOutpost" to="AnyOutpost" />
+    <message header="missionheader0.escort4" text="missionmessage0.escort4"/>
+    <message header="missionheader1.escort4" text="missionmessage1.escort4"/>
+  </EscortMission>
+
+  <PirateMission
+    type="Pirate"
+    identifier="pirate1"
+    tags="piratehumpback"
+    difficulty="4"
+    commonness="20"
+    reward="4000"
+    achievementidentifier="piratemission"
+    addedmissiondifficultyperplayer="8">
+    <Reputation identifier="location" amount="30" />
+    <SubmarineTypes>
+      <Submarine path="Content/Map/EnemySubmarines/DugongPirate.sub" preferreddifficulty="10" alternatereward="3200"/>
+      <Submarine path="Content/Map/EnemySubmarines/HumpbackPirate.sub" preferreddifficulty="40" alternatereward="4400"/>
+      <Submarine path="Content/Map/EnemySubmarines/Typhon2Pirate.sub" preferreddifficulty="70" alternatereward="5600"/>
+    </SubmarineTypes>
+    <Characters>
+      <Character typeidentifier="piratecaptain" minamount="1" maxamount="1"/>
+      <Character typeidentifier="piratesecurity" minamount="1" maxamount="5" />
+      <Character typeidentifier="piratemechanic" minamount="1" maxamount="1" />
+      <Character typeidentifier="pirateengineer" minamount="1" maxamount="1" />
+    </Characters>
+    <CharacterTypes>
+      <CharacterType typeidentifier="piratecaptain">
+        <Character identifier="piratecaptain" from="piratenpcs1" preferreddifficulty="50" iscommander="true" />
+        <Character identifier="piratecaptainlord" from="piratenpcs1" preferreddifficulty="90" iscommander="true" />
+      </CharacterType>
+      <CharacterType typeidentifier="piratesecurity">
+        <Character identifier="piratesecurityrecruit" from="piratenpcs1" preferreddifficulty="40"/>
+        <Character identifier="piratesecuritygunner" from="piratenpcs1" preferreddifficulty="60"/>
+        <Character identifier="piratesecuritybrute" from="piratenpcs1" preferreddifficulty="70"/>
+        <Character identifier="piratesecurityelite" from="piratenpcs1" preferreddifficulty="100"/>
+      </CharacterType>
+      <CharacterType typeidentifier="piratemechanic">
+        <Character identifier="piratemechanicrecruit" from="piratenpcs1" preferreddifficulty="40"/>
+        <Character identifier="piratemechanicveteran" from="piratenpcs1" preferreddifficulty="70"/>
+      </CharacterType>
+      <CharacterType typeidentifier="pirateengineer">
+        <Character identifier="pirateengineerrecruit" from="piratenpcs1" preferreddifficulty="40"/>
+        <Character identifier="pirateengineerveteran" from="piratenpcs1" preferreddifficulty="70"/>
+      </CharacterType>
+    </CharacterTypes>
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="0,768,256,256" color="243,146,55"/>
+    <message header="missionheader0.pirate1" text="missionmessage0.pirate1"/>
+    <message header="missionheader1.pirate1" text="missionmessage1.pirate1"/>
+  </PirateMission>
+
+  <EscortMission
+    identifier="stowawayescort1"
+    tags="escortstowaway"
+    type="Escort"
+    description=""
+    commonness="0"
+    reward="0"
+    achievementidentifier="escortmission">
+    <Characters>
+      <Item from="customnpcs1" identifier="stowaway" />
+    </Characters>
+    <Reputation identifier="location" amount="20" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="768,512,256,256" color="243,146,55" />
+    <LocationType from="AnyOutpost" to="City" />
+    <message header="missionheader0.stowawayescort1" text="missionmessage0.stowawayescort1"/>
+  </EscortMission>
+
+  <EscortMission
+    identifier="subraescort"
+    tags="escortsubra"
+    type="Escort"
+    description=""
+    commonness="0"
+    reward="0"
+    achievementidentifier="escortmission">
+    <Characters>
+      <Item from="customnpcs1" identifier="jacovsubra" />
+    </Characters>
+    <Reputation identifier="location" amount="20" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="768,512,256,256" color="243,146,55" />
+    <LocationType from="AnyOutpost" to="City" />
+    <message header="missionheader0.subraescort" text="missionmessage0.subraescort"/>
+  </EscortMission>
+
+  <EscortMission
+    identifier="raptorescort"
+    tags="escortraptor"
+    type="Escort"
+    description=""
+    commonness="0"
+    reward="2000"
+    achievementidentifier="escortmission">
+    <Characters>
+      <Item from="customnpcs1" identifier="raptorowner" />
+    </Characters>
+    <Reputation identifier="location" amount="20" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="768,512,256,256" color="243,146,55" />
+    <LocationType from="AnyOutpost" to="AnyOutpost" />
+    <TriggerEvent state="0" delay="5" eventidentifier="manandhisraptor2" campaignonly="true"/>
+    <message header="missionheader0.raptorescort" text="missionmessage0.raptorescort"/>
+  </EscortMission>
+
+  <GotoMission
+    name=""
+    identifier="gotosubra"
+    type="GoTo"
+    difficulty="3"
+    commonness="0"
+    reward="1000">
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,0,256,256" color="49,93,233"/>
+    <TriggerEvent state="1" delay="5" eventidentifier="assassinationofjacovsubra4" campaignonly="true"/>
+    <LocationType identifier="Abandoned" />
+  </GotoMission>
+
+  <MonsterMission
+    identifier="killmopingjack"
+    type="Monster"
+    difficulty="2"
+    commonness="100"
+    reward="2500"
+    maxsonarmarkerdistance="10000"
+    monsterfile="Hammerhead_mNamed" count ="1">
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,768,256,256" color="214,50,48"/>
+    <TriggerEvent state="0" delay="5" eventidentifier="hognose2" campaignonly="true"/>
+  </MonsterMission>
+
+  <AlienRuinScanMission
+    identifier="scanruin"
+    tags="alienruin,alienruinscan"
+    type="ScanAlienRuins"
+    description=""
+    difficulty="3"
+    commonness="30"
+    reward="4000"
+    sonarlabel="scantarget"
+    targets="3"
+    mintargetdistance="4000"
+    displaytargethudicons="true"
+    hudiconmaxdistance="1500"    
+    requireruin="true">
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="512,768,256,256" color="243,146,55"/>
+    <HudIcon texture="Content/UI/InventoryUIAtlas.png" sourcerect="565,269,64,64"/>
+    <Items>
+      <Item identifier="metalcrate">
+        <Item identifier="ruinscanner" amount="3"/>
+      </Item>
+    </Items>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <LocationType from="City" to="Research"/>
+    <LocationType from="City" to="None"/>
+    <LocationType from="City" to="Lair"/>
+    <LocationType from="Outpost" to="Research"/>
+    <LocationType from="Outpost" to="None"/>
+    <LocationType from="Outpost" to="Lair"/>
+    <LocationType from="Research" to="None"/>
+    <LocationType from="Research" to="City"/>
+    <LocationType from="Research" to="Outpost"/>
+    <LocationType from="Research" to="Military"/>
+    <LocationType from="Research" to="Research"/>
+    <LocationType from="Research" to="Mine"/>
+    <LocationType from="Research" to="Lair"/>
+  </AlienRuinScanMission>
+
+  <AlienRuinClearMission
+    identifier="clearruin"
+    tags="alienruin,alienruinclear"
+    type="ClearAlienRuins"
+    difficulty="4"
+    commonness="25"
+    reward="6000"
+    sonarlabel="target"
+    targetitems="guardianpod"
+    targetenemies="fractalguardian,fractalguardian2"
+    minenemycount="2"
+    requireruin="true">
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,768,256,256" color="214,50,48"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <LocationType from="City" to="Research"/>
+    <LocationType from="City" to="None"/>
+    <LocationType from="City" to="Lair"/>
+    <LocationType from="Outpost" to="Research"/>
+    <LocationType from="Outpost" to="None"/>
+    <LocationType from="Outpost" to="Lair"/>
+    <LocationType from="Research" to="None"/>
+    <LocationType from="Research" to="City"/>
+    <LocationType from="Research" to="Outpost"/>
+    <LocationType from="Research" to="Military"/>
+    <LocationType from="Research" to="Research"/>
+    <LocationType from="Research" to="Mine"/>
+    <LocationType from="Research" to="Lair"/>
+  </AlienRuinClearMission>
+
+</Missions>

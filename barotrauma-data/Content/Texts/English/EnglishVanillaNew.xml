@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+  
+<!-- When adding new text, do it so at the bottom under the 'New values' & 'Modified values' sections. If it's a new tag entirely, put it under the new additions one; If it's an update to an existing value, put it under the changed values one. -->
+<!-- DO NOT EDIT EXISTING TAGS FOR ALREADY TRANSLATED LINES -> if you need a new tag for something, add it under the 'New values' header and comment if there's some other tag that should be replaced -->
+
+<!-- Modified values after September 5 (Hoist the Sails update) -->
+<tutorial.roles.popup.healthui1>Open the Doctor's health interface with [InputType.Health]</tutorial.roles.popup.healthui1>
+<tutorial.roles.popup.medfabricator1>Find Morphine and Stabilozine.</tutorial.roles.popup.medfabricator1>
+<tutorial.roles.popup.engineer_wiring3>Attach the wire to the POWER connection.</tutorial.roles.popup.engineer_wiring3>
+<tutorial.roles.popup.engineer_wiring5>Attach the wire to the POWER connection.</tutorial.roles.popup.engineer_wiring5>
+<tutorial.roles.engineer.objective.rewire3>Wire the Junction Box's POWER output</tutorial.roles.engineer.objective.rewire3>
+<tutorial.roles.engineer.objective.rewire4>Connect the wire to the lamp's POWER input</tutorial.roles.engineer.objective.rewire4>
+<tutorial.roles.medicalinstructor.healthui>“Okay, bring it here. Just highlight me with your mouse and press [InputType.Health] to enter my Health interface.”</tutorial.roles.medicalinstructor.healthui>
+<tutorial.roles.medicalinstructor.medfabricator3>“Now be a good assistant and use the Naloxone on me. Remember, [InputType.Health] to enter my Health interface.”</tutorial.roles.medicalinstructor.medfabricator3>
+<tutorial.roles.medicalinstructor.patients2>“There are several patients here, each with a different affliction. Inspect each of them ([InputType.Health] to enter Health interface!) to learn about what ails them.”</tutorial.roles.medicalinstructor.patients2>
+
+<entitydescription.magnesium>Used in the manufacture of explosives and medical compounds.</entitydescription.magnesium>
+<entitydescription.lithium>Most commonly used in the manufacture of batteries and antipsychotic drugs. Reacts violently when in contact with water.</entitydescription.lithium>
+
+<!-- New values after September 5 (Hoist the Sails update) -->
+  
+<tutorial.roles.popup.mechanic_divingmask>Equip the diving mask.</tutorial.roles.popup.mechanic_divingmask>
+<submarine.classandtier>[class] ([tier])</submarine.classandtier>
+</infotexts>

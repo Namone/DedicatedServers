@@ -1,0 +1,11 @@
+<Charactervariant inherit="Crawler" speciesname="Crawler_large" speciestranslationoverride="Crawler" usebosshealthbar="true">
+  <health vitality="160"/>
+  <ai combatstrength="160" avoidgunfire="False">
+    <!--Disables latching-->
+    <chooserandom>
+      <clear/>
+    </chooserandom>
+  </ai>
+  <ragdoll scalemultiplier="1.3"/>
+  <attack damagemultiplier="1.3" rangemultiplier="1.3" impactmultiplier="1.3" />
+</Charactervariant>
