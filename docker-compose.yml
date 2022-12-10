@@ -1,4 +1,6 @@
 version: "3"
+volumes:
+  barotrauma-data:
 services:
   barotrauma:
     image: barotrauma:latest
@@ -6,5 +8,5 @@ services:
       context: .
       target: barotrauma-server
     volumes:
-      - ./barotrauma-data/:/home/steam/barotrauma-data
+      - barotrauma-data:/home/steam/steamcmd/barotrauma-data
     command: ["sleep", "3600"]
