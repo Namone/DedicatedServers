@@ -1,0 +1,10 @@
+version: "3"
+services:
+  barotrauma:
+    image: barotrauma:latest
+    build:
+      context: .
+      target: barotrauma-server
+    volumes:
+      - ./barotrauma-data/:/home/steam/barotrauma-data
+    command: ["sleep", "3600"]
