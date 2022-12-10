@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+    annotations:
+        meta.helm.sh/release-name: barotrauma-server
+        meta.helm.sh/release-namespace: barotrauma-server
+    labels:
+        app.kubernetes.io/managed-by: Helm
+    name: barotrauma-server
+    namespace: barotrauma
+spec:
+    type: ClusterIP
+    ipFamilyPolicy: SingleStack
+    ports:
+        - name: barotrauma-server
+          port: 27015
+          protocol: TCP
+          targetPort: 27015
+    selector:
+        app: barotrauma-server
+    sessionAffinity: None

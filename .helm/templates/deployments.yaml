@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: barotrauma
+    namespace: barotrauma
+spec:
+    selector:
+        matchLabels:
+            app: barotrauma
+    template:
+        metadata:
+            labels:
+                app: barotrauma
+        spec:
+            containers:
+                - name: barotrauma
+                  image: {{ .Values.barotraumaImage }}
+                  command:
+                    - "steamcmd"
+                    - "+force_install_dir /home/barotrauma-data" 
+                    - "+login anonymous"
+                    - "+app_run 1026340"
+                  ports:
+                    - containerPort: 27015
+                  resources:
+                      limits:
+                        cpu: "0.1"
+                  volumeMounts:
+                    - mountPath: /home/barotrauma-data
+                      name: barotrauma-server-data
+            volumes:
+                - name: barotrauma-server-data
+                  emptyDir: { }

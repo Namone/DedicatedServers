@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+    annotations:
+        meta.helm.sh/release-name: barotrauma-server-endpoint
+        meta.helm.sh/release-namespace: barotrauma-server-endpoint
+        nginx.ingress.kubernetes.io/rewrite-target: /
+        nginx.ingress.kubernetes.io/upstream-vhost: barotrauma.namonesdedicatedserver.com
+    generation: 1
+    labels:
+        app: barotrauma-server-endpoint
+        app.kubernetes.io/managed-by: Helm
+    name: barotrauma-server-endpoint
+    namespace: barotrauma
+spec:
+    ingressClassName: nginx
+    rules:
+        - host: barotrauma.namonesdedicatedserver.com
+          http:
+              paths:
+                  - path: /
+                    pathType: Prefix
+                    backend:
+                        service:
+                            name: barotrauma-server
+                            port:
+                                name: barotrauma-server
