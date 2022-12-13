@@ -15,8 +15,6 @@ RUN apt-get update -y
 RUN apt-get install lib32gcc-s1 -y
 RUN apt-get install steam steamcmd -y
 
-
-
 # Link steamcmd
 RUN ln -s /usr/games/steamcmd steamcmd
 RUN useradd -m steam && useradd -m barouser && useradd -m pzuser
@@ -31,6 +29,9 @@ RUN mkdir /home/zomboid-data
 RUN chown -R steam:steam /home
 RUN chown -R barouser:barouser /home/barotrauma-data
 RUN chown -R pzuser:pzuser /home/zomboid-data
+
+# Replaces SystemCtl with a good enough Python replacement script.
+COPY /.docker/systemctl.py /usr/bin/systemctl
 
 # USER steam
 WORKDIR /home/steam
@@ -50,12 +51,16 @@ RUN /usr/games/steamcmd +force_install_dir /home/barotrauma-data +login anonymou
 
 # Run Barotrauma on port 27015; query port at 27016.
 EXPOSE 27015
-# EXPOSE 27016
+EXPOSE 27016
 
 FROM server-base as zomboid-server
 
+# Define the Zomboid server configuration as a service in SystemCtl.
 RUN mkdir /home/pzuser/.steam
-
+COPY /.docker/zomboid.conf /usr/lib/systemd/system/zomboid.service
 RUN /usr/games/steamcmd +force_install_dir /home/zomboid-data +login anonymous +app_update 380870 validate +quit
 
+EXPOSE 16261
 EXPOSE 16262
+
+CMD ["/bin/bash", "/home/zomboid-data/start-server.sh", "-servername", "NamonesWorld", "-adminpassword", "root"]

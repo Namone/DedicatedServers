@@ -41,3 +41,25 @@ spec:
     selector:
         app: zomboid-server
     sessionAffinity: None
+---
+apiVersion: v1
+kind: Service
+metadata:
+    annotations:
+        meta.helm.sh/release-name: zomboid-server-query
+        meta.helm.sh/release-namespace: zomboid-server-query
+    labels:
+        app.kubernetes.io/managed-by: Helm
+    name: zomboid-server-query
+    namespace: servers
+spec:
+    type: ClusterIP
+    ipFamilyPolicy: SingleStack
+    ports:
+        - name: zomboid-server-query
+          port: 16262
+          protocol: UDP
+          targetPort: 16262
+    selector:
+        app: zomboid-server
+    sessionAffinity: None

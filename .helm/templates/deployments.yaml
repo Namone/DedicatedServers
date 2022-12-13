@@ -49,11 +49,6 @@ spec:
             containers:
                 - name: zomboid
                   image: {{ .Values.zomboidImage }}
-                  command:
-                    - "/usr/games/steamcmd"
-                    - "+force_install_dir /home/zomboid-data" 
-                    - "+login anonymous"
-                    - "+app_run 380870"
                   ports:
                     - containerPort: 16261
                   resources:

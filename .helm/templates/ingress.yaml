@@ -35,3 +35,10 @@ spec:
                             name: zomboid-server
                             port:
                                 name: zomboid-server
+                  - path: /
+                    pathType: Prefix
+                    backend:
+                        service:
+                            name: zomboid-server-query
+                            port:
+                                name: zomboid-server-query
