@@ -4,16 +4,13 @@ metadata:
     annotations:
         meta.helm.sh/release-name: dedicated-server-endpoint
         meta.helm.sh/release-namespace: dedicated-server-endpoint
-        nginx.ingress.kubernetes.io/rewrite-target: /
-        nginx.ingress.kubernetes.io/upstream-vhost: barotrauma.namonesdedicatedserver.com
     generation: 1
     labels:
-        app: edicated-server-endpoint
+        app: dedicated-server-endpoint
         app.kubernetes.io/managed-by: Helm
     name: dedicated-server-endpoint
     namespace: servers
 spec:
-    ingressClassName: nginx
     rules:
         - host: barotrauma.namonesdedicatedserver.com
           http:

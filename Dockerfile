@@ -29,10 +29,6 @@ RUN mkdir /home/zomboid-data
 RUN chown -R steam:steam /home
 RUN chown -R barouser:barouser /home/barotrauma-data
 RUN chown -R pzuser:pzuser /home/zomboid-data
-
-# Replaces SystemCtl with a good enough Python replacement script.
-COPY /.docker/systemctl.py /usr/bin/systemctl
-
 # USER steam
 WORKDIR /home/steam
 
@@ -57,10 +53,8 @@ FROM server-base as zomboid-server
 
 # Define the Zomboid server configuration as a service in SystemCtl.
 RUN mkdir /home/pzuser/.steam
-COPY /.docker/zomboid.conf /usr/lib/systemd/system/zomboid.service
+
 RUN /usr/games/steamcmd +force_install_dir /home/steam/zomboid-data +login anonymous +app_update 380870 validate +quit
 
 EXPOSE 16261
 EXPOSE 16262
-
-CMD ["/bin/bash", "/home/zomboid-data/start-server.sh", "-servername", "NamonesWorld", "-adminpassword", "root"]

@@ -57,44 +57,17 @@ spec:
                     - "-adminpassword"
                     - "root"
                   ports:
-                    - containerPort: 16261
+                    - name: zomboid-server
+                      protocol: UDP
+                      containerPort: 16261
+                    - name: zomb-server-q
+                      protocol: UDP
+                      containerPort: 16262
                   resources:
                       limits:
                         cpu: "1"
                   volumeMounts:
                     - mountPath: /home/steam/zomboid-data
-                      name: zomboid-server-data
-            volumes:
-                - name: zomboid-server-data
-                  emptyDir: { }
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-    name: test-zomboid
-    namespace: servers
-spec:
-    selector:
-        matchLabels:
-            app: test-zomboid
-    template:
-        metadata:
-            labels:
-                app: test-zomboid
-        spec:
-            containers:
-                - name: test-zomboid
-                  image: {{ .Values.zomboidImage }}
-                  command:
-                    - "sleep"
-                    - "3600"
-                  ports:
-                    - containerPort: 16260
-                  resources:
-                      limits:
-                        cpu: "0.1"
-                  volumeMounts:
-                    - mountPath: /home/zomboid-data
                       name: zomboid-server-data
             volumes:
                 - name: zomboid-server-data
