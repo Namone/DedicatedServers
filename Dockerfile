@@ -58,7 +58,7 @@ FROM server-base as zomboid-server
 # Define the Zomboid server configuration as a service in SystemCtl.
 RUN mkdir /home/pzuser/.steam
 COPY /.docker/zomboid.conf /usr/lib/systemd/system/zomboid.service
-RUN /usr/games/steamcmd +force_install_dir /home/zomboid-data +login anonymous +app_update 380870 validate +quit
+RUN /usr/games/steamcmd +force_install_dir /home/steam/zomboid-data +login anonymous +app_update 380870 validate +quit
 
 EXPOSE 16261
 EXPOSE 16262

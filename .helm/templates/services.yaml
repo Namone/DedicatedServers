@@ -13,7 +13,7 @@ spec:
     ipFamilyPolicy: SingleStack
     ports:
         - name: baro-server
-          port: 27015
+          port: 80
           protocol: TCP
           targetPort: 27015
     selector:
@@ -35,7 +35,7 @@ spec:
     ipFamilyPolicy: SingleStack
     ports:
         - name: zomboid-server
-          port: 16261 
+          port: 80
           protocol: TCP
           targetPort: 16261
     selector:
@@ -46,17 +46,17 @@ apiVersion: v1
 kind: Service
 metadata:
     annotations:
-        meta.helm.sh/release-name: zomboid-server-query
-        meta.helm.sh/release-namespace: zomboid-server-query
+        meta.helm.sh/release-name: zomb-server-q
+        meta.helm.sh/release-namespace: zomb-server-q
     labels:
         app.kubernetes.io/managed-by: Helm
-    name: zomboid-server-query
+    name: zomb-server-q
     namespace: servers
 spec:
     type: ClusterIP
     ipFamilyPolicy: SingleStack
     ports:
-        - name: zomboid-server-query
+        - name: zomb-server-q
           port: 16262
           protocol: UDP
           targetPort: 16262

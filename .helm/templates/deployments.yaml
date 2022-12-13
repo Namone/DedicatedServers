@@ -26,7 +26,7 @@ spec:
                       limits:
                         cpu: "0.1"
                   volumeMounts:
-                    - mountPath: /home/barotrauma-data
+                    - mountPath: /home/steam/barotrauma-data
                       name: barotrauma-server-data
             volumes:
                 - name: barotrauma-server-data
@@ -49,8 +49,47 @@ spec:
             containers:
                 - name: zomboid
                   image: {{ .Values.zomboidImage }}
+                  command:
+                    - "/bin/bash"
+                    - "/home/zomboid-data/start-server.sh"
+                    - "-servername"
+                    - "NamonesWorld"
+                    - "-adminpassword"
+                    - "root"
                   ports:
                     - containerPort: 16261
+                  resources:
+                      limits:
+                        cpu: "1"
+                  volumeMounts:
+                    - mountPath: /home/steam/zomboid-data
+                      name: zomboid-server-data
+            volumes:
+                - name: zomboid-server-data
+                  emptyDir: { }
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: test-zomboid
+    namespace: servers
+spec:
+    selector:
+        matchLabels:
+            app: test-zomboid
+    template:
+        metadata:
+            labels:
+                app: test-zomboid
+        spec:
+            containers:
+                - name: test-zomboid
+                  image: {{ .Values.zomboidImage }}
+                  command:
+                    - "sleep"
+                    - "3600"
+                  ports:
+                    - containerPort: 16260
                   resources:
                       limits:
                         cpu: "0.1"
