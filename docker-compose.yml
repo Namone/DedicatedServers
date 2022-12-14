@@ -1,6 +1,7 @@
 version: "3"
 volumes:
   zomboid-data:
+  valheim-data:
 services:
   barotrauma:
     image: barotrauma:latest
@@ -23,3 +24,14 @@ services:
       - "16262:16272/udp"
     volumes:
       - zomboid-data:/home/steam/zomboid-data
+  valheim:
+    image: valheim:latest
+    build:
+      context: .
+      target: valheim-server
+    ports:
+      - "2456-2457:2456-2457/udp"
+    volumes:
+      - valheim-data:/home/steam/valheim-data
+    # environment:
+    #   - name=value

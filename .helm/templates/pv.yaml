@@ -12,7 +12,7 @@ metadata:
     type: server-data
 spec:
   persistentVolumeReclaimPolicy: Retain
-  storageClassName: local-storage
+  storageClassName: manual
   capacity:
     storage: 10Gi
   accessModes:

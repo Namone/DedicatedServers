@@ -17,13 +17,9 @@ RUN apt-get install steam steamcmd -y
 
 # Link steamcmd
 RUN ln -s /usr/games/steamcmd steamcmd
-RUN useradd -m steam && useradd -m barouser && useradd -m pzuser
+RUN useradd -m steam && useradd -m barouser && useradd -m pzuser && useradd -m valuser
 
 RUN usermod --password $(echo "root" | openssl passwd -1 -stdin) steam
-
-RUN wget archive.ubuntu.com/ubuntu/pool/main/o/openssl1.0/libssl1.0.0_1.0.2n-1ubuntu5.10_amd64.deb && dpkg -i libssl1.0.0_1.0.2n-1ubuntu5.10_amd64.deb
-RUN mkdir /home/barotrauma-data
-RUN mkdir /home/zomboid-data
 
 WORKDIR /home/steam
 
@@ -63,3 +59,18 @@ USER steam
 
 EXPOSE 16261
 EXPOSE 16262
+
+FROM server-base as valheim-server
+
+# Define the Zomboid server configuration as a service in SystemCtl.
+RUN mkdir /home/steam/valheim-data
+
+RUN /usr/games/steamcmd +force_install_dir /home/steam/valheim-data +login anonymous +app_update 896660 validate +quit
+
+RUN chown -R steam:steam /home/steam
+RUN chown -R valuser:valuser /home/steam/valheim-data
+
+USER steam
+
+EXPOSE 2456
+EXPOSE 2457

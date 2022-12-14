@@ -11,7 +11,7 @@ metadata:
 spec:
   volumeName: server-data
   volumeMode: Filesystem
-  storageClassName: local-storage
+  storageClassName: manual
   accessModes:
     - ReadWriteMany
   resources:
