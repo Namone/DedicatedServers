@@ -12,33 +12,49 @@ spec:
             labels:
                 app: dedicated-server
         spec:
-            volumes:  
-              - name: server-data-storage
+            volumes:
+              - name: server-data
+                # This AWS EBS volume must already exist.
                 persistentVolumeClaim:
                   claimName: server-data
+              # volumes:  
+            #   - name: server-data-storage
+            #     persistentVolumeClaim:
+            #       claimName: server-data
+            #   - name: root-data-storage
+            #     persistentVolumeClaim:
+            #       claimName: root-data
             containers:
-                - name: barotrauma
-                  image: {{ .Values.barotraumaImage }}
-                  command:
-                    - "/usr/games/steamcmd"
-                    - "+force_install_dir /home/barotrauma-data" 
-                    - "+login anonymous"
-                    - "+app_run 1026340"
-                  ports:
-                    - name: baro-server
-                      protocol: UDP
-                      containerPort: 27015
-                    - name: baro-server-q
-                      protocol: UDP
-                      containerPort: 27016
-                  resources:
-                      limits:
-                        cpu: "0.1"
-                  volumeMounts:
-                    - mountPath: /home/steam/barotrauma-data
-                      name: server-data-storage
+                # - name: barotrauma
+                #   image: {{ .Values.barotraumaImage }}
+                #   imagePullPolicy: Always
+                #   command:
+                #     - "/usr/games/steamcmd"
+                #     - "+force_install_dir /home/barotrauma-data" 
+                #     - "+login anonymous"
+                #     - "+app_run 1026340"
+                #   ports:
+                #     - name: baro-server
+                #       protocol: UDP
+                #       containerPort: 27015
+                #     - name: baro-server-q
+                #       protocol: UDP
+                #       containerPort: 27016
+                #   resources:
+                #       limits:
+                #         cpu: "2"
+                #         memory: 2Gi
+                #         ephemeral-storage: 4Gi
+                #       requests:
+                #         cpu: "0.5"
+                #         memory: 1Gi 
+                #         ephemeral-storage: 2Gi 
+                #   volumeMounts:
+                #     - mountPath: /home/steam/barotrauma-data
+                #       name: server-data-storage
                 - name: zomboid
                   image: {{ .Values.zomboidImage }}
+                  imagePullPolicy: Always
                   command:
                     - "/bin/bash"
                     - "/home/zomboid-data/start-server.sh"
@@ -55,29 +71,38 @@ spec:
                       containerPort: 16262
                   resources:
                       limits:
+                        cpu: "4"
+                        memory: 4Gi
+                      requests:
                         cpu: "1"
+                        memory: 1Gi 
                   volumeMounts:
-                    - mountPath: /home/steam/zomboid-data
-                      name: server-data-storage
-                    - mountPath: /home/steam/Zomboid
-                      name: server-data-storage
-                - name: valheim
-                  image: {{ .Values.valheimImage }}
-                  command:
-                    - "/bin/bash"
-                    - "/home/steam/valheim-data/valheim.sh"
-                  ports:
-                    - name: valheim-server
-                      protocol: UDP
-                      containerPort: 2456
-                    - name: val-server-q
-                      protocol: UDP
-                      containerPort: 2457
-                  resources:
-                      limits:
-                        cpu: "1"
-                  volumeMounts:
-                    - mountPath: /home/steam/valheim-data
-                      name: server-data-storage
-                    - mountPath: /home/steam/.config/unity3d/IronGate/Valheim/worlds
-                      name: server-data-storage
+                    - mountPath: /home/zomboid-data
+                      name: server-data
+                # - name: valheim
+                #   image: {{ .Values.valheimImage }}
+                #   imagePullPolicy: Always
+                #   command:
+                #     - "/bin/bash"
+                #     - "/home/steam/valheim-data/valheim.sh"
+                #   ports:
+                #     - name: valheim-server
+                #       protocol: UDP
+                #       containerPort: 2456
+                #     - name: val-server-q
+                #       protocol: UDP
+                #       containerPort: 2457
+                #   resources:
+                #       limits:
+                #         cpu: "2"
+                #         memory: 2Gi
+                #         ephemeral-storage: 4Gi
+                #       requests:
+                #         cpu: "0.5"
+                #         memory: 1Gi 
+                #         ephemeral-storage: 2Gi 
+                #   volumeMounts:
+                #     - mountPath: /home/steam/valheim-data
+                #       name: server-data-storage
+                #     - mountPath: /home/steam/.config/unity3d/IronGate/Valheim/worlds
+                #       name: server-data-storage

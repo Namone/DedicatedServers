@@ -36,8 +36,8 @@ RUN mkdir /home/steam/.local/share/Daedalic\ Entertainment\ GmbH/Barotrauma
 
 RUN /usr/games/steamcmd +force_install_dir /home/steam/barotrauma-data +login anonymous +app_update 1026340 validate +quit
 
-RUN chown -R steam:steam /home/steam
-RUN chown -R barouser:barouser /home/steam/barotrauma-data
+RUN chown -R steam:steam /home
+RUN chown -R barouser:barouser /home/barotrauma-data
 
 USER barouser
 
@@ -47,12 +47,11 @@ EXPOSE 27016
 
 FROM server-base as zomboid-server
 
-RUN mkdir /home/steam/Zomboid
-
-RUN /usr/games/steamcmd +force_install_dir /home/steam/zomboid-data +login anonymous +app_update 380870 validate +quit
+# Define the Zomboid server configuration as a service in SystemCtl.
+RUN /usr/games/steamcmd +force_install_dir /home/zomboid-data +login anonymous +app_update 380870 validate +quit
 
 RUN chown -R steam:steam /home/steam
-RUN chown -R pzuser:pzuser /home/steam/zomboid-data
+RUN chown -R pzuser:pzuser /home/zomboid-data
 
 USER steam
 
@@ -62,13 +61,13 @@ EXPOSE 16262
 FROM server-base as valheim-server
 
 RUN mkdir /home/steam/valheim-data
-COPY internal/valheim/valheim.sh /home/steam/valheim-data
+COPY internal/valheim/valheim.sh /home/valheim-data
 RUN chmod u+x /home/steam/valheim-data
 
-RUN /usr/games/steamcmd +force_install_dir /home/steam/valheim-data +login anonymous +app_update 896660 validate +quit
+RUN /usr/games/steamcmd +force_install_dir /home/valheim-data +login anonymous +app_update 896660 validate +quit
 
-RUN chown -R steam:steam /home/steam
-RUN chown -R valuser:valuser /home/steam/valheim-data
+RUN chown -R steam:steam /home
+RUN chown -R valuser:valuser /home/valheim-data
 
 USER steam
 

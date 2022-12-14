@@ -1,19 +1,20 @@
 apiVersion: v1
-kind: PersistentVolumeClaim
+kind: PersistentVolume
 metadata:
   annotations:
       meta.helm.sh/release-name: dedicated-server-deployment
       meta.helm.sh/release-namespace: dedicated-server-deployment
   labels:
       app.kubernetes.io/managed-by: Helm
-  name: server-data
-  namespace: servers
+  name: efs-server-data
 spec:
-  volumeName: server-data
+  capacity:
+    storage: 16Gi
   volumeMode: Filesystem
-  storageClassName: manual
   accessModes:
-    - ReadWriteMany
-  resources:
-    requests:
-      storage: 3Gi
+    - ReadWriteOnce
+  storageClassName: ""
+  persistentVolumeReclaimPolicy: Retain
+  csi:
+    driver: efs.csi.aws.com
+    volumeHandle: fs-08c85a185c3b5d475
