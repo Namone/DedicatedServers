@@ -47,7 +47,6 @@ EXPOSE 27016
 
 FROM server-base as zomboid-server
 
-# Define the Zomboid server configuration as a service in SystemCtl.
 RUN mkdir /home/steam/Zomboid
 
 RUN /usr/games/steamcmd +force_install_dir /home/steam/zomboid-data +login anonymous +app_update 380870 validate +quit
@@ -62,8 +61,9 @@ EXPOSE 16262
 
 FROM server-base as valheim-server
 
-# Define the Zomboid server configuration as a service in SystemCtl.
 RUN mkdir /home/steam/valheim-data
+COPY internal/valheim/valheim.sh /home/steam/valheim-data
+RUN chmod u+x /home/steam/valheim-data
 
 RUN /usr/games/steamcmd +force_install_dir /home/steam/valheim-data +login anonymous +app_update 896660 validate +quit
 

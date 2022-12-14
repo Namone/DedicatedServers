@@ -1,17 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-    name: barotrauma
+    name: dedicated-server
     namespace: servers
 spec:
     selector:
         matchLabels:
-            app: barotrauma
+            app: dedicated-server
     template:
         metadata:
             labels:
-                app: barotrauma
+                app: dedicated-server
         spec:
+            volumes:  
+              - name: server-data-storage
+                persistentVolumeClaim:
+                  claimName: server-data
             containers:
                 - name: barotrauma
                   image: {{ .Values.barotraumaImage }}
@@ -21,41 +25,27 @@ spec:
                     - "+login anonymous"
                     - "+app_run 1026340"
                   ports:
-                    - containerPort: 27015
+                    - name: baro-server
+                      protocol: UDP
+                      containerPort: 27015
+                    - name: baro-server-q
+                      protocol: UDP
+                      containerPort: 27016
                   resources:
                       limits:
                         cpu: "0.1"
                   volumeMounts:
                     - mountPath: /home/steam/barotrauma-data
-                      name: barotrauma-server-data
-            volumes:
-                - name: barotrauma-server-data
-                  emptyDir: { }
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-    name: zomboid
-    namespace: servers
-spec:
-    selector:
-        matchLabels:
-            app: zomboid
-    template:
-        metadata:
-            labels:
-                app: zomboid
-        spec:
-            volumes:  
-              - name: server-data-storage
-                persistentVolumeClaim:
-                  claimName: server-data
-            containers:
+                      name: server-data-storage
                 - name: zomboid
                   image: {{ .Values.zomboidImage }}
                   command:
-                    - "sleep"
-                    - "3600"
+                    - "/bin/bash"
+                    - "/home/zomboid-data/start-server.sh"
+                    - "-servername"
+                    - "NamonesWorld"
+                    - "-adminpassword"
+                    - "root"
                   ports:
                     - name: zomboid-server
                       protocol: UDP
@@ -71,37 +61,17 @@ spec:
                       name: server-data-storage
                     - mountPath: /home/steam/Zomboid
                       name: server-data-storage
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-    name: valheim
-    namespace: servers
-spec:
-    selector:
-        matchLabels:
-            app: valheim
-    template:
-        metadata:
-            labels:
-                app: valheim
-        spec:
-            volumes:  
-              - name: server-data-storage
-                persistentVolumeClaim:
-                  claimName: server-data
-            containers:
                 - name: valheim
                   image: {{ .Values.valheimImage }}
                   command:
-                    - "sleep"
-                    - "3600"
+                    - "/bin/bash"
+                    - "/home/steam/valheim-data/valheim.sh"
                   ports:
                     - name: valheim-server
-                      protocol: TCP
+                      protocol: UDP
                       containerPort: 2456
                     - name: val-server-q
-                      protocol: TCP
+                      protocol: UDP
                       containerPort: 2457
                   resources:
                       limits:

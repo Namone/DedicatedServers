@@ -18,5 +18,10 @@ docker build -t $GAME --target $GAME-server --no-cache .
 docker image tag $GAME 262580537006.dkr.ecr.us-west-2.amazonaws.com/dedicated-servers:$GAME
 docker image push 262580537006.dkr.ecr.us-west-2.amazonaws.com/dedicated-servers:$GAME
 
+GAME="valheim"
+docker build -t $GAME --target $GAME-server --no-cache . 
+docker image tag $GAME 262580537006.dkr.ecr.us-west-2.amazonaws.com/dedicated-servers:$GAME
+docker image push 262580537006.dkr.ecr.us-west-2.amazonaws.com/dedicated-servers:$GAME
+
 
 echo "Build finished!"

@@ -33,5 +33,3 @@ services:
       - "2456-2457:2456-2457/udp"
     volumes:
       - valheim-data:/home/steam/valheim-data
-    # environment:
-    #   - name=value
