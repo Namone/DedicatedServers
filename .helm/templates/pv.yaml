@@ -7,7 +7,6 @@ metadata:
   labels:
       app.kubernetes.io/managed-by: Helm
   name: server-data
-  namespace: servers
   labels:
     type: server-data
 spec:

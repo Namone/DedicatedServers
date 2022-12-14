@@ -54,12 +54,8 @@ spec:
                 - name: zomboid
                   image: {{ .Values.zomboidImage }}
                   command:
-                    - "/bin/bash"
-                    - "/home/steam/zomboid-data/start-server.sh"
-                    - "-servername"
-                    - "NamonesWorld"
-                    - "-adminpassword"
-                    - "root"
+                    - "sleep"
+                    - "3600"
                   ports:
                     - name: zomboid-server
                       protocol: UDP
@@ -74,4 +70,44 @@ spec:
                     - mountPath: /home/steam/zomboid-data
                       name: server-data-storage
                     - mountPath: /home/steam/Zomboid
+                      name: server-data-storage
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: valheim
+    namespace: servers
+spec:
+    selector:
+        matchLabels:
+            app: valheim
+    template:
+        metadata:
+            labels:
+                app: valheim
+        spec:
+            volumes:  
+              - name: server-data-storage
+                persistentVolumeClaim:
+                  claimName: server-data
+            containers:
+                - name: valheim
+                  image: {{ .Values.valheimImage }}
+                  command:
+                    - "sleep"
+                    - "3600"
+                  ports:
+                    - name: valheim-server
+                      protocol: TCP
+                      containerPort: 2456
+                    - name: val-server-q
+                      protocol: TCP
+                      containerPort: 2457
+                  resources:
+                      limits:
+                        cpu: "1"
+                  volumeMounts:
+                    - mountPath: /home/steam/valheim-data
+                      name: server-data-storage
+                    - mountPath: /home/steam/.config/unity3d/IronGate/Valheim/worlds
                       name: server-data-storage
