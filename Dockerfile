@@ -52,9 +52,12 @@ EXPOSE 27016
 FROM server-base as zomboid-server
 
 # Define the Zomboid server configuration as a service in SystemCtl.
-RUN mkdir /home/pzuser/.steam
+RUN mkdir /home/steam/Zomboid
 
 RUN /usr/games/steamcmd +force_install_dir /home/steam/zomboid-data +login anonymous +app_update 380870 validate +quit
+
+RUN chown steam:steam -R /home/steam
+USER steam
 
 EXPOSE 16261
 EXPOSE 16262

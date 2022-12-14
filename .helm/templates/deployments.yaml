@@ -46,12 +46,16 @@ spec:
             labels:
                 app: zomboid
         spec:
+            volumes:  
+              - name: server-data-storage
+                persistentVolumeClaim:
+                  claimName: server-data
             containers:
                 - name: zomboid
                   image: {{ .Values.zomboidImage }}
                   command:
                     - "/bin/bash"
-                    - "/home/zomboid-data/start-server.sh"
+                    - "/home/steam/zomboid-data/start-server.sh"
                     - "-servername"
                     - "NamonesWorld"
                     - "-adminpassword"
@@ -68,7 +72,6 @@ spec:
                         cpu: "1"
                   volumeMounts:
                     - mountPath: /home/steam/zomboid-data
-                      name: zomboid-server-data
-            volumes:
-                - name: zomboid-server-data
-                  emptyDir: { }
+                      name: server-data-storage
+                    - mountPath: /home/steam/Zomboid
+                      name: server-data-storage
