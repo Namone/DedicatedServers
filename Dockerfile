@@ -25,11 +25,6 @@ RUN wget archive.ubuntu.com/ubuntu/pool/main/o/openssl1.0/libssl1.0.0_1.0.2n-1ub
 RUN mkdir /home/barotrauma-data
 RUN mkdir /home/zomboid-data
 
-
-RUN chown -R steam:steam /home
-RUN chown -R barouser:barouser /home/barotrauma-data
-RUN chown -R pzuser:pzuser /home/zomboid-data
-# USER steam
 WORKDIR /home/steam
 
 #### Configure Barotrauma Server & related dependenices for the environment it runs within. #####
@@ -43,7 +38,12 @@ RUN mkdir /home/steam/.local/share
 RUN mkdir /home/steam/.local/share/Daedalic\ Entertainment\ GmbH
 RUN mkdir /home/steam/.local/share/Daedalic\ Entertainment\ GmbH/Barotrauma
 
-RUN /usr/games/steamcmd +force_install_dir /home/barotrauma-data +login anonymous +app_update 1026340 validate +quit
+RUN /usr/games/steamcmd +force_install_dir /home/steam/barotrauma-data +login anonymous +app_update 1026340 validate +quit
+
+RUN chown -R steam:steam /home/steam
+RUN chown -R barouser:barouser /home/steam/barotrauma-data
+
+USER barouser
 
 # Run Barotrauma on port 27015; query port at 27016.
 EXPOSE 27015
@@ -56,7 +56,9 @@ RUN mkdir /home/steam/Zomboid
 
 RUN /usr/games/steamcmd +force_install_dir /home/steam/zomboid-data +login anonymous +app_update 380870 validate +quit
 
-RUN chown steam:steam -R /home/steam
+RUN chown -R steam:steam /home/steam
+RUN chown -R pzuser:pzuser /home/steam/zomboid-data
+
 USER steam
 
 EXPOSE 16261
