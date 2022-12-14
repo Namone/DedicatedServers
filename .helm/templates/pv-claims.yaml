@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  annotations:
+      meta.helm.sh/release-name: dedicated-server-deployment
+      meta.helm.sh/release-namespace: dedicated-server-deployment
+  labels:
+      app.kubernetes.io/managed-by: Helm
+  name: server-data
+  namespace: servers
+spec:
+  volumeName: server-data
+  volumeMode: Filesystem
+  storageClassName: manual
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 3Gi

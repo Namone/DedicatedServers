@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: aws-auth
+  namespace: servers
+data:
+  mapRoles: |
+    - rolearn: arn:aws:iam::262580537006:role/Admin
+      username: system:node:DedicatedServer
+      groups:
+        - system:bootstrappers
+        - system:nodes

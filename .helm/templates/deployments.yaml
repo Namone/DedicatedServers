@@ -1,17 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-    name: barotrauma
+    name: dedicated-server
     namespace: servers
 spec:
     selector:
         matchLabels:
-            app: barotrauma
+            app: dedicated-server
     template:
         metadata:
             labels:
-                app: barotrauma
+                app: dedicated-server
         spec:
+            volumes:  
+              - name: server-data-storage
+                persistentVolumeClaim:
+                  claimName: server-data
             containers:
                 - name: barotrauma
                   image: {{ .Values.barotraumaImage }}
@@ -21,47 +25,59 @@ spec:
                     - "+login anonymous"
                     - "+app_run 1026340"
                   ports:
-                    - containerPort: 27015
+                    - name: baro-server
+                      protocol: UDP
+                      containerPort: 27015
+                    - name: baro-server-q
+                      protocol: UDP
+                      containerPort: 27016
                   resources:
                       limits:
                         cpu: "0.1"
                   volumeMounts:
-                    - mountPath: /home/barotrauma-data
-                      name: barotrauma-server-data
-            volumes:
-                - name: barotrauma-server-data
-                  emptyDir: { }
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-    name: zomboid
-    namespace: servers
-spec:
-    selector:
-        matchLabels:
-            app: zomboid
-    template:
-        metadata:
-            labels:
-                app: zomboid
-        spec:
-            containers:
+                    - mountPath: /home/steam/barotrauma-data
+                      name: server-data-storage
                 - name: zomboid
                   image: {{ .Values.zomboidImage }}
                   command:
-                    - "/usr/games/steamcmd"
-                    - "+force_install_dir /home/zomboid-data" 
-                    - "+login anonymous"
-                    - "+app_run 380870"
+                    - "/bin/bash"
+                    - "/home/zomboid-data/start-server.sh"
+                    - "-servername"
+                    - "NamonesWorld"
+                    - "-adminpassword"
+                    - "root"
                   ports:
-                    - containerPort: 16261
+                    - name: zomboid-server
+                      protocol: UDP
+                      containerPort: 16261
+                    - name: zomb-server-q
+                      protocol: UDP
+                      containerPort: 16262
                   resources:
                       limits:
-                        cpu: "0.1"
+                        cpu: "1"
                   volumeMounts:
-                    - mountPath: /home/zomboid-data
-                      name: zomboid-server-data
-            volumes:
-                - name: zomboid-server-data
-                  emptyDir: { }
+                    - mountPath: /home/steam/zomboid-data
+                      name: server-data-storage
+                    - mountPath: /home/steam/Zomboid
+                      name: server-data-storage
+                - name: valheim
+                  image: {{ .Values.valheimImage }}
+                  command:
+                    - "/bin/bash"
+                    - "/home/steam/valheim-data/valheim.sh"
+                  ports:
+                    - name: valheim-server
+                      protocol: UDP
+                      containerPort: 2456
+                    - name: val-server-q
+                      protocol: UDP
+                      containerPort: 2457
+                  resources:
+                      limits:
+                        cpu: "1"
+                  volumeMounts:
+                    - mountPath: /home/steam/valheim-data
+                      name: server-data-storage
+                    - mountPath: /home/steam/.config/unity3d/IronGate/Valheim/worlds
+                      name: server-data-storage
