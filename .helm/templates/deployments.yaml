@@ -13,10 +13,10 @@ spec:
                 app: dedicated-server
         spec:
             volumes:
-              - name: server-data
-                # This AWS EBS volume must already exist.
+              - name: persistent-storage
+                # This AWS EFS volume must already exist.
                 persistentVolumeClaim:
-                  claimName: server-data
+                  claimName: efs-claim
               # volumes:  
             #   - name: server-data-storage
             #     persistentVolumeClaim:
@@ -77,8 +77,14 @@ spec:
                         cpu: "1"
                         memory: 1Gi 
                   volumeMounts:
-                    - mountPath: /home/zomboid-data
-                      name: server-data
+                    - name: persistent-storage
+                      mountPath: /home/zomboid-data
+            
+                  # volumeMounts:
+                  #   - mountPath: /home/zomboid-data
+                  #     name: server-data
+                  #   - mountPath: /root/Zomboid
+                  #     name: server-data
                 # - name: valheim
                 #   image: {{ .Values.valheimImage }}
                 #   imagePullPolicy: Always
