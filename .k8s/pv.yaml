@@ -12,7 +12,7 @@ spec:
     storage: 16Gi
   volumeMode: Filesystem
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   storageClassName: efs-sc
   persistentVolumeReclaimPolicy: Retain
   csi:

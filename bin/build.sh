@@ -8,8 +8,8 @@ aws ecr get-login-password \
         --password-stdin \262580537006.dkr.ecr.us-west-2.amazonaws.com/dedicated-servers
 
 echo "Building, tagging, and pushing image for $GAME..."
-docker build -t $GAME --target $GAME-server .
-docker image tag $GAME 262580537006.dkr.ecr.us-west-2.amazonaws.com/dedicated-servers:$GAME
-docker image push 262580537006.dkr.ecr.us-west-2.amazonaws.com/dedicated-servers:$GAME
+docker build -t zomboid:new --target zomboid-server .
+docker image tag zomboid:new 262580537006.dkr.ecr.us-west-2.amazonaws.com/dedicated-servers:new
+docker image push 262580537006.dkr.ecr.us-west-2.amazonaws.com/dedicated-servers:new
 
 echo "Build finished for $GAME!"

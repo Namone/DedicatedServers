@@ -3,17 +3,17 @@ volumes:
   zomboid-data:
   valheim-data:
 services:
-  barotrauma:
-    image: barotrauma:latest
-    build:
-      context: .
-      target: barotrauma-server
-    ports:
-      - 27015:27015
-      - 27016:27016
-    volumes:
-      - ./barotrauma-data:/home/barotrauma-data
-    command: ["/usr/games/steamcmd", "+force_install_dir /home/barotrauma-data", "+login anonymous", "+app_run 1026340"]
+  # barotrauma:
+  #   image: barotrauma:latest
+  #   build:
+  #     context: .
+  #     target: barotrauma-server
+  #   ports:
+  #     - 27015:27015
+  #     - 27016:27016
+  #   volumes:
+  #     - ./barotrauma-data:/home/barotrauma-data
+  #   command: ["/usr/games/steamcmd", "+force_install_dir /home/barotrauma-data", "+login anonymous", "+app_run 1026340"]
   zomboid:
     image: zomboid:latest
     build:
@@ -23,13 +23,16 @@ services:
       - "16261:16261/udp"
       - "16262:16272/udp"
     volumes:
-      - zomboid-data:/home/steam/zomboid-data
-  valheim:
-    image: valheim:latest
-    build:
-      context: .
-      target: valheim-server
-    ports:
-      - "2456-2457:2456-2457/udp"
-    volumes:
-      - valheim-data:/home/steam/valheim-data
+      - ./internal/Zomboid:/root/Zomboid
+    command: ["sleep", "9000"]
+  # valheim:
+  #   image: valheim:latest
+  #   build:
+  #     context: .
+  #     target: valheim-server
+  #   ports:
+  #     - "2456-2457:2456-2457/udp"
+  #   volumes:
+  #     - valheim-data:/home/steam/valheim-data
+
+  # /bin/bash /home/pzuser/zomboid-data/start-server.sh -servername NamonesWorld -adminpassword root

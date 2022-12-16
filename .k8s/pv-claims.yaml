@@ -11,8 +11,8 @@ metadata:
 spec:
   volumeName: efs-pv
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   storageClassName: efs-sc
   resources:
     requests:
-      storage: 16Gi
+      storage: 10Gi

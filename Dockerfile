@@ -20,7 +20,7 @@ RUN ln -s /usr/games/steamcmd steamcmd
 RUN useradd -m steam && useradd -m barouser && useradd -m pzuser && useradd -m valuser
 
 RUN usermod --password $(echo "root" | openssl passwd -1 -stdin) steam
-
+RUN chown -R steam:steam /home
 WORKDIR /home/steam
 
 #### Configure Barotrauma Server & related dependenices for the environment it runs within. #####
@@ -47,13 +47,18 @@ EXPOSE 27016
 
 FROM server-base as zomboid-server
 
-# Define the Zomboid server configuration as a service in SystemCtl.
-RUN /usr/games/steamcmd +force_install_dir /home/zomboid-data +login anonymous +app_update 380870 validate +quit
+WORKDIR /home/pzuser
 
-RUN chown -R steam:steam /home/steam
-RUN chown -R pzuser:pzuser /home/zomboid-data
 
-USER steam
+RUN /usr/games/steamcmd +force_install_dir /home/pzuser/zomboid-data +login anonymous +app_update 380870 validate +quit
+RUN rm /home/pzuser/zomboid-data/start-server.sh
+COPY internal/start-server.sh /home/pzuser/zomboid-data/start-server.sh
+
+COPY internal/Zomboid /root/Zomboid
+
+RUN chown -R pzuser:pzuser /home/pzuser
+
+USER root
 
 EXPOSE 16261
 EXPOSE 16262

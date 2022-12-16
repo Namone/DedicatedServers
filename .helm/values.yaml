@@ -1,5 +1,5 @@
 barotraumaImage: "262580537006.dkr.ecr.us-west-2.amazonaws.com/dedicated-servers:barotrauma"
-zomboidImage: "262580537006.dkr.ecr.us-west-2.amazonaws.com/dedicated-servers:zomboid"
+zomboidImage: "262580537006.dkr.ecr.us-west-2.amazonaws.com/dedicated-servers:zomboid-1"
 valheimImage: "262580537006.dkr.ecr.us-west-2.amazonaws.com/dedicated-servers:valheim"
 
 env:

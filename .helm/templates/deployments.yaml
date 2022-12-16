@@ -52,16 +52,19 @@ spec:
                 #   volumeMounts:
                 #     - mountPath: /home/steam/barotrauma-data
                 #       name: server-data-storage
+                # ERROR: ld.so: object 'libjsig.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+
                 - name: zomboid
                   image: {{ .Values.zomboidImage }}
                   imagePullPolicy: Always
                   command:
-                    - "/bin/bash"
-                    - "/home/zomboid-data/start-server.sh"
-                    - "-servername"
-                    - "NamonesWorld"
-                    - "-adminpassword"
-                    - "root"
+                    - "sleep"
+                    - "9000"
+                    # - "/home/pzuser/zomboid-data/start-server.sh"
+                    # - "-servername"
+                    # - "NamonesWorld"
+                    # - "-adminpassword"
+                    # - "root"
                   ports:
                     - name: zomboid-server
                       protocol: UDP
@@ -71,14 +74,18 @@ spec:
                       containerPort: 16262
                   resources:
                       limits:
-                        cpu: "4"
-                        memory: 4Gi
+                        cpu: "2"
+                        memory: 2Gi
+                        ephemeral-storage: 18Gi
                       requests:
                         cpu: "1"
-                        memory: 1Gi 
+                        memory: 1Gi
+                        ephemeral-storage: 8Gi
                   volumeMounts:
                     - name: persistent-storage
-                      mountPath: /home/zomboid-data
+                      mountPath: /root/Zomboid
+                    - name: persistent-storage
+                      mountPath: /home/pzuser
             
                   # volumeMounts:
                   #   - mountPath: /home/zomboid-data
