@@ -6,13 +6,32 @@ metadata:
       meta.helm.sh/release-namespace: dedicated-server-deployment
   labels:
       app.kubernetes.io/managed-by: Helm
-  name: efs-claim
+  name: claim-storage-1
   namespace: servers
 spec:
-  volumeName: efs-pv
+  volumeName: pv-storage-1
   accessModes:
     - ReadWriteMany
-  storageClassName: efs-sc
+  storageClassName: manual
   resources:
     requests:
-      storage: 10Gi
+      storage: 32Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  annotations:
+      meta.helm.sh/release-name: dedicated-server-deployment
+      meta.helm.sh/release-namespace: dedicated-server-deployment
+  labels:
+      app.kubernetes.io/managed-by: Helm
+  name: claim-storage-2
+  namespace: servers
+spec:
+  volumeName: pv-storage-2
+  accessModes:
+    - ReadWriteMany
+  storageClassName: manual
+  resources:
+    requests:
+      storage: 8Gi

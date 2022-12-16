@@ -5,11 +5,11 @@ echo "Refreshing AWS access token..."
 aws ecr get-login-password \
         --region us-west-2 | docker login \
         --username AWS \
-        --password-stdin \262580537006.dkr.ecr.us-west-2.amazonaws.com/dedicated-servers
+        --password-stdin \262580537006.dkr.ecr.us-west-2.amazonaws.com/$GAME-server
 
 echo "Building, tagging, and pushing image for $GAME..."
-docker build -t zomboid:new --target zomboid-server .
-docker image tag zomboid:new 262580537006.dkr.ecr.us-west-2.amazonaws.com/dedicated-servers:new
-docker image push 262580537006.dkr.ecr.us-west-2.amazonaws.com/dedicated-servers:new
+docker build -t $GAME --target $GAME-server .
+docker image tag $GAME 262580537006.dkr.ecr.us-west-2.amazonaws.com/$GAME-server:1
+docker image push 262580537006.dkr.ecr.us-west-2.amazonaws.com/$GAME-server:1
 
 echo "Build finished for $GAME!"

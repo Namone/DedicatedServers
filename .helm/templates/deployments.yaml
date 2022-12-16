@@ -12,59 +12,38 @@ spec:
             labels:
                 app: dedicated-server
         spec:
-            volumes:
-              - name: persistent-storage
-                # This AWS EFS volume must already exist.
+            # volumes:
+              # - name: persistent-storage
+              #   # This AWS EFS volume must already exist.
+              #   persistentVolumeClaim:
+              #     claimName: efs-claim
+            volumes:  
+              - name: storage-1
                 persistentVolumeClaim:
-                  claimName: efs-claim
-              # volumes:  
-            #   - name: server-data-storage
-            #     persistentVolumeClaim:
-            #       claimName: server-data
-            #   - name: root-data-storage
-            #     persistentVolumeClaim:
-            #       claimName: root-data
+                  claimName: claim-storage-1
+              - name: storage-2
+                persistentVolumeClaim:
+                  claimName: claim-storage-2
             containers:
-                # - name: barotrauma
-                #   image: {{ .Values.barotraumaImage }}
-                #   imagePullPolicy: Always
-                #   command:
-                #     - "/usr/games/steamcmd"
-                #     - "+force_install_dir /home/barotrauma-data" 
-                #     - "+login anonymous"
-                #     - "+app_run 1026340"
-                #   ports:
-                #     - name: baro-server
-                #       protocol: UDP
-                #       containerPort: 27015
-                #     - name: baro-server-q
-                #       protocol: UDP
-                #       containerPort: 27016
-                #   resources:
-                #       limits:
-                #         cpu: "2"
-                #         memory: 2Gi
-                #         ephemeral-storage: 4Gi
-                #       requests:
-                #         cpu: "0.5"
-                #         memory: 1Gi 
-                #         ephemeral-storage: 2Gi 
-                #   volumeMounts:
-                #     - mountPath: /home/steam/barotrauma-data
-                #       name: server-data-storage
-                # ERROR: ld.so: object 'libjsig.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
-
                 - name: zomboid
                   image: {{ .Values.zomboidImage }}
                   imagePullPolicy: Always
                   command:
-                    - "sleep"
-                    - "9000"
-                    # - "/home/pzuser/zomboid-data/start-server.sh"
-                    # - "-servername"
-                    # - "NamonesWorld"
-                    # - "-adminpassword"
-                    # - "root"
+                    - "/usr/games/steamcmd"
+                    - "+force_install_dir"
+                    - "/home/pzuser/zomboid-data"
+                    - "+login"
+                    - "anonymous"
+                    - "+app_update"
+                    - "380870"
+                    - "validate" 
+                    - "+quit"
+                    - "&&"
+                    - "./zomboid-data/start-server.sh"
+                    - "-servername"
+                    - "NamonesWorld"
+                    - "-adminpassword"
+                    - "Muggins1"
                   ports:
                     - name: zomboid-server
                       protocol: UDP
@@ -75,47 +54,42 @@ spec:
                   resources:
                       limits:
                         cpu: "2"
-                        memory: 2Gi
-                        ephemeral-storage: 18Gi
+                        memory: 8Gi
+                        ephemeral-storage: 32Gi
                       requests:
                         cpu: "1"
-                        memory: 1Gi
+                        memory: 4Gi
                         ephemeral-storage: 8Gi
                   volumeMounts:
-                    - name: persistent-storage
-                      mountPath: /root/Zomboid
-                    - name: persistent-storage
+                    - name: storage-1
                       mountPath: /home/pzuser
+                    - name: storage-2
+                      mountPath: /root/Zomboid
+                - name: valheim
+                  image: {{ .Values.valheimImage }}
+                  imagePullPolicy: Always
+                  command:
+                    - "sleep"
+                    - "9000"
+                  ports:
+                    - name: valheim-server
+                      protocol: UDP
+                      containerPort: 2456
+                    - name: val-server-q
+                      protocol: UDP
+                      containerPort: 2457
+                  resources:
+                      limits:
+                        cpu: "2"
+                        memory: 4Gi
+                        ephemeral-storage: 4Gi
+                      requests:
+                        cpu: "1"
+                        memory: 2Gi
+                        ephemeral-storage: 2Gi
+                  volumeMounts:
+                    - name: storage-1
+                      mountPath: /home/valuser
+                    - name: storage-2
+                      mountPath: /home/.config/unity3d/IronGate/Valheim/Worlds
             
-                  # volumeMounts:
-                  #   - mountPath: /home/zomboid-data
-                  #     name: server-data
-                  #   - mountPath: /root/Zomboid
-                  #     name: server-data
-                # - name: valheim
-                #   image: {{ .Values.valheimImage }}
-                #   imagePullPolicy: Always
-                #   command:
-                #     - "/bin/bash"
-                #     - "/home/steam/valheim-data/valheim.sh"
-                #   ports:
-                #     - name: valheim-server
-                #       protocol: UDP
-                #       containerPort: 2456
-                #     - name: val-server-q
-                #       protocol: UDP
-                #       containerPort: 2457
-                #   resources:
-                #       limits:
-                #         cpu: "2"
-                #         memory: 2Gi
-                #         ephemeral-storage: 4Gi
-                #       requests:
-                #         cpu: "0.5"
-                #         memory: 1Gi 
-                #         ephemeral-storage: 2Gi 
-                #   volumeMounts:
-                #     - mountPath: /home/steam/valheim-data
-                #       name: server-data-storage
-                #     - mountPath: /home/steam/.config/unity3d/IronGate/Valheim/worlds
-                #       name: server-data-storage

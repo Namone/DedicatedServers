@@ -6,15 +6,34 @@ metadata:
       meta.helm.sh/release-namespace: dedicated-server-deployment
   labels:
       app.kubernetes.io/managed-by: Helm
-  name: efs-pv
+  name: pv-storage-1
 spec:
   capacity:
-    storage: 16Gi
+    storage: 32Gi
   volumeMode: Filesystem
   accessModes:
     - ReadWriteMany
-  storageClassName: efs-sc
+  storageClassName: manual
   persistentVolumeReclaimPolicy: Retain
-  csi:
-    driver: efs.csi.aws.com
-    volumeHandle: fs-0e196e403f6673525
+  hostPath:
+    path: "/home"
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  annotations:
+      meta.helm.sh/release-name: dedicated-server-deployment
+      meta.helm.sh/release-namespace: dedicated-server-deployment
+  labels:
+      app.kubernetes.io/managed-by: Helm
+  name: pv-storage-2
+spec:
+  capacity:
+    storage: 8Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany
+  storageClassName: manual
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: "/root"

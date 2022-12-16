@@ -24,15 +24,14 @@ services:
       - "16262:16272/udp"
     volumes:
       - ./internal/Zomboid:/root/Zomboid
-    command: ["sleep", "9000"]
-  # valheim:
-  #   image: valheim:latest
-  #   build:
-  #     context: .
-  #     target: valheim-server
-  #   ports:
-  #     - "2456-2457:2456-2457/udp"
-  #   volumes:
-  #     - valheim-data:/home/steam/valheim-data
-
-  # /bin/bash /home/pzuser/zomboid-data/start-server.sh -servername NamonesWorld -adminpassword root
+    command: ["zomboid-data/start-server.sh", "-servername", "NamonesWorld", "-adminpassword", "root"]
+  valheim:
+    image: valheim:latest
+    build:
+      context: .
+      target: valheim-server
+    ports:
+      - "2456:2456/udp"
+      - "2457:2457/udp"
+    volumes:
+      - valheim-data:/home/steam/valheim-data

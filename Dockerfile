@@ -14,7 +14,8 @@ RUN dpkg --add-architecture i386
 RUN apt-get update -y
 RUN apt-get install lib32gcc-s1 -y
 RUN apt-get install steam steamcmd -y
-
+# RUN apt-get install --reinstall libcairomm-1.0-1v5 libglibmm-2.4-1v5 \
+# libsigc++-2.0-0v5
 # Link steamcmd
 RUN ln -s /usr/games/steamcmd steamcmd
 RUN useradd -m steam && useradd -m barouser && useradd -m pzuser && useradd -m valuser
@@ -49,7 +50,6 @@ FROM server-base as zomboid-server
 
 WORKDIR /home/pzuser
 
-
 RUN /usr/games/steamcmd +force_install_dir /home/pzuser/zomboid-data +login anonymous +app_update 380870 validate +quit
 RUN rm /home/pzuser/zomboid-data/start-server.sh
 COPY internal/start-server.sh /home/pzuser/zomboid-data/start-server.sh
@@ -65,16 +65,17 @@ EXPOSE 16262
 
 FROM server-base as valheim-server
 
-RUN mkdir /home/steam/valheim-data
-COPY internal/valheim/valheim.sh /home/valheim-data
-RUN chmod u+x /home/steam/valheim-data
+WORKDIR /home/valuser
 
-RUN /usr/games/steamcmd +force_install_dir /home/valheim-data +login anonymous +app_update 896660 validate +quit
+RUN mkdir /home/valuser/valheim-data
+COPY internal/valheim /home/valuser/valheim-data
+RUN chmod u+x /home/valuser/valheim-data
 
-RUN chown -R steam:steam /home
-RUN chown -R valuser:valuser /home/valheim-data
+RUN /usr/games/steamcmd +force_install_dir /home/valuser/valheim-data +login anonymous +app_update 896660 validate +quit
 
-USER steam
+RUN chown -R valuser:valuser /home/valuser
+
+USER root
 
 EXPOSE 2456
 EXPOSE 2457
