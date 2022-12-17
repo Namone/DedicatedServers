@@ -42,7 +42,7 @@ spec:
                   command: ["/usr/games/steamcmd", "+force_install_dir", "/home/valuser", "+login", "anonymous", "+app_update", "896660", "validate", "+quit"]
                 - name: init-val-script
                   image: {{ .Values.valheimImage }}
-                  command: ["mv", "/internal/start-valheim-server.sh", "/home/valuser/start-zomboid-server.sh"]
+                  command: ["mv", "/internal/start-valheim-server.sh", "/home/valuser/start-valheim-server.sh"]
             containers:
                 - name: zomboid
                   image: {{ .Values.zomboidImage }}
