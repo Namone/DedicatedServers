@@ -74,12 +74,12 @@ spec:
                       containerPort: 16262
                   resources:
                       limits:
-                        cpu: "1"
-                        memory: 6Gi
+                        cpu: "2"
+                        memory: 8Gi
                         ephemeral-storage: 16Gi
                       requests:
-                        cpu: "0.5"
-                        memory: 4Gi
+                        cpu: "1"
+                        memory: 2Gi
                         ephemeral-storage: 8Gi
                   volumeMounts:
                     - name: pz-game-data
@@ -101,11 +101,11 @@ spec:
                       containerPort: 2457
                   resources:
                       limits:
-                        cpu: "1"
-                        memory: 2Gi
-                        ephemeral-storage: 4Gi
+                        cpu: "2"
+                        memory: 8Gi
+                        ephemeral-storage: 8Gi
                       requests:
-                        cpu: "0.5"
+                        cpu: "1"
                         memory: 2Gi
                         ephemeral-storage: 2Gi
                   volumeMounts:
