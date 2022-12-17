@@ -1,6 +1,6 @@
 barotraumaImage: "262580537006.dkr.ecr.us-west-2.amazonaws.com/dedicated-servers:barotrauma"
-zomboidImage: "262580537006.dkr.ecr.us-west-2.amazonaws.com/zomboid-server:1"
-valheimImage: "262580537006.dkr.ecr.us-west-2.amazonaws.com/valheim-server:1"
+zomboidImage: "262580537006.dkr.ecr.us-west-2.amazonaws.com/zomboid-server:2"
+valheimImage: "262580537006.dkr.ecr.us-west-2.amazonaws.com/valheim-server:2"
 
 env:
   ZOMBOID_APP_ID: 380870

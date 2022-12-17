@@ -6,16 +6,16 @@ metadata:
       meta.helm.sh/release-namespace: dedicated-server-deployment
   labels:
       app.kubernetes.io/managed-by: Helm
-  name: claim-storage-1
+  name: pz-storage-1
   namespace: servers
 spec:
-  volumeName: pv-storage-1
+  volumeName: pz-storage-1
   accessModes:
     - ReadWriteMany
   storageClassName: manual
   resources:
     requests:
-      storage: 32Gi
+      storage: 16Gi
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -25,13 +25,51 @@ metadata:
       meta.helm.sh/release-namespace: dedicated-server-deployment
   labels:
       app.kubernetes.io/managed-by: Helm
-  name: claim-storage-2
+  name: pz-storage-2
   namespace: servers
 spec:
-  volumeName: pv-storage-2
+  volumeName: pz-storage-2
   accessModes:
     - ReadWriteMany
   storageClassName: manual
   resources:
     requests:
-      storage: 8Gi
+      storage: 512Mi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  annotations:
+      meta.helm.sh/release-name: dedicated-server-deployment
+      meta.helm.sh/release-namespace: dedicated-server-deployment
+  labels:
+      app.kubernetes.io/managed-by: Helm
+  name: val-storage-1
+  namespace: servers
+spec:
+  volumeName: val-storage-1
+  accessModes:
+    - ReadWriteMany
+  storageClassName: manual
+  resources:
+    requests:
+      storage: 16Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  annotations:
+      meta.helm.sh/release-name: dedicated-server-deployment
+      meta.helm.sh/release-namespace: dedicated-server-deployment
+  labels:
+      app.kubernetes.io/managed-by: Helm
+  name: val-storage-2
+  namespace: servers
+spec:
+  volumeName: val-storage-2
+  accessModes:
+    - ReadWriteMany
+  storageClassName: manual
+  resources:
+    requests:
+      storage: 512Mi

@@ -23,8 +23,8 @@ services:
       - "16261:16261/udp"
       - "16262:16272/udp"
     volumes:
-      - ./internal/Zomboid:/root/Zomboid
-    command: ["zomboid-data/start-server.sh", "-servername", "NamonesWorld", "-adminpassword", "root"]
+      - zomboid-data:/root/Zomboid
+    command: ["./start-zomboid-server.sh", "-servername", "NamonesWorld", "-adminpassword", "root"]
   valheim:
     image: valheim:latest
     build:
@@ -34,4 +34,5 @@ services:
       - "2456:2456/udp"
       - "2457:2457/udp"
     volumes:
-      - valheim-data:/home/steam/valheim-data
+      - valheim-data:/root/.config
+    command: ["sleep", "9000"]
