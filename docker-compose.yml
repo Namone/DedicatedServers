@@ -14,17 +14,18 @@ services:
   #   volumes:
   #     - ./barotrauma-data:/home/barotrauma-data
   #   command: ["/usr/games/steamcmd", "+force_install_dir /home/barotrauma-data", "+login anonymous", "+app_run 1026340"]
-  zomboid:
-    image: zomboid:latest
-    build:
-      context: .
-      target: zomboid-server
-    ports:
-      - "16261:16261/udp"
-      - "16262:16272/udp"
-    volumes:
-      - zomboid-data:/root/Zomboid
-    command: ["./start-zomboid-server.sh", "-servername", "NamonesWorld", "-adminpassword", "root"]
+  # zomboid:
+  #   image: zomboid:latest
+  #   build:
+  #     context: .
+  #     target: zomboid-server
+  #   ports:
+  #     - "16261:16261/udp"
+  #     - "16262:16272/udp"
+  #   volumes:
+  #     - /internal/start-zomboid-server.sh:/home/valuser/start-zomboid-server.sh
+  #     - zomboid-data:/root/Zomboid
+  #   command: ["./start-zomboid-server.sh", "-servername", "NamonesWorld", "-adminpassword", "root"]
   valheim:
     image: valheim:latest
     build:
@@ -35,4 +36,6 @@ services:
       - "2457:2457/udp"
     volumes:
       - valheim-data:/root/.config
+      - /internal/valheim/valuser:/home/valuser
+      - /internal/valheim/Valheim:/root/.config/unity3d/IronGate/Valheim
     command: ["sleep", "9000"]

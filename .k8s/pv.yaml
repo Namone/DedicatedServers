@@ -16,7 +16,7 @@ spec:
   storageClassName: manual
   persistentVolumeReclaimPolicy: Retain
   hostPath:
-    path: "/home"
+    path: "/zomboid"
 ---
 apiVersion: v1
 kind: PersistentVolume
@@ -36,7 +36,7 @@ spec:
   storageClassName: manual
   persistentVolumeReclaimPolicy: Retain
   hostPath:
-    path: "/root"
+    path: "/root/Zomboid"
 ---
 apiVersion: v1
 kind: PersistentVolume
@@ -56,7 +56,7 @@ spec:
   storageClassName: manual
   persistentVolumeReclaimPolicy: Retain
   hostPath:
-    path: "/home"
+    path: "/valheim"
 ---
 apiVersion: v1
 kind: PersistentVolume
@@ -76,4 +76,4 @@ spec:
   storageClassName: manual
   persistentVolumeReclaimPolicy: Retain
   hostPath:
-    path: "/root"
+    path: "/root/.config"

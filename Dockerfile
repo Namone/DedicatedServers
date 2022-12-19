@@ -20,7 +20,7 @@ RUN apt-get install steam steamcmd -y
 
 USER root
 RUN mkdir /internal
-WORKDIR /home
+WORKDIR /
 
 #### Configure Barotrauma Server & related dependenices for the environment it runs within. #####
 # FROM server-base as barotrauma-server
@@ -52,19 +52,17 @@ COPY internal/Zomboid /root/Zomboid
 
 USER root
 
-WORKDIR /home/pzuser
+WORKDIR /zomboid
 
 EXPOSE 16261
 EXPOSE 16262
 
 FROM server-base as valheim-server
 
-COPY internal/valheim/start-valheim-server.sh /internal/start-valheim-server.sh
-COPY internal/valheim/Valheim /root/.config/unity3d/IronGate/Valheim
+COPY internal/valheim/valuser/start-valheim-server.sh /internal/start-valheim-server.sh
+COPY internal/valheim/Valheim /internal/Valheim
 
-USER root
-
-WORKDIR /home/valuser
+WORKDIR /valheim
 
 EXPOSE 2456
 EXPOSE 2457

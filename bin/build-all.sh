@@ -10,12 +10,12 @@ echo "Building, tagging, and pushing image for all supported games..."
 
 GAME="zomboid"
 docker build -t $GAME --target $GAME-server . 
-docker image tag $GAME 262580537006.dkr.ecr.us-west-2.amazonaws.com/$GAME-server:2
-docker image push 262580537006.dkr.ecr.us-west-2.amazonaws.com/$GAME-server:2
+docker image tag $GAME 262580537006.dkr.ecr.us-west-2.amazonaws.com/$GAME-server:3
+docker image push 262580537006.dkr.ecr.us-west-2.amazonaws.com/$GAME-server:3
 
 GAME="valheim"
 docker build -t $GAME --target $GAME-server . 
-docker image tag $GAME 262580537006.dkr.ecr.us-west-2.amazonaws.com/$GAME-server:2
-docker image push 262580537006.dkr.ecr.us-west-2.amazonaws.com/$GAME-server:2
+docker image tag $GAME 262580537006.dkr.ecr.us-west-2.amazonaws.com/$GAME-server:9
+docker image push 262580537006.dkr.ecr.us-west-2.amazonaws.com/$GAME-server:9
 
 echo "Build finished!"

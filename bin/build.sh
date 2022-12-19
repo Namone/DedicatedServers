@@ -8,8 +8,8 @@ aws ecr get-login-password \
         --password-stdin \262580537006.dkr.ecr.us-west-2.amazonaws.com/$GAME-server
 
 echo "Building, tagging, and pushing image for $GAME..."
-docker build -t $GAME --target $GAME-server .
-docker image tag $GAME 262580537006.dkr.ecr.us-west-2.amazonaws.com/$GAME-server:3
-docker image push 262580537006.dkr.ecr.us-west-2.amazonaws.com/$GAME-server:3
+docker build -t $GAME --target $GAME-server . --no-cache
+docker image tag $GAME 262580537006.dkr.ecr.us-west-2.amazonaws.com/$GAME-server:12
+docker image push 262580537006.dkr.ecr.us-west-2.amazonaws.com/$GAME-server:12
 
 echo "Build finished for $GAME!"

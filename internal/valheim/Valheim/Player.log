@@ -247,5 +247,3 @@ Total: 77.463700 ms (FindLiveObjects: 4.717600 ms CreateObjectMapping: 10.910600
 12/18/2022 16:22:39: Player onboard, total onboard 3
 12/18/2022 16:22:43: UI Group status changed MenuRoot = True
 
-
- kc cp -n servers ../internal/valheim/Valheim dedicated-server-5fb8b8cc68-brs92:/root/.config/unity3d/IronGate/Valheim -c valheim
