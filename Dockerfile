@@ -44,8 +44,6 @@ WORKDIR /
 
 FROM server-base as zomboid-server
 
-WORKDIR /home/pzuser
-
 COPY internal/start-zomboid-server.sh /internal/start-zomboid-server.sh
 
 COPY internal/Zomboid /root/Zomboid
