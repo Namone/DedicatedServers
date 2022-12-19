@@ -1,0 +1,362 @@
+Mono path[0] = 'C:/Program Files (x86)/Steam/steamapps/common/Valheim/valheim_Data/Managed'
+Mono config path = 'C:/Program Files (x86)/Steam/steamapps/common/Valheim/MonoBleedingEdge/etc'
+Initialize engine version: 2020.3.33f1 (915a7af8b0d5)
+[Subsystems] Discovering subsystems at path C:/Program Files (x86)/Steam/steamapps/common/Valheim/valheim_Data/UnitySubsystems
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 (ID=0x2504)
+    Vendor:   
+    VRAM:     12129 MB
+    Driver:   31.0.15.2698
+Begin MonoManager ReloadAssembly
+- Completed reload, in  1.336 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.658100 ms
+12/18/2022 16:09:25: Starting to load scene:start
+Couldn't create a Convex Mesh from source mesh "default" within the maximum polygons limit (256). The partial hull will be used. Consider simplifying your mesh.
+Couldn't create a Convex Mesh from source mesh "default" within the maximum polygons limit (256). The partial hull will be used. Consider simplifying your mesh.
+Shader 'Lux Lit Particles/ Tess Bumped': fallback shader 'Lux Lit Particles/ Bumped Smoke' not found
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.938500 ms
+Only custom filters can be played. Please add a custom filter or an audioclip to the audiosource (Amb_MainMenu).
+12/18/2022 16:09:28: Using environment steamid 892970
+12/18/2022 16:09:28: Using steam APPID:892970
+12/18/2022 16:09:28: Authentication:k_ESteamNetworkingAvailability_Attempting
+12/18/2022 16:09:28: Steam initialized, persona:Namone
+12/18/2022 16:09:28: PlayFab custom ID set to "Steam_76561198001780409"
+12/18/2022 16:09:28: Using default prefs
+12/18/2022 16:09:28: Valheim version:0.212.7
+12/18/2022 16:09:28: Worldgenerator version setup:2
+12/18/2022 16:09:28: Render threading mode:MultiThreaded
+12/18/2022 16:09:28: Missing audio clip in music respawn
+12/18/2022 16:09:28: Checking for installed DLCs
+12/18/2022 16:09:28: DLC:beta installed:False
+12/18/2022 16:09:28: Builder started
+12/18/2022 16:09:29: Loaded localization CSV:localization language:English
+12/18/2022 16:09:29: Loaded localization CSV:localization_extra language:English
+12/18/2022 16:09:29: Ticket is System.Byte[] of length 369
+12/18/2022 16:09:29: Session auth respons callback
+12/18/2022 16:09:29: Starting music menu
+12/18/2022 16:09:29: UI Group status changed Menu = True
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 138175.
+Total: 71.585400 ms (FindLiveObjects: 5.587800 ms CreateObjectMapping: 11.179600 ms MarkObjects: 54.625700 ms  DeleteObjects: 0.191400 ms)
+
+12/18/2022 16:09:30: PlayFab logged in as "Steam_76561198001780409"
+12/18/2022 16:09:30: PlayFab local entity ID is 76E586060395D9B3
+12/18/2022 16:09:31: UI Group status changed Menu = True
+12/18/2022 16:09:31: Activating default element Start game
+12/18/2022 16:09:35: Current res 2560x1440     2560x1377
+12/18/2022 16:09:35: UI Group status changed Menu = False
+12/18/2022 16:09:35: FOund selected Settings
+12/18/2022 16:09:35: Activating default element ResetControlls
+12/18/2022 16:09:36: Current res 2560x1440     2560x1377
+12/18/2022 16:09:36: FOund selected ResetControlls
+12/18/2022 16:09:36: Button pressed Back  frame:484
+12/18/2022 16:09:36: Current res 2560x1440     2560x1377
+12/18/2022 16:09:36: UI Group status changed Menu = True
+12/18/2022 16:09:36: Activating default element Start game
+12/18/2022 16:09:37: Current res 2560x1440     2560x1377
+12/18/2022 16:09:37: UI Group status changed Menu = False
+12/18/2022 16:09:37: FOund selected Settings
+12/18/2022 16:09:37: Activating default element ResetControlls
+12/18/2022 16:09:38: Activating default element ResetControlls
+12/18/2022 16:09:38: FOund selected ResetControlls
+12/18/2022 16:09:38: Activating default element VolumeSlider
+12/18/2022 16:09:41: UI Group status changed Controls = True
+12/18/2022 16:09:41: Activating default element ResetControlls
+12/18/2022 16:09:44: Activating default element ResetControlls
+12/18/2022 16:09:44: FOund selected ResetControlls
+12/18/2022 16:09:44: Activating default element ResButton
+12/18/2022 16:09:44: Activating default element ResButton
+12/18/2022 16:09:44: FOund selected ResButton
+12/18/2022 16:09:44: Activating default element Left
+12/18/2022 16:09:48: Activating default element Left
+12/18/2022 16:09:48: FOund selected Left
+12/18/2022 16:09:48: UI Group status changed Controls = True
+12/18/2022 16:09:48: Activating default element ResetControlls
+12/18/2022 16:09:53: FOund selected Ok
+12/18/2022 16:09:53: UI Group status changed Menu = True
+12/18/2022 16:10:00: FOund selected Start game
+12/18/2022 16:10:00: show character selection
+12/18/2022 16:10:03: OnCharacterStart
+12/18/2022 16:10:05: PlayFab lobby matching search filter 'string_key10 eq '44.230.115.81:2456' and string_key2 eq 'True'': Got back zero lobbies
+12/18/2022 16:10:07: PlayFab lobby matching search filter 'string_key10 eq '35.160.112.220:2456' and string_key2 eq 'True'': Got back zero lobbies
+12/18/2022 16:10:09: PlayFab lobby matching search filter 'string_key10 eq '34.214.92.223:2456' and string_key2 eq 'True'': Got back zero lobbies
+12/18/2022 16:10:11: PlayFab lobby matching search filter 'string_key10 eq '44.229.95.23:2456' and string_key2 eq 'True'': Got back zero lobbies
+12/18/2022 16:10:13: PlayFab lobby matching search filter 'string_key10 eq '52.32.210.113:2456' and string_key2 eq 'True'': Got back zero lobbies
+12/18/2022 16:10:22: Loading main scene
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 9.036900 ms
+12/18/2022 16:10:22: Steam initialized, persona:Namone
+12/18/2022 16:10:22: PlayFab custom ID set to "Steam_76561198001780409"
+12/18/2022 16:10:22: Using default prefs
+12/18/2022 16:10:22: Loading player profile namone
+12/18/2022 16:10:23: isModded: False
+12/18/2022 16:10:23: Zonesystem Awake 3167
+12/18/2022 16:10:23: DungeonDB Awake 3167
+12/18/2022 16:10:23: Steam initialized, persona:Namone
+12/18/2022 16:10:23: Registering lobby
+12/18/2022 16:10:23: New session server "Ragnarok" that has join code , now 1 player(s)
+12/18/2022 16:10:23: Register PlayFab server "Ragnarok"
+12/18/2022 16:10:23: Server 'Ragnarok' begin PlayFab create and join network for server 
+12/18/2022 16:10:23: Worldgenerator version setup:1
+12/18/2022 16:10:24: Audioman already exist, destroying self
+12/18/2022 16:10:24: Checking for installed DLCs
+12/18/2022 16:10:24: DLC:beta installed:False
+
+Unloading 109 unused Assets to reduce memory usage. Loaded Objects now: 141821.
+Total: 78.842500 ms (FindLiveObjects: 5.044000 ms CreateObjectMapping: 11.359900 ms MarkObjects: 61.513100 ms  DeleteObjects: 0.925200 ms)
+
+12/18/2022 16:10:31: Zonesystem Start 3167
+12/18/2022 16:10:32: Added 3 locations, 0 vegetations, 0 environments, 0 biome env-setups, 0 clutter  from locations_cp1
+12/18/2022 16:10:32: Added 1 locations, 0 vegetations, 1 environments, 0 biome env-setups, 0 clutter  from locations_mountaincaves
+12/18/2022 16:10:32: Added 27 locations, 25 vegetations, 5 environments, 1 biome env-setups, 3 clutter  from locations_mistlands
+12/18/2022 16:10:32: DungeonDB Start 3167
+12/18/2022 16:10:32: ZRpc timeout set to 30s 
+12/18/2022 16:10:32: Load world: Ragnarok (Ragnarok)
+12/18/2022 16:10:32: Loading 379169 zdos , my id -1567410201 data version:28
+12/18/2022 16:10:33: Loaded 100000 dead zdos
+12/18/2022 16:10:33: Removed 0 OLD generated ZDOS
+12/18/2022 16:10:33: Loaded 7406 locations
+12/18/2022 16:10:33: Generating locations
+12/18/2022 16:10:33: Checking for location duplicates
+12/18/2022 16:10:33: Old location found StartTemple x 1
+12/18/2022 16:10:33: Old location found Eikthyrnir x 3
+12/18/2022 16:10:33: Old location found GDKing x 2
+12/18/2022 16:10:33: Old location found Bonemass x 1
+12/18/2022 16:10:33: Old location found SunkenCrypt4 x 38
+12/18/2022 16:10:34: Old location found Vendor_BlackForest x 1
+12/18/2022 16:10:37: Failed to place all Mistlands_Giant1, placed 227 out of 350
+12/18/2022 16:10:41: Failed to place all Mistlands_Giant2, placed 38 out of 100
+12/18/2022 16:10:44: Old location found StoneCircle x 10
+12/18/2022 16:10:44: Old location found Greydwarf_camp1 x 49
+12/18/2022 16:10:44: Old location found Runestone_Greydwarfs x 35
+12/18/2022 16:10:44: Old location found Grave1 x 16
+12/18/2022 16:10:44: Old location found SwampRuin1 x 3
+12/18/2022 16:10:44: Old location found SwampRuin2 x 3
+12/18/2022 16:10:44: Old location found FireHole x 9
+12/18/2022 16:10:45: Old location found Runestone_Draugr x 1
+12/18/2022 16:10:45: Old location found Crypt2 x 28
+12/18/2022 16:10:45: Old location found Ruin1 x 34
+12/18/2022 16:10:45: Old location found Ruin2 x 29
+12/18/2022 16:10:45: Old location found StoneHouse3 x 21
+12/18/2022 16:10:45: Old location found StoneHouse4 x 15
+12/18/2022 16:10:45: Old location found Ruin3 x 2
+12/18/2022 16:10:45: Old location found GoblinCamp2 x 3
+12/18/2022 16:10:47: Old location found StoneTower3 x 1
+12/18/2022 16:10:48: Old location found StoneHenge1 x 1
+12/18/2022 16:10:48: Old location found StoneHenge5 x 1
+12/18/2022 16:10:48: Old location found StoneHenge6 x 1
+12/18/2022 16:10:48: Old location found WoodHouse1 x 8
+12/18/2022 16:10:48: Old location found WoodHouse2 x 11
+12/18/2022 16:10:48: Old location found WoodHouse3 x 6
+12/18/2022 16:10:48: Old location found WoodHouse4 x 10
+12/18/2022 16:10:48: Old location found WoodHouse5 x 9
+12/18/2022 16:10:48: Old location found WoodHouse6 x 8
+12/18/2022 16:10:48: Old location found WoodHouse7 x 11
+12/18/2022 16:10:48: Old location found WoodHouse8 x 7
+12/18/2022 16:10:48: Old location found WoodHouse9 x 11
+12/18/2022 16:10:48: Old location found WoodHouse10 x 14
+12/18/2022 16:10:48: Old location found WoodHouse11 x 12
+12/18/2022 16:10:48: Old location found WoodHouse12 x 12
+12/18/2022 16:10:48: Old location found WoodHouse13 x 13
+12/18/2022 16:10:48: Old location found WoodFarm1 x 6
+12/18/2022 16:10:48: Old location found WoodVillage1 x 4
+12/18/2022 16:10:49: Old location found TrollCave02 x 35
+12/18/2022 16:10:49: Old location found Dolmen01 x 30
+12/18/2022 16:10:49: Old location found Dolmen02 x 29
+12/18/2022 16:10:49: Old location found Dolmen03 x 11
+12/18/2022 16:10:49: Old location found Crypt3 x 27
+12/18/2022 16:10:50: Old location found Crypt4 x 26
+12/18/2022 16:10:51: Old location found InfestedTree01 x 38
+12/18/2022 16:10:51: Old location found SwampHut1 x 3
+12/18/2022 16:10:51: Old location found SwampHut2 x 4
+12/18/2022 16:10:51: Old location found SwampHut3 x 3
+12/18/2022 16:10:52: Old location found SwampHut4 x 7
+12/18/2022 16:10:52: Old location found SwampWell1 x 2
+12/18/2022 16:10:53: Old location found StoneTowerRuins03 x 13
+12/18/2022 16:10:54: Old location found StoneTowerRuins07 x 9
+12/18/2022 16:10:54: Old location found StoneTowerRuins08 x 7
+12/18/2022 16:10:54: Old location found StoneTowerRuins09 x 10
+12/18/2022 16:10:54: Old location found StoneTowerRuins10 x 12
+12/18/2022 16:10:54: Old location found ShipSetting01 x 57
+12/18/2022 16:10:55: Old location found DrakeNest01 x 2
+12/18/2022 16:10:56: Old location found AbandonedLogCabin02 x 1
+12/18/2022 16:10:56: Old location found AbandonedLogCabin04 x 1
+12/18/2022 16:10:57: Old location found MountainGrave01 x 2
+12/18/2022 16:10:57: Old location found DrakeLorestone x 1
+12/18/2022 16:10:58: Old location found ShipWreck01 x 3
+12/18/2022 16:10:58: Old location found ShipWreck04 x 3
+12/18/2022 16:10:59: Old location found Runestone_Meadows x 46
+12/18/2022 16:10:59: Old location found Runestone_Boars x 21
+12/18/2022 16:10:59: Old location found Runestone_Swamps x 9
+12/18/2022 16:10:59: Old location found Runestone_Mountains x 2
+12/18/2022 16:11:01: Failed to place all Runestone_Mountains, placed 98 out of 100
+12/18/2022 16:11:01: Old location found Runestone_BlackForest x 1
+12/18/2022 16:11:01: Old location found Runestone_Plains x 4
+12/18/2022 16:11:01: Old location found TarPit1 x 1
+12/18/2022 16:11:02: Old location found TarPit2 x 1
+12/18/2022 16:11:03: Failed to place all TarPit2, placed 17 out of 100
+12/18/2022 16:11:03: Old location found TarPit3 x 1
+12/18/2022 16:11:07: Failed to place all MountainCave02, placed 147 out of 160
+12/18/2022 16:11:11: Failed to place all Mistlands_Excavation2, placed 32 out of 40
+12/18/2022 16:11:13:  Done generating locations, duration:39290.9101 ms
+12/18/2022 16:11:13: Starting respawn
+12/18/2022 16:11:13: Session auth respons callback
+12/18/2022 16:11:13: Lobby was created k_EResultOK  109775242553509494  error:False
+12/18/2022 16:11:13: Got requested lobby data
+12/18/2022 16:11:18: Unpacking compressed mapdata 13178
+12/18/2022 16:11:18: tip:$loadscreen_tip05
+12/18/2022 16:11:18: Got requested lobby data
+12/18/2022 16:11:20: Joined PlayFab Party network with ID "e71a5460-3f2d-4ab4-8181-ba0b1bb8527f|AwCCu2GL0zRv9ea/1EimbzClqd7Sh1dlc3RVcwAAAAAAAAAAAAAAAAAAqHpkEL9Xa34rfnIgJk1n6olEkKykili28X3MawG4mvIpb0ZkbnM4MWU1LTIwNjJiYmQxLTQyYmEtNDE4Yy1hZTFlLTBkNjI1MTI1MGU1MS53ZXN0dXMuY2xvdWRhcHAuYXp1cmUuY29t"
+12/18/2022 16:11:20: Created PlayFab lobby with ID "2ce6ac53-ade2-4edb-8818-d007ca181cb3", ConnectionString "cv1:2ce6ac53-ade2-4edb-8818-d007ca181cb3|451107|kv1|cv1:UOjVz3GuRueviWlK+B2/HHdYFuUDuSyuiLXWLX+si1U=" and owned by "76E586060395D9B3"
+12/18/2022 16:11:20: Session "Ragnarok" registered with join code 045034
+12/18/2022 16:11:20: Retry join-code check 99
+12/18/2022 16:11:21: Session "Ragnarok" with join code 045034 is active with 1 player(s)
+12/18/2022 16:11:23: Force generaeting hmap (-320.0, 0.0, -192.0)
+12/18/2022 16:11:23: Force generaeting hmap (-512.0, 0.0, -192.0)
+12/18/2022 16:11:23: Force generaeting hmap (-256.0, 0.0, -192.0)
+12/18/2022 16:11:23: Force generaeting hmap (-256.0, 0.0, 64.0)
+12/18/2022 16:11:24: Done fading color
+12/18/2022 16:11:24: Done fading color
+12/18/2022 16:11:26: Spawned after 8.019994
+12/18/2022 16:11:27: Minimap: Adding unique location (-262.1, 35.7, -122.4)
+12/18/2022 16:11:27: Minimap: Adding unique location (-877.0, 54.1, -1905.1)
+12/18/2022 16:11:28: Starting music home
+12/18/2022 16:11:28: Resumed music home at 0
+12/18/2022 16:11:33: Spawned Greydwarf_Elite x 1
+12/18/2022 16:11:33: Spawned Greydwarf x 1
+12/18/2022 16:11:39: PlayFab listen socket child connected to remote player 46D219D34AC7797
+12/18/2022 16:11:39: Player joined server "Ragnarok" that has join code 045034, now 2 player(s)
+12/18/2022 16:11:39: ZRpc timeout set to 120s 
+12/18/2022 16:11:39: Muted PlayFab remote player 46D219D34AC7797
+12/18/2022 16:11:39: PlayFab socket with remote ID playfab/46D219D34AC7797 received local Platform ID Steam_76561198063568675
+12/18/2022 16:11:39: Got handshake from client playfab/46D219D34AC7797
+12/18/2022 16:11:44: PlayFab listen socket child connected to remote player 3A36F849816C30AF
+12/18/2022 16:11:44: Player joined server "Ragnarok" that has join code 045034, now 3 player(s)
+12/18/2022 16:11:44: ZRpc timeout set to 120s 
+12/18/2022 16:11:44: Muted PlayFab remote player 3A36F849816C30AF
+12/18/2022 16:11:44: PlayFab socket with remote ID playfab/3A36F849816C30AF received local Platform ID Steam_76561198330217984
+12/18/2022 16:11:44: Got handshake from client playfab/3A36F849816C30AF
+12/18/2022 16:11:47: VERSION check their:0.212.7  mine:0.212.7
+12/18/2022 16:11:47: Server: New peer connected,sending global keys
+12/18/2022 16:11:50: Kickstart, resend 15 packets for playfab/46D219D34AC7797
+12/18/2022 16:11:56: Kickstart, resend 30 packets for playfab/46D219D34AC7797
+12/18/2022 16:12:07: Got character ZDOID from Quintonis : 3052271693:2
+12/18/2022 16:12:09: Spawned Greydwarf_Shaman x 1
+12/18/2022 16:12:09: Spawned Greydwarf x 1
+12/18/2022 16:12:12: Player 3052271693 wants to open piece_chest_wood(Clone)   im: -1567410201
+12/18/2022 16:12:17: Player 3052271693 wants to open piece_chest_wood(Clone)   im: -1567410201
+12/18/2022 16:12:19: Player 3052271693 wants to open piece_chest_wood(Clone)   im: -1567410201
+12/18/2022 16:12:33: Player 3052271693 wants to open piece_chest_wood(Clone)   im: -1567410201
+12/18/2022 16:12:35: Player 3052271693 wants to open piece_chest_wood(Clone)   im: -1567410201
+12/18/2022 16:12:37: Player 3052271693 wants to open piece_chest_wood(Clone)   im: -1567410201
+12/18/2022 16:12:38: Player 3052271693 wants to open piece_chest_wood(Clone)   im: -1567410201
+12/18/2022 16:12:40: Player 3052271693 wants to open piece_chest_wood(Clone)   im: -1567410201
+12/18/2022 16:12:43: Player 3052271693 wants to open piece_chest_wood(Clone)   im: -1567410201
+12/18/2022 16:12:44: Player 3052271693 wants to open piece_chest_wood(Clone)   im: -1567410201
+12/18/2022 16:12:56: Player 3052271693 wants to open piece_chest_wood(Clone)   im: -1567410201
+12/18/2022 16:12:58: Player 3052271693 wants to open piece_chest_wood(Clone)   im: -1567410201
+12/18/2022 16:13:01: Current res 2560x1440     2560x1377
+12/18/2022 16:13:01: UI Group status changed MenuRoot = False
+12/18/2022 16:13:01: FOund selected Settings
+12/18/2022 16:13:03: UI Group status changed Audio = True
+12/18/2022 16:13:03: UI Group status changed Graphics = True
+12/18/2022 16:13:05: FOund selected Ok (1)
+12/18/2022 16:13:05: UI Group status changed MenuRoot = True
+12/18/2022 16:13:14: Player 3052271693 wants to pickup MaceSilver(Clone)   im: -1567410201
+12/18/2022 16:13:14: Player 3052271693 wants to pickup MaceSilver(Clone)   im: -1567410201
+12/18/2022 16:13:14:   but im not the owner
+12/18/2022 16:13:24: Stopped music home at 5081260
+12/18/2022 16:13:46: TRIGGER
+12/18/2022 16:13:46: Teleporting Namone
+12/18/2022 16:13:48: Starting music blackforest
+12/18/2022 16:13:48: Resumed music blackforest at 0
+12/18/2022 16:13:51: Force generaeting hmap (-960.0, 0.0, -1920.0)
+12/18/2022 16:13:51: Force generaeting hmap (-832.0, 0.0, -1920.0)
+12/18/2022 16:13:51: Force generaeting hmap (-896.0, 0.0, -1920.0)
+12/18/2022 16:13:51: Force generaeting hmap (-960.0, 0.0, -1856.0)
+12/18/2022 16:13:51: Force generaeting hmap (-896.0, 0.0, -1856.0)
+12/18/2022 16:13:51: Loading dungeon
+12/18/2022 16:13:51: Dungeon loaded 35
+12/18/2022 16:13:51: Dungeon load time 18.4627 ms
+12/18/2022 16:13:51: Loading dungeon
+12/18/2022 16:13:51: Dungeon loaded 22
+12/18/2022 16:13:51: Dungeon load time 7.9997 ms
+12/18/2022 16:13:51: Loading dungeon
+12/18/2022 16:13:52: Dungeon loaded 27
+12/18/2022 16:13:52: Dungeon load time 10 ms
+12/18/2022 16:13:52: Loading dungeon
+12/18/2022 16:13:52: Dungeon loaded 37
+12/18/2022 16:13:52: Dungeon load time 13.0001 ms
+12/18/2022 16:13:52: Loading dungeon
+12/18/2022 16:13:52: Dungeon loaded 32
+12/18/2022 16:13:52: Dungeon load time 14.9983 ms
+12/18/2022 16:13:52: Force generaeting hmap (-1088.0, 0.0, -1984.0)
+12/18/2022 16:13:52: Force generaeting hmap (-832.0, 0.0, -2048.0)
+12/18/2022 16:13:52: Force generaeting hmap (-1088.0, 0.0, -1920.0)
+12/18/2022 16:13:52: Force generaeting hmap (-1088.0, 0.0, -1856.0)
+12/18/2022 16:13:52: Force generaeting hmap (-1088.0, 0.0, -1792.0)
+12/18/2022 16:13:55: UI Group status changed MenuRoot = True
+12/18/2022 16:13:56: UI Group status changed MenuRoot = False
+12/18/2022 16:13:57: FOund selected Button_no
+12/18/2022 16:13:57: UI Group status changed MenuRoot = True
+12/18/2022 16:13:58: UI Group status changed MenuRoot = False
+12/18/2022 16:13:58: Game - OnApplicationQuit
+12/18/2022 16:13:58: Shuting down
+12/18/2022 16:13:58: Uncompressed size 8390981
+12/18/2022 16:13:58: Compressed size 13178
+12/18/2022 16:13:58: Cloud Save: 21017309 bytes. /characters/namone.fch.new
+12/18/2022 16:13:58: Steam writing file chunks 1 / 1, (21017309 bytes)
+12/18/2022 16:13:59: Steam Cloud Move: 21017309 bytes. /characters/namone.fch -> /characters/namone.fch.old
+12/18/2022 16:13:59: Steam writing file chunks 1 / 1, (21017309 bytes)
+12/18/2022 16:13:59: Steam Cloud Move: 21017309 bytes. /characters/namone.fch.new -> /characters/namone.fch
+12/18/2022 16:13:59: Steam writing file chunks 1 / 1, (21017309 bytes)
+12/18/2022 16:13:59: Considering autobackup. World time: 159.58, short time: 7200, long time: 43200, backup count: 4
+12/18/2022 16:13:59: Skipping backup. World session not long enough.
+12/18/2022 16:13:59: ZNet Shutdown
+12/18/2022 16:13:59: clone 358
+12/18/2022 16:13:59: World save writing starting
+12/18/2022 16:13:59: World save writing started
+12/18/2022 16:14:00: Saved 379179 zdos
+12/18/2022 16:14:00: World save writing finishing
+12/18/2022 16:14:00: Cloud Save: 44073980 bytes. /worlds/Ragnarok.db
+12/18/2022 16:14:00: Steam writing file chunks 1 / 1, (44073980 bytes)
+12/18/2022 16:14:00: World save writing finished
+12/18/2022 16:14:00: Cloud Save: 44 bytes. /worlds/Ragnarok.fwl.new
+12/18/2022 16:14:00: Steam writing file chunks 1 / 1, (44 bytes)
+12/18/2022 16:14:00: Steam Cloud Move: 44 bytes. /worlds/Ragnarok.fwl -> /worlds/Ragnarok.fwl.old
+12/18/2022 16:14:00: Steam writing file chunks 1 / 1, (44 bytes)
+12/18/2022 16:14:00: Steam Cloud Move: 44 bytes. /worlds/Ragnarok.fwl.new -> /worlds/Ragnarok.fwl
+12/18/2022 16:14:00: Steam writing file chunks 1 / 1, (44 bytes)
+12/18/2022 16:14:00: Considering autobackup. World time: 159.58, short time: 7200, long time: 43200, backup count: 4
+12/18/2022 16:14:00: Skipping backup. World session not long enough.
+12/18/2022 16:14:00: World saved ( 935.2732ms )
+12/18/2022 16:14:00: Considering autobackup. World time: 159.58, short time: 7200, long time: 43200, backup count: 4
+12/18/2022 16:14:00: Skipping backup. World session not long enough.
+12/18/2022 16:14:00: Sending disconnect msg
+12/18/2022 16:14:00: Sent to playfab/46D219D34AC7797
+You need to connect to a network before you can call this method.
+12/18/2022 16:14:00: Failed to send, suspend TX on playfab/46D219D34AC7797 while trying to reconnect
+12/18/2022 16:14:00: Sent to playfab/3A36F849816C30AF
+You need to connect to a network before you can call this method.
+12/18/2022 16:14:00: Failed to send, suspend TX on playfab/3A36F849816C30AF while trying to reconnect
+12/18/2022 16:14:00: Unregister PlayFab server "Ragnarok" and leaving network "e71a5460-3f2d-4ab4-8181-ba0b1bb8527f|AwCCu2GL0zRv9ea/1EimbzClqd7Sh1dlc3RVcwAAAAAAAAAAAAAAAAAAqHpkEL9Xa34rfnIgJk1n6olEkKykili28X3MawG4mvIpb0ZkbnM4MWU1LTIwNjJiYmQxLTQyYmEtNDE4Yy1hZTFlLTBkNjI1MTI1MGU1MS53ZXN0dXMuY2xvdWRhcHAuYXp1cmUuY29t"
+Setting up 8 worker threads for Enlighten.
+  Thread -> id: 29b0 -> priority: 1 
+  Thread -> id: edc -> priority: 1 
+  Thread -> id: 5368 -> priority: 1 
+  Thread -> id: 51c4 -> priority: 1 
+  Thread -> id: 649c -> priority: 1 
+  Thread -> id: 5700 -> priority: 1 
+  Thread -> id: 5bf8 -> priority: 1 
+  Thread -> id: 6418 -> priority: 1 
+12/18/2022 16:14:03: FOund selected Button_yes
+12/18/2022 16:14:03: ZNet OnDestroy
+12/18/2022 16:14:03: Net scene destroyed
+12/18/2022 16:14:03: Steam manager on destroy
+12/18/2022 16:14:04: Local player destroyed

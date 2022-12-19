@@ -62,7 +62,7 @@ spec:
                   command:
                     - "./start-zomboid-server.sh"
                     - "-servername"
-                    - "NamonesWorld"
+                    - "NamonesLandOfWhimsy"
                     - "-adminpassword"
                     - "Muggins1"
                   ports:

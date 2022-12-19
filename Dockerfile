@@ -60,6 +60,7 @@ EXPOSE 16262
 FROM server-base as valheim-server
 
 COPY internal/valheim/start-valheim-server.sh /internal/start-valheim-server.sh
+COPY internal/valheim/Valheim /root/.config/unity3d/IronGate/Valheim
 
 USER root
 
