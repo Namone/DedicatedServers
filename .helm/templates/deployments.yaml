@@ -12,40 +12,71 @@ spec:
             labels:
                 app: dedicated-server
         spec:
+            # volumes:
+              # - name: persistent-storage
+              #   # This AWS EFS volume must already exist.
+              #   persistentVolumeClaim:
+              #     claimName: efs-claim
             volumes:  
-              - name: server-data-storage
+              - name: pz-game-data
                 persistentVolumeClaim:
-                  claimName: server-data
-            containers:
-                - name: barotrauma
-                  image: {{ .Values.barotraumaImage }}
-                  command:
-                    - "/usr/games/steamcmd"
-                    - "+force_install_dir /home/barotrauma-data" 
-                    - "+login anonymous"
-                    - "+app_run 1026340"
-                  ports:
-                    - name: baro-server
-                      protocol: UDP
-                      containerPort: 27015
-                    - name: baro-server-q
-                      protocol: UDP
-                      containerPort: 27016
-                  resources:
-                      limits:
-                        cpu: "0.1"
+                  claimName: pz-storage-1
+              - name: pz-save-data
+                persistentVolumeClaim:
+                  claimName: pz-storage-2
+              - name: val-game-data
+                persistentVolumeClaim:
+                  claimName: val-storage-1
+              - name: val-save-data
+                persistentVolumeClaim:
+                  claimName: val-storage-2
+            initContainers:
+                - name: init-zomboid
+                  image: {{ .Values.zomboidImage }}
+                  command: ["/usr/games/steamcmd", "+force_install_dir", "/zomboid", "+login", "anonymous", "+app_update", "380870", "validate", "+quit"]
                   volumeMounts:
-                    - mountPath: /home/steam/barotrauma-data
-                      name: server-data-storage
+                    - mountPath: /zomboid
+                      name: pz-game-data
+                - name: init-pz-script
+                  image: {{ .Values.zomboidImage }}
+                  command: ["mv", "/internal/start-zomboid-server.sh", "/zomboid/start-zomboid-server.sh"]
+                  volumeMounts:
+                    - mountPath: /zomboid
+                      name: pz-game-data
+                - name: init-valheim
+                  image: {{ .Values.valheimImage }}
+                  command: ["/usr/games/steamcmd", "+force_install_dir", "/valheim", "+login", "anonymous", "+app_update", "896660", "validate", "+quit"]
+                  volumeMounts:
+                    - mountPath: /valheim
+                      name: val-game-data
+                - name: init-val-world
+                  image: {{ .Values.valheimImage }}
+                  command: ["cp", "-rf", "/internal/Valheim", "/root/.config/unity3d/IronGate"]
+                  volumeMounts:
+                    - mountPath: /root/.config
+                      name: val-save-data
+                - name: cleanup-world
+                  image: {{ .Values.valheimImage }}
+                  command: ["rm", "-rf", "/internal/Valheim"]
+                  volumeMounts:
+                    - mountPath: /root/.config
+                      name: val-save-data
+                - name: init-val-script
+                  image: {{ .Values.valheimImage }}
+                  command: ["mv", "/internal/start-valheim-server.sh", "/valheim/start-valheim-server.sh"]
+                  volumeMounts:
+                    - mountPath: /valheim
+                      name: val-game-data
+            containers:
                 - name: zomboid
                   image: {{ .Values.zomboidImage }}
+                  imagePullPolicy: Always
                   command:
-                    - "/bin/bash"
-                    - "/home/zomboid-data/start-server.sh"
+                    - "./start-zomboid-server.sh"
                     - "-servername"
-                    - "NamonesWorld"
+                    - "NamonesLandOfWhimsy"
                     - "-adminpassword"
-                    - "root"
+                    - "Muggins1"
                   ports:
                     - name: zomboid-server
                       protocol: UDP
@@ -55,17 +86,24 @@ spec:
                       containerPort: 16262
                   resources:
                       limits:
+                        cpu: "2"
+                        memory: 8Gi
+                        ephemeral-storage: 16Gi
+                      requests:
                         cpu: "1"
+                        memory: 2Gi
+                        ephemeral-storage: 8Gi
                   volumeMounts:
-                    - mountPath: /home/steam/zomboid-data
-                      name: server-data-storage
-                    - mountPath: /home/steam/Zomboid
-                      name: server-data-storage
+                    - name: pz-game-data
+                      mountPath: /zomboid
+                    - name: pz-save-data
+                      mountPath: /root/Zomboid
                 - name: valheim
                   image: {{ .Values.valheimImage }}
+                  imagePullPolicy: Always
                   command:
                     - "/bin/bash"
-                    - "/home/steam/valheim-data/valheim.sh"
+                    - "./start-valheim-server.sh"
                   ports:
                     - name: valheim-server
                       protocol: UDP
@@ -75,9 +113,16 @@ spec:
                       containerPort: 2457
                   resources:
                       limits:
+                        cpu: "2"
+                        memory: 8Gi
+                        ephemeral-storage: 8Gi
+                      requests:
                         cpu: "1"
+                        memory: 2Gi
+                        ephemeral-storage: 2Gi
                   volumeMounts:
-                    - mountPath: /home/steam/valheim-data
-                      name: server-data-storage
-                    - mountPath: /home/steam/.config/unity3d/IronGate/Valheim/worlds
-                      name: server-data-storage
+                    - name: val-game-data
+                      mountPath: /valheim
+                    - name: val-save-data
+                      mountPath: /root/.config
+              

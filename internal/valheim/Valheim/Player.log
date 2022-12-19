@@ -1,0 +1,249 @@
+Mono path[0] = 'C:/Program Files (x86)/Steam/steamapps/common/Valheim/valheim_Data/Managed'
+Mono config path = 'C:/Program Files (x86)/Steam/steamapps/common/Valheim/MonoBleedingEdge/etc'
+Initialize engine version: 2020.3.33f1 (915a7af8b0d5)
+[Subsystems] Discovering subsystems at path C:/Program Files (x86)/Steam/steamapps/common/Valheim/valheim_Data/UnitySubsystems
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 (ID=0x2504)
+    Vendor:   
+    VRAM:     12129 MB
+    Driver:   31.0.15.2698
+Begin MonoManager ReloadAssembly
+- Completed reload, in  0.061 seconds
+<RI> Initializing input.
+
+<RI> Input initialized.
+
+<RI> Initialized touch support.
+
+UnloadTime: 0.598500 ms
+12/18/2022 16:14:36: Starting to load scene:start
+Couldn't create a Convex Mesh from source mesh "default" within the maximum polygons limit (256). The partial hull will be used. Consider simplifying your mesh.
+Couldn't create a Convex Mesh from source mesh "default" within the maximum polygons limit (256). The partial hull will be used. Consider simplifying your mesh.
+Shader 'Lux Lit Particles/ Tess Bumped': fallback shader 'Lux Lit Particles/ Bumped Smoke' not found
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.780100 ms
+Only custom filters can be played. Please add a custom filter or an audioclip to the audiosource (Amb_MainMenu).
+12/18/2022 16:14:39: Using environment steamid 892970
+12/18/2022 16:14:39: Using steam APPID:892970
+12/18/2022 16:14:39: Authentication:k_ESteamNetworkingAvailability_Attempting
+12/18/2022 16:14:39: Steam initialized, persona:Namone
+12/18/2022 16:14:39: PlayFab custom ID set to "Steam_76561198001780409"
+12/18/2022 16:14:39: Using default prefs
+12/18/2022 16:14:39: Valheim version:0.212.7
+12/18/2022 16:14:39: Worldgenerator version setup:2
+12/18/2022 16:14:39: Render threading mode:MultiThreaded
+12/18/2022 16:14:39: Missing audio clip in music respawn
+12/18/2022 16:14:39: Checking for installed DLCs
+12/18/2022 16:14:39: DLC:beta installed:False
+12/18/2022 16:14:39: Builder started
+12/18/2022 16:14:40: Loaded localization CSV:localization language:English
+12/18/2022 16:14:40: Loaded localization CSV:localization_extra language:English
+12/18/2022 16:14:40: Loaded localization CSV:localization language:English
+12/18/2022 16:14:40: Loaded localization CSV:localization_extra language:English
+12/18/2022 16:14:40: Session auth respons callback
+12/18/2022 16:14:40: Ticket is System.Byte[] of length 369
+12/18/2022 16:14:40: Starting music menu
+12/18/2022 16:14:40: UI Group status changed Menu = True
+12/18/2022 16:14:41: PlayFab logged in as "Steam_76561198001780409"
+12/18/2022 16:14:41: PlayFab local entity ID is 76E586060395D9B3
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 138177.
+Total: 68.903300 ms (FindLiveObjects: 5.655100 ms CreateObjectMapping: 10.773200 ms MarkObjects: 52.324900 ms  DeleteObjects: 0.149500 ms)
+
+12/18/2022 16:14:42: UI Group status changed Menu = True
+12/18/2022 16:14:45: FOund selected Start game
+12/18/2022 16:14:45: show character selection
+12/18/2022 16:14:46: OnCharacterStart
+12/18/2022 16:14:59: Loading main scene
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 9.280300 ms
+12/18/2022 16:15:00: Steam initialized, persona:Namone
+12/18/2022 16:15:00: PlayFab custom ID set to "Steam_76561198001780409"
+12/18/2022 16:15:00: Using default prefs
+12/18/2022 16:15:00: Loading player profile namone
+12/18/2022 16:15:00: isModded: False
+12/18/2022 16:15:00: Zonesystem Awake 1090
+12/18/2022 16:15:00: DungeonDB Awake 1090
+12/18/2022 16:15:00: Steam initialized, persona:Namone
+12/18/2022 16:15:00: Registering lobby
+12/18/2022 16:15:00: New session server "Ragnarok" that has join code , now 1 player(s)
+12/18/2022 16:15:00: Register PlayFab server "Ragnarok"
+12/18/2022 16:15:00: Server 'Ragnarok' begin PlayFab create and join network for server 
+12/18/2022 16:15:00: Worldgenerator version setup:1
+12/18/2022 16:15:01: Audioman already exist, destroying self
+12/18/2022 16:15:01: Checking for installed DLCs
+12/18/2022 16:15:01: DLC:beta installed:False
+
+Unloading 109 unused Assets to reduce memory usage. Loaded Objects now: 141821.
+Total: 77.463700 ms (FindLiveObjects: 4.717600 ms CreateObjectMapping: 10.910600 ms MarkObjects: 60.834300 ms  DeleteObjects: 1.000800 ms)
+
+12/18/2022 16:15:08: Zonesystem Start 1090
+12/18/2022 16:15:08: Added 3 locations, 0 vegetations, 0 environments, 0 biome env-setups, 0 clutter  from locations_cp1
+12/18/2022 16:15:08: Added 1 locations, 0 vegetations, 1 environments, 0 biome env-setups, 0 clutter  from locations_mountaincaves
+12/18/2022 16:15:08: Added 27 locations, 25 vegetations, 5 environments, 1 biome env-setups, 3 clutter  from locations_mistlands
+12/18/2022 16:15:09: DungeonDB Start 1090
+12/18/2022 16:15:09: ZRpc timeout set to 30s 
+12/18/2022 16:15:09: Load world: Ragnarok (Ragnarok)
+12/18/2022 16:15:09: Loading 379179 zdos , my id -1114471323 data version:29
+12/18/2022 16:15:10: Loaded 100000 dead zdos
+12/18/2022 16:15:10: Removed 0 OLD generated ZDOS
+12/18/2022 16:15:10: Loaded 9960 locations
+12/18/2022 16:15:10: Session auth respons callback
+12/18/2022 16:15:10: Lobby was created k_EResultOK  109775242554556791  error:False
+12/18/2022 16:15:10: Got requested lobby data
+12/18/2022 16:15:15: Unpacking compressed mapdata 13178
+12/18/2022 16:15:16: Got requested lobby data
+12/18/2022 16:15:16: Starting respawn
+12/18/2022 16:15:16: tip:$loadscreen_tip21
+12/18/2022 16:15:17: Joined PlayFab Party network with ID "ff28d0d8-26f6-4cb5-9130-b34a1676be60|AwC6NvSQwihPcdse8kONDttbh9jBBVdlc3RVcwAAAAAAAAAAAAAAAAAATXVkEL9Xa34rfnIgJk1n6olEkKykili28X3MawG4mvIpb0ZkbnM4MWU1LTIyZjViOGVmLWFjNjktNGE4MS04M2NlLThlOGYxYTAyYWI2ZC53ZXN0dXMuY2xvdWRhcHAuYXp1cmUuY29t"
+12/18/2022 16:15:17: Created PlayFab lobby with ID "2eb5536f-8a49-4808-ad25-286351c61b2b", ConnectionString "cv1:2eb5536f-8a49-4808-ad25-286351c61b2b|451107|kv1|cv1:ikLuFkUNs486/Xhwof5aYoN4fSCGR5D0xhFM1FymgLI=" and owned by "76E586060395D9B3"
+12/18/2022 16:15:17: Session "Ragnarok" registered with join code 555238
+12/18/2022 16:15:17: Retry join-code check 99
+12/18/2022 16:15:18: Retry join-code check 98
+12/18/2022 16:15:19: Force generaeting hmap (-960.0, 0.0, -1920.0)
+12/18/2022 16:15:19: Force generaeting hmap (-896.0, 0.0, -1920.0)
+12/18/2022 16:15:19: Force generaeting hmap (-832.0, 0.0, -1920.0)
+12/18/2022 16:15:19: Force generaeting hmap (-960.0, 0.0, -1856.0)
+12/18/2022 16:15:19: Force generaeting hmap (-896.0, 0.0, -1856.0)
+12/18/2022 16:15:19: Session "Ragnarok" with join code 555238 is active with 1 player(s)
+12/18/2022 16:15:19: Loading dungeon
+12/18/2022 16:15:19: Dungeon loaded 35
+12/18/2022 16:15:19: Dungeon load time 16.9997 ms
+12/18/2022 16:15:19: Loading dungeon
+12/18/2022 16:15:19: Dungeon loaded 22
+12/18/2022 16:15:19: Dungeon load time 9.0079 ms
+12/18/2022 16:15:19: Loading dungeon
+12/18/2022 16:15:19: Dungeon loaded 27
+12/18/2022 16:15:19: Dungeon load time 9.0006 ms
+12/18/2022 16:15:19: Loading dungeon
+12/18/2022 16:15:20: Dungeon loaded 37
+12/18/2022 16:15:20: Dungeon load time 15.0001 ms
+12/18/2022 16:15:20: Loading dungeon
+12/18/2022 16:15:20: Dungeon loaded 32
+12/18/2022 16:15:20: Dungeon load time 16.0005 ms
+12/18/2022 16:15:20: Force generaeting hmap (-1088.0, 0.0, -1984.0)
+12/18/2022 16:15:20: Force generaeting hmap (-832.0, 0.0, -2048.0)
+12/18/2022 16:15:20: Force generaeting hmap (-1088.0, 0.0, -1920.0)
+12/18/2022 16:15:20: Force generaeting hmap (-1088.0, 0.0, -1856.0)
+12/18/2022 16:15:20: Force generaeting hmap (-1088.0, 0.0, -1792.0)
+12/18/2022 16:15:24: Spawned after 8.019994
+12/18/2022 16:15:24: Minimap: Adding unique location (-262.1, 35.7, -122.4)
+12/18/2022 16:15:24: Minimap: Adding unique location (-877.0, 54.1, -1905.1)
+12/18/2022 16:15:26: Starting music blackforest
+12/18/2022 16:15:26: Resumed music blackforest at 0
+12/18/2022 16:15:30: Spawned Greydwarf x 1
+12/18/2022 16:15:30: Spawned Greydwarf_Elite x 1
+12/18/2022 16:15:30: Spawned Greydwarf_Shaman x 1
+12/18/2022 16:15:30: Spawned FireFlies x 1
+12/18/2022 16:15:30: Spawned FireFlies x 1
+12/18/2022 16:15:38: TRIGGER
+12/18/2022 16:15:38: Teleporting Namone
+12/18/2022 16:15:45: Force generaeting hmap (-320.0, 0.0, -192.0)
+12/18/2022 16:15:45: Force generaeting hmap (-256.0, 0.0, -64.0)
+12/18/2022 16:15:45: Force generaeting hmap (-320.0, 0.0, -128.0)
+12/18/2022 16:15:45: Force generaeting hmap (-256.0, 0.0, -128.0)
+12/18/2022 16:15:45: Force generaeting hmap (-320.0, 0.0, -64.0)
+12/18/2022 16:15:45: Force generaeting hmap (-512.0, 0.0, -192.0)
+12/18/2022 16:15:45: Force generaeting hmap (-256.0, 0.0, -192.0)
+12/18/2022 16:15:45: Force generaeting hmap (-256.0, 0.0, 64.0)
+12/18/2022 16:15:46: Done fading color
+12/18/2022 16:15:46: Done fading color
+12/18/2022 16:15:52: Stopped music blackforest at 1167532
+12/18/2022 16:15:53: TRIGGER
+12/18/2022 16:15:53: Teleporting Namone
+12/18/2022 16:15:57: Starting music blackforest
+12/18/2022 16:15:57: Resumed music blackforest at 1167532
+12/18/2022 16:16:22: Stopped music blackforest at 2276735
+12/18/2022 16:16:22: Starting music blackforest
+12/18/2022 16:16:22: Resumed music blackforest at 2276735
+12/18/2022 16:16:46: Stopped music blackforest at 3336075
+12/18/2022 16:16:46: Starting music blackforest
+12/18/2022 16:16:46: Resumed music blackforest at 3336075
+12/18/2022 16:16:51: PlayFab listen socket child connected to remote player 46D219D34AC7797
+12/18/2022 16:16:51: Player joined server "Ragnarok" that has join code 555238, now 2 player(s)
+12/18/2022 16:16:51: ZRpc timeout set to 120s 
+12/18/2022 16:16:51: Muted PlayFab remote player 46D219D34AC7797
+12/18/2022 16:16:51: PlayFab socket with remote ID playfab/46D219D34AC7797 received local Platform ID Steam_76561198063568675
+12/18/2022 16:16:51: Got handshake from client playfab/46D219D34AC7797
+12/18/2022 16:16:54: VERSION check their:0.212.7  mine:0.212.7
+12/18/2022 16:16:54: Server: New peer connected,sending global keys
+12/18/2022 16:17:13: Got character ZDOID from Quintonis : 3238378886:2
+12/18/2022 16:17:19: Spawned Fish3 x 1
+12/18/2022 16:17:20: PlayFab listen socket child connected to remote player 3A36F849816C30AF
+12/18/2022 16:17:20: Player joined server "Ragnarok" that has join code 555238, now 3 player(s)
+12/18/2022 16:17:20: ZRpc timeout set to 120s 
+12/18/2022 16:17:20: Muted PlayFab remote player 3A36F849816C30AF
+12/18/2022 16:17:20: PlayFab socket with remote ID playfab/3A36F849816C30AF received local Platform ID Steam_76561198330217984
+12/18/2022 16:17:20: Got handshake from client playfab/3A36F849816C30AF
+12/18/2022 16:17:24: VERSION check their:0.212.7  mine:0.212.7
+12/18/2022 16:17:24: Server: New peer connected,sending global keys
+12/18/2022 16:17:43: Kickstart, resend 1 packets for playfab/3A36F849816C30AF
+12/18/2022 16:17:48: Got character ZDOID from Beefcake : 738173461:12
+12/18/2022 16:17:56: Player 3238378886 wants to pickup Wood(Clone)   im: -1114471323
+12/18/2022 16:17:56: Player 3238378886 wants to pickup Wood(Clone)   im: -1114471323
+12/18/2022 16:17:56:   but im not the owner
+12/18/2022 16:18:01: Player 3238378886 wants to pickup Wood(Clone)   im: -1114471323
+12/18/2022 16:18:01: Player 3238378886 wants to pickup Wood(Clone)   im: -1114471323
+12/18/2022 16:18:01: Player 3238378886 wants to pickup Wood(Clone)   im: -1114471323
+12/18/2022 16:18:01: Player 3238378886 wants to pickup Wood(Clone)   im: -1114471323
+12/18/2022 16:18:01: Player 3238378886 wants to pickup Wood(Clone)   im: -1114471323
+12/18/2022 16:18:03: Player 3238378886 wants to pickup Wood(Clone)   im: -1114471323
+12/18/2022 16:18:08: Player 3238378886 wants to pickup Wood(Clone)   im: -1114471323
+12/18/2022 16:18:08: Player 3238378886 wants to pickup Wood(Clone)   im: -1114471323
+12/18/2022 16:18:08: Player 3238378886 wants to pickup Wood(Clone)   im: -1114471323
+12/18/2022 16:18:08: Player 3238378886 wants to pickup Wood(Clone)   im: -1114471323
+12/18/2022 16:18:15: Spawned FireFlies x 1
+12/18/2022 16:18:16: Spawned FireFlies x 1
+12/18/2022 16:18:35: Player 3238378886 wants to pickup GreydwarfEye(Clone)   im: -1114471323
+12/18/2022 16:18:35: Player 3238378886 wants to pickup Resin(Clone)   im: -1114471323
+12/18/2022 16:18:35: Player 3238378886 wants to pickup Pukeberries(Clone)   im: -1114471323
+12/18/2022 16:18:35: Player 3238378886 wants to pickup Wood(Clone)   im: -1114471323
+12/18/2022 16:18:35: Placed locations in zone -49,-5  duration 0 ms
+12/18/2022 16:18:39: Spawned FireFlies x 1
+12/18/2022 16:18:45: Stopped music blackforest at 8557514
+12/18/2022 16:18:45: Starting music blackforest
+12/18/2022 16:18:45: Resumed music blackforest at 8557514
+12/18/2022 16:18:58: Got character ZDOID from Beefcake : 0:0
+12/18/2022 16:19:05: UI Group status changed MenuRoot = True
+12/18/2022 16:19:06: Got character ZDOID from Beefcake : 738173461:206
+12/18/2022 16:19:09: Stopped music blackforest at 591181
+12/18/2022 16:19:09: Starting music home
+12/18/2022 16:19:09: Resumed music home at 0
+12/18/2022 16:19:16: Player 3238378886 wants to pickup Stone(Clone)   im: -1114471323
+12/18/2022 16:19:16: Player 3238378886 wants to pickup Wood(Clone)   im: -1114471323
+12/18/2022 16:19:16: Player 3238378886 wants to pickup Wood(Clone)   im: -1114471323
+12/18/2022 16:19:16: Player 3238378886 wants to pickup Wood(Clone)   im: -1114471323
+12/18/2022 16:19:16: Player 3238378886 wants to pickup Stone(Clone)   im: -1114471323
+12/18/2022 16:19:16: Player 3238378886 wants to pickup Wood(Clone)   im: -1114471323
+12/18/2022 16:19:16: Player 3238378886 wants to pickup Dandelion(Clone)   im: -1114471323
+12/18/2022 16:19:20: Spawned Fish1 x 1
+12/18/2022 16:19:20: Player 3238378886 wants to pickup Resin(Clone)   im: -1114471323
+12/18/2022 16:19:20: Player 3238378886 wants to pickup Wood(Clone)   im: -1114471323
+12/18/2022 16:19:20: Player 3238378886 wants to pickup Stone(Clone)   im: -1114471323
+12/18/2022 16:19:21: Player 3238378886 wants to pickup Stone(Clone)   im: -1114471323
+12/18/2022 16:19:21:   but im not the owner
+12/18/2022 16:19:22: Kickstart, resend 2 packets for playfab/3A36F849816C30AF
+12/18/2022 16:19:23: Spawned Greydwarf_Elite x 1
+12/18/2022 16:19:27: Spawned FireFlies x 1
+12/18/2022 16:19:28: Spawned Greydwarf_Shaman x 1
+12/18/2022 16:19:29: Player 3238378886 wants to pickup Resin(Clone)   im: -1114471323
+12/18/2022 16:19:29: Player 3238378886 wants to pickup GreydwarfEye(Clone)   im: -1114471323
+12/18/2022 16:19:29: Player 3238378886 wants to pickup Stone(Clone)   im: -1114471323
+12/18/2022 16:19:30: Player 3238378886 wants to pickup Wood(Clone)   im: -1114471323
+12/18/2022 16:19:31: Starting music morning
+12/18/2022 16:19:32: Stopped music home at 1010419
+12/18/2022 16:20:06: Starting music blackforest
+12/18/2022 16:20:06: Resumed music blackforest at 591181
+12/18/2022 16:20:06: Kickstart, resend 1 packets for playfab/3A36F849816C30AF
+12/18/2022 16:20:07: UI Group status changed MenuRoot = True
+12/18/2022 16:20:19: Player 3238378886 wants to pickup Wood(Clone)   im: -1114471323
+12/18/2022 16:21:01: UI Group status changed MenuRoot = True
+12/18/2022 16:21:51: UI Group status changed MenuRoot = True
+12/18/2022 16:22:04: Update PlayFab entity token
+12/18/2022 16:22:30: Player onboard, total onboard 1
+12/18/2022 16:22:30: Player onboard, total onboard 2
+12/18/2022 16:22:39: Player onboard, total onboard 3
+12/18/2022 16:22:43: UI Group status changed MenuRoot = True
+
