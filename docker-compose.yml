@@ -3,17 +3,21 @@ volumes:
   zomboid-data:
   valheim-data:
 services:
-  # barotrauma:
-  #   image: barotrauma:latest
-  #   build:
-  #     context: .
-  #     target: barotrauma-server
-  #   ports:
-  #     - 27015:27015
-  #     - 27016:27016
-  #   volumes:
-  #     - ./barotrauma-data:/home/barotrauma-data
-  #   command: ["/usr/games/steamcmd", "+force_install_dir /home/barotrauma-data", "+login anonymous", "+app_run 1026340"]
+  barotrauma:
+    image: barotrauma:latest
+    build:
+      context: .
+      target: barotrauma-server
+    environment:
+      - BAR_PASSWORD=muggins1
+      - BAR_NAME=NamonesDedicatedServer
+      - BARSERVERMESSAGE="Server message goes here"
+      - BAR_PERMISSIONS=InGameUsername1:SteamId1:Perm1,Perm2:Command1,Command2;InGameUsername2:SteamId2:Perm2.1;
+    ports:
+      - 27015:27015/udp
+      - 27016:27016/udp
+    volumes:
+      - ./internal/barotrauma:/barotrauma
   # zomboid:
   #   image: zomboid:latest
   #   build:
@@ -26,16 +30,16 @@ services:
   #     - /internal/start-zomboid-server.sh:/home/valuser/start-zomboid-server.sh
   #     - zomboid-data:/root/Zomboid
   #   command: ["./start-zomboid-server.sh", "-servername", "NamonesWorld", "-adminpassword", "root"]
-  valheim:
-    image: valheim:latest
-    build:
-      context: .
-      target: valheim-server
-    ports:
-      - "2456:2456/udp"
-      - "2457:2457/udp"
-    volumes:
-      - valheim-data:/root/.config
-      - /internal/valheim/valuser:/home/valuser
-      - /internal/valheim/Valheim:/root/.config/unity3d/IronGate/Valheim
-    command: ["sleep", "9000"]
+  # valheim:
+  #   image: valheim:latest
+  #   build:
+  #     context: .
+  #     target: valheim-server
+  #   ports:
+  #     - "2456:2456/udp"
+  #     - "2457:2457/udp"
+  #   volumes:
+  #     - valheim-data:/root/.config
+  #     - /internal/valheim/valuser:/home/valuser
+  #     - /internal/valheim/Valheim:/root/.config/unity3d/IronGate/Valheim
+  #   command: ["sleep", "9000"]
