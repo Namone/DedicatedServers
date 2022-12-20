@@ -30,6 +30,12 @@ spec:
               - name: val-save-data
                 persistentVolumeClaim:
                   claimName: val-storage-2
+              - name: baro-game-data
+                persistentVolumeClaim:
+                  claimName: baro-storage-1
+              - name: baro-save-data
+                persistentVolumeClaim:
+                  claimName: baro-storage-2
             initContainers:
                 - name: init-zomboid
                   image: {{ .Values.zomboidImage }}
@@ -67,14 +73,17 @@ spec:
                   volumeMounts:
                     - mountPath: /valheim
                       name: val-game-data
-                - name: init-baro
-                  image: {{ .Values.barotraumaImage }}
-                  command: ["cp", "-rf", "/internal/Barotrauma", "/home/steam/.local/share/Daedalic\ Entertainment\ GmbH"]
-                  volumeMounts:
-                    - mountPath: "/home/steam/.local/share/Daedalic\ Entertainment\ GmbH"
-                      name: baro-game-data
+                # - name: init-baro
+                #   image: {{ .Values.barotraumaImage }}/home/steam/.local/share/Daedalic\ Entertainment\ GmbH
+                #   command: ["cp", "-rf", "/internal/Barotrauma", ""]
+                #   volumeMounts:
+                #     - mountPath: "/home/steam/.local/share/Daedalic\ Entertainment\ GmbH"
+                #       name: baro-save-data
             containers:
                 - name: barotrauma
+                  # command:
+                  #   - "sleep"
+                  #   - "100000"
                   image: {{ .Values.barotraumaImage }}
                   imagePullPolicy: Always
                   ports:
@@ -96,8 +105,6 @@ spec:
                   volumeMounts:
                     - name: baro-game-data
                       mountPath: /home/steam
-                    - name: baro-save-data
-                      mountPath: "/home/steam/.local/share/Daedalic\ Entertainment\ GmbH/Barotrauma/Multiplayer"
                 - name: zomboid
                   image: {{ .Values.zomboidImage }}
                   imagePullPolicy: Always
