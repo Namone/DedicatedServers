@@ -29,6 +29,8 @@ FROM goldfish92/barotrauma-dedicated-server:1.2.0 as barotrauma-server
 
 USER root
 COPY internal/Barotrauma /internal/Barotrauma
+COPY internal/Barotrauma/Data /internal/Barotrauma
+COPY internal/Barotrauma/Multiplayer /internal/Barotrauma
 
 FROM server-base as zomboid-server
 
