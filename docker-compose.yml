@@ -4,20 +4,14 @@ volumes:
   valheim-data:
 services:
   barotrauma:
-    image: barotrauma:latest
+    image: barotrauma
+    command: ["/usr/games/steamcmd", "+force_install_dir", "/barotrauma", "+login", "anonymous", "+app_run", "1026340"]
     build:
       context: .
       target: barotrauma-server
-    environment:
-      - BAR_PASSWORD=muggins1
-      - BAR_NAME=NamonesDedicatedServer
-      - BARSERVERMESSAGE="Server message goes here"
-      - BAR_PERMISSIONS=InGameUsername1:SteamId1:Perm1,Perm2:Command1,Command2;InGameUsername2:SteamId2:Perm2.1;
     ports:
       - 27015:27015/udp
       - 27016:27016/udp
-    volumes:
-      - ./internal/barotrauma:/barotrauma
   # zomboid:
   #   image: zomboid:latest
   #   build:

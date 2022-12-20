@@ -61,31 +61,37 @@ spec:
                   volumeMounts:
                     - mountPath: /valheim
                       name: val-game-data
-                # - name: init-val-world
-                #   image: {{ .Values.valheimImage }}
-                #   command: ["cp", "-rf", "/internal/Valheim", "/root/.config/unity3d/IronGate"]
-                #   volumeMounts:
-                #     - mountPath: /root/.config
-                #       name: val-save-data
                 - name: init-val-script
                   image: {{ .Values.valheimImage }}
                   command: ["mv", "/internal/start-valheim-server.sh", "/valheim/start-valheim-server.sh"]
                   volumeMounts:
                     - mountPath: /valheim
                       name: val-game-data
-                # - name: init-baro
-                #   image: {{ .Values.barotraumaImage }}/home/steam/.local/share/Daedalic\ Entertainment\ GmbH
-                #   command: ["cp", "-rf", "/internal/Barotrauma", ""]
-                #   volumeMounts:
-                #     - mountPath: "/home/steam/.local/share/Daedalic\ Entertainment\ GmbH"
-                #       name: baro-save-data
+                - name: init-baro-script
+                  image: {{ .Values.barotraumaImage }}
+                  command: ["mv", "/internal/Barotrauma/entry.sh", "/barotrauma/entry.sh"]
+                  volumeMounts:
+                    - mountPath: /barotrauma
+                      name: baro-game-data
+                - name: init-baro-config
+                  image: {{ .Values.barotraumaImage }}
+                  command: ["mv", "/internal/Barotrauma/serversettings.xml", "/barotrauma/serversettings.xml"]
+                  volumeMounts:
+                    - mountPath: /barotrauma
+                      name: baro-game-data
+                - name: init-baro-perms
+                  image: {{ .Values.barotraumaImage }}
+                  command: ["mv", "/internal/Barotrauma/clientpermissions.xml", "/barotrauma/clientpermissions.xml"]
+                  volumeMounts:
+                    - mountPath: /barotrauma
+                      name: baro-game-data
             containers:
                 - name: barotrauma
-                  # command:
-                  #   - "sleep"
-                  #   - "100000"
                   image: {{ .Values.barotraumaImage }}
                   imagePullPolicy: Always
+                  env:
+                    - name: STEAMAPPDIR
+                      value: "/barotrauma"
                   ports:
                     - name: baro-server
                       protocol: UDP
@@ -104,6 +110,8 @@ spec:
                         ephemeral-storage: 8Gi
                   volumeMounts:
                     - name: baro-game-data
+                      mountPath: /barotrauma
+                    - name: baro-save-data
                       mountPath: /home/steam
                 - name: zomboid
                   image: {{ .Values.zomboidImage }}
