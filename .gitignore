@@ -1,3 +1,4 @@
 .aws
 barotrauma-data
 zomboid-data
+internal/*
