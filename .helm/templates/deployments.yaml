@@ -38,12 +38,12 @@ spec:
                   volumeMounts:
                     - mountPath: /zomboid
                       name: pz-game-data
-                # - name: init-pz-world
-                #   image: {{ .Values.zomboidImage }}
-                #   command: ["cp", "-rf", "/internal/Zomboid", "/root"]
-                #   volumeMounts:
-                #     - mountPath: /root/Zomboid
-                #       name: pz-save-data
+                - name: init-pz-save
+                  image: {{ .Values.zomboidImage }}
+                  command: ["mv", "/internal/Zomboid", "/save-data/Zomboid"]
+                  volumeMounts:
+                    - mountPath: /save-data/Zomboid
+                      name: pz-save-data
                 - name: init-valheim
                   image: {{ .Values.valheimImage }}
                   command: ["/usr/games/steamcmd", "+force_install_dir", "/valheim", "+login", "anonymous", "+app_update", "896660", "validate", "+quit"]
@@ -62,6 +62,8 @@ spec:
                   imagePullPolicy: Always
                   command:
                     - "./start-server.sh"
+                    - "-cachedir"
+                    - "/save-data/Zomboid"
                     - "-servername"
                     - "zomboid"
                     - "-adminpassword"

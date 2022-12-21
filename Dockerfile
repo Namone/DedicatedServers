@@ -1,4 +1,4 @@
-# Pull a Debian Linux distro.
+# Pull in Ubuntu.
 FROM  ubuntu:20.04 as server-base
 
 
@@ -8,37 +8,24 @@ RUN echo steam steam/license note '' | debconf-set-selections
 
 RUN apt-get update -y
 RUN apt-get install software-properties-common -y
+
 RUN dpkg --add-architecture i386
-RUN apt-get update -y
 RUN add-apt-repository multiverse
-RUN apt-get install wget gdebi-core lib32gcc-s1 -y
 
-
-# RUN apt-get install --reinstall libcairomm-1.0-1v5 libglibmm-2.4-1v5 \
-# libsigc++-2.0-0v5
-# Link steamcmd
 RUN apt-get update -y
-RUN apt-get install steam steamcmd -y
+RUN apt-get install steamcmd -y
 
 USER root
 RUN mkdir /internal
+RUN mkdir /save-data
 WORKDIR /
-
-#### Configure Barotrauma Server & related dependenices for the environment it runs within. #####
-FROM goldfish92/barotrauma-dedicated-server:1.2.0 as barotrauma-server
-
-USER root
-COPY internal/Barotrauma /internal/Barotrauma
-COPY internal/Barotrauma/Data /internal/Barotrauma
-COPY internal/Barotrauma/Multiplayer /internal/Barotrauma
-COPY internal/Barotrauma/entry.sh /internal/Barotrauma/entry.sh
 
 FROM server-base as zomboid-server
 
 COPY internal/start-zomboid-server.sh /internal/start-zomboid-server.sh
+RUN mkdir /internal/Zomboid
 
 COPY internal/Zomboid /internal/Zomboid
-
 USER root
 
 WORKDIR /zomboid
