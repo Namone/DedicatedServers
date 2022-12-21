@@ -20,14 +20,14 @@ metadata:
 spec:
     type: LoadBalancer
     ports:
-        - name: baro-server
-          targetPort: 27015
-          port: 27015
-          protocol: UDP
-        - name: baro-server-q
-          targetPort: 27016
-          port: 27016
-          protocol: UDP
+        # - name: baro-server
+        #   targetPort: 27015
+        #   port: 27015
+        #   protocol: UDP
+        # - name: baro-server-q
+        #   targetPort: 27016
+        #   port: 27016
+        #   protocol: UDP
         - name: zomboid-server
           targetPort: 16261
           port: 16261

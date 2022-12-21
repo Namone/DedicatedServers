@@ -31,6 +31,7 @@ USER root
 COPY internal/Barotrauma /internal/Barotrauma
 COPY internal/Barotrauma/Data /internal/Barotrauma
 COPY internal/Barotrauma/Multiplayer /internal/Barotrauma
+COPY internal/Barotrauma/entry.sh /internal/Barotrauma/entry.sh
 
 FROM server-base as zomboid-server
 
