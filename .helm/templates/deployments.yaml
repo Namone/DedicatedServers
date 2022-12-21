@@ -85,12 +85,12 @@ spec:
                   volumeMounts:
                     - mountPath: /barotrauma
                       name: baro-game-data
-                - name: init-baro-saves
-                  image: {{ .Values.barotraumaImage }}
-                  command: ["cp", "-rf", "/internal/Barotrauma/Multiplayer", "/barotrauma/Daedalic Entertainment GmbH/Barotrauma"]
-                  volumeMounts:
-                    - mountPath: /barotrauma
-                      name: baro-game-data
+                # - name: init-baro-saves
+                #   image: {{ .Values.barotraumaImage }}
+                #   command: ["cp", "-rf", "/internal/Barotrauma/Multiplayer", "/barotrauma/Daedalic Entertainment GmbH/Barotrauma"]
+                #   volumeMounts:
+                #     - mountPath: /barotrauma
+                #       name: baro-game-data
                 - name: init-baro-data
                   image: {{ .Values.barotraumaImage }}
                   command: ["cp", "-rf", "/internal/Barotrauma/Data", "/barotrauma"]
