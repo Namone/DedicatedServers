@@ -12,11 +12,6 @@ spec:
             labels:
                 app: dedicated-server
         spec:
-            # volumes:
-              # - name: persistent-storage
-              #   # This AWS EFS volume must already exist.
-              #   persistentVolumeClaim:
-              #     claimName: efs-claim
             volumes:  
               - name: pz-game-data
                 persistentVolumeClaim:
@@ -30,12 +25,6 @@ spec:
               - name: val-save-data
                 persistentVolumeClaim:
                   claimName: val-storage-2
-              - name: baro-game-data
-                persistentVolumeClaim:
-                  claimName: baro-storage-1
-              - name: baro-save-data
-                persistentVolumeClaim:
-                  claimName: baro-storage-2
             initContainers:
                 - name: init-zomboid
                   image: {{ .Values.zomboidImage }}
@@ -67,76 +56,11 @@ spec:
                   volumeMounts:
                     - mountPath: /valheim
                       name: val-game-data
-                # - name: init-baro-install
-                #   image: {{ .Values.barotraumaImage }}
-                #   command: ["cp", "-rf", "/home/steam/barotrauma-dedicated", "/barotrauma"]
-                #   volumeMounts:
-                #     - mountPath: /barotrauma
-                #       name: baro-game-data
-                # - name: init-baro-script
-                #   image: {{ .Values.barotraumaImage }}
-                #   command: ["mv", "/internal/Barotrauma/entry.sh", "/barotrauma/entry.sh"]
-                #   volumeMounts:
-                #     - mountPath: /barotrauma
-                #       name: baro-game-data
-                # - name: init-baro-config
-                #   image: {{ .Values.barotraumaImage }}
-                #   command: ["mv", "/internal/Barotrauma/serversettings.xml", "/barotrauma/serversettings.xml"]
-                #   volumeMounts:
-                #     - mountPath: /barotrauma
-                #       name: baro-game-data
-                # - name: init-baro-perms
-                #   image: {{ .Values.barotraumaImage }}
-                #   command: ["mv", "/internal/Barotrauma/Data/clientpermissions.xml", "/barotrauma/clientpermissions.xml"]
-                #   volumeMounts:
-                #     - mountPath: /barotrauma
-                #       name: baro-game-data
-                # # - name: init-baro-saves
-                # #   image: {{ .Values.barotraumaImage }}
-                # #   command: ["cp", "-rf", "/internal/Barotrauma/Multiplayer", "/barotrauma/Daedalic Entertainment GmbH/Barotrauma"]
-                # #   volumeMounts:
-                # #     - mountPath: /barotrauma
-                # #       name: baro-game-data
-                # - name: init-baro-data
-                #   image: {{ .Values.barotraumaImage }}
-                #   command: ["cp", "-rf", "/internal/Barotrauma/Data", "/barotrauma"]
-                #   volumeMounts:
-                #     - mountPath: /barotrauma
-                #       name: baro-game-data
             containers:
-                # - name: barotrauma
-                #   image: {{ .Values.barotraumaImage }}
-                #   imagePullPolicy: Always
-                #   env:
-                #     - name: STEAMAPPDIR
-                #       value: "/barotrauma"
-                #   ports:
-                #     - name: baro-server
-                #       protocol: UDP
-                #       containerPort: 27015
-                #     - name: baro-server-q
-                #       protocol: UDP
-                #       containerPort: 27016
-                #   resources:
-                #       limits:
-                #         cpu: "2"
-                #         memory: 4Gi
-                #         ephemeral-storage: 16Gi
-                #       requests:
-                #         cpu: "1"
-                #         memory: 2Gi
-                #         ephemeral-storage: 8Gi
-                #   volumeMounts:
-                #     - name: baro-game-data
-                #       mountPath: /barotrauma
-                #     - name: baro-save-data
-                #       mountPath: /home/steam
                 - name: zomboid
                   image: {{ .Values.zomboidImage }}
                   imagePullPolicy: Always
                   command:
-                    # - "sleep"
-                    # - "100000"
                     - "./start-server.sh"
                     - "-servername"
                     - "zomboid"
