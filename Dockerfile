@@ -22,11 +22,13 @@ WORKDIR /
 
 FROM server-base as zomboid-server
 
+RUN mkdir /internal/ZomboidInstall
+RUN /usr/games/steamcmd +force_install_dir /internal/ZomboidInstall +login anonymous +app_update 380870 validate +quit
 COPY internal/start-zomboid-server.sh /internal/start-zomboid-server.sh
 RUN mkdir /internal/Zomboid
 
 COPY internal/Zomboid /internal
-COPY internal/ProjectZomboid64.json /internal/ProjectZomboid64.json
+COPY internal/ProjectZomboid64.json /internal/ZomboidInstall/ProjectZomboid64.json
 USER root
 
 WORKDIR /zomboid
@@ -36,7 +38,8 @@ EXPOSE 16262
 
 FROM server-base as valheim-server
 
-
+RUN mkdir /internal/ValheimInstall
+RUN /usr/games/steamcmd +force_install_dir /internal/ValheimInstall +login anonymous +app_update 896660 validate +quit
 COPY internal/valheim/valuser/start-valheim-server.sh /internal/start-valheim-server.sh
 COPY internal/valheim/Valheim /internal/Valheim
 
