@@ -12,7 +12,7 @@ metadata:
         service.beta.kubernetes.io/aws-load-balancer-healthcheck-interval: "10"   
         service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing
         meta.helm.sh/release-name: server-load-manager
-        meta.helm.sh/release-namespace: server-load-manager
+        meta.helm.sh/release-namespace: servers
     labels:
         app.kubernetes.io/managed-by: Helm
     name: server-load-manager

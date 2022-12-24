@@ -15,4 +15,4 @@ spec:
   storageClassName: efs-sc
   resources:
     requests:
-      storage: 10Gi
+      storage: 32Gi

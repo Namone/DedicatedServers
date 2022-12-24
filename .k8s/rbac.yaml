@@ -1,0 +1,54 @@
+# This YAML file contains all RBAC objects that are necessary to run external
+# CSI attacher.
+#
+# In production, each CSI driver deployment has to be customized:
+# - to avoid conflicts, use non-default namespace and different names
+#   for non-namespaced entities like the ClusterRole
+# - decide whether the deployment replicates the external CSI
+#   attacher, in which case leadership election must be enabled;
+#   this influences the RBAC setup, see below
+
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  annotations:
+    eks.amazonaws.com/role-arn: arn:aws:iam::262580537006:role/EBSVolumeAdmin
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: aws-ebs-csi-driver
+    meta.helm.sh/release-name: dedicated-server-deployment
+    meta.helm.sh/release-namespace: servers
+  name: ebs-csi-controller-sa
+  namespace: kube-system
+
+---
+# Attacher must be able to work with PVs, CSINodes and VolumeAttachments
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: external-attacher-runner
+rules:
+  - apiGroups: [""]
+    resources: ["persistentvolumes"]
+    verbs: ["get", "list", "watch", "patch"]
+  - apiGroups: ["storage.k8s.io"]
+    resources: ["csinodes"]
+    verbs: ["get", "list", "watch"]
+  - apiGroups: ["storage.k8s.io"]
+    resources: ["volumeattachments"]
+    verbs: ["get", "list", "watch", "patch"]
+  - apiGroups: ["storage.k8s.io"]
+    resources: ["volumeattachments/status"]
+    verbs: ["patch"]
+---
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: ebs-csi-controller-sa-role
+subjects:
+  - kind: ServiceAccount
+    name: ebs-csi-controller-sa
+    namespace: servers
+roleRef:
+  kind: ClusterRole
+  name: external-attacher-runner
+  apiGroup: rbac.authorization.k8s.io

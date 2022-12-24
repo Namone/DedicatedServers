@@ -25,7 +25,8 @@ FROM server-base as zomboid-server
 COPY internal/start-zomboid-server.sh /internal/start-zomboid-server.sh
 RUN mkdir /internal/Zomboid
 
-COPY internal/Zomboid /internal/Zomboid
+COPY internal/Zomboid /internal
+COPY internal/ProjectZomboid64.json /internal/ProjectZomboid64.json
 USER root
 
 WORKDIR /zomboid

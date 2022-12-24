@@ -1,2 +1,2 @@
 #!/bin/bash
-kubectl apply -f pv.yaml && kubectl apply -f pv-claims.yaml
+kubectl apply -f pv-efs.yaml && kubectl apply -f pv-efs-claims.yaml

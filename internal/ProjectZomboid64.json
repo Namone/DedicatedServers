@@ -30,6 +30,7 @@
 		"-Djava.library.path=linux64/:natives/",
 		"-Djava.security.egd=file:/dev/urandom",
 		"-XX:+UseZGC",
-		"-XX:-OmitStackTraceInFastThrow"
+		"-XX:-OmitStackTraceInFastThrow",
+		"-Duser.home=/save-data"
 	]
 }
