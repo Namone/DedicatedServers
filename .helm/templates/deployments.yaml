@@ -34,19 +34,19 @@ spec:
                   command: ["cp", "-rf", "/internal/Saves", "/save-data/Zomboid/Saves"]
                   volumeMounts:
                     - mountPath: /games/save-data/Zomboid/Saves
-                      name: pz-save-data
+                      name: game-data
                 - name: init-pz-conf
                   image: {{ .Values.zomboidImage }}
                   command: ["cp", "-rf", "/internal/Server", "/save-data/Zomboid/Server"]
                   volumeMounts:
                     - mountPath: /games/save-data/Zomboid/Server
-                      name: pz-save-data
+                      name: game-data
                 - name: init-pz-db
                   image: {{ .Values.zomboidImage }}
                   command: ["cp", "-rf", "/internal/db", "/save-data/Zomboid/db"]
                   volumeMounts:
                     - mountPath: /games/save-data/Zomboid/db
-                      name: pz-save-data
+                      name: game-data
                 - name: init-valheim
                   image: {{ .Values.valheimImage }}
                   command: ["/usr/games/steamcmd", "+force_install_dir", "/valheim", "+login", "anonymous", "+app_update", "896660", "validate", "+quit"]
