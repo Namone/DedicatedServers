@@ -17,58 +17,54 @@ spec:
               persistentVolumeClaim:
                 claimName: efs-claim
             initContainers:
-                - name: init-zomboid
-                  image: {{ .Values.zomboidImage }}
-                  command: ["mv", "/internal/ZomboidInstall", "/games/zomboid"]
-                  volumeMounts:
-                    - mountPath: /games/zomboid
-                      name: game-data
-                - name: init-pz-json
-                  image: {{ .Values.zomboidImage }}
-                  command: ["cp", "-rf", "/internal/ProjectZomboid64.json", "/games/zomboid/ProjectZomboid64.json"]
-                  volumeMounts:
-                    - mountPath: /zomboid
-                      name: game-data
-                - name: init-pz-save
-                  image: {{ .Values.zomboidImage }}
-                  command: ["cp", "-rf", "/internal/Saves", "/save-data/Zomboid/Saves"]
-                  volumeMounts:
-                    - mountPath: /games/save-data/Zomboid/Saves
-                      name: game-data
-                - name: init-pz-conf
-                  image: {{ .Values.zomboidImage }}
-                  command: ["cp", "-rf", "/internal/Server", "/save-data/Zomboid/Server"]
-                  volumeMounts:
-                    - mountPath: /games/save-data/Zomboid/Server
-                      name: game-data
-                - name: init-pz-db
-                  image: {{ .Values.zomboidImage }}
-                  command: ["cp", "-rf", "/internal/db", "/save-data/Zomboid/db"]
-                  volumeMounts:
-                    - mountPath: /games/save-data/Zomboid/db
-                      name: game-data
-                - name: init-valheim
-                  image: {{ .Values.valheimImage }}
-                  command: ["mv", "/internal/ValheimInstall", "/games/zomboid"]
-                  volumeMounts:
-                    - mountPath: /valheim
-                      name: game-data
-                - name: init-val-script
-                  image: {{ .Values.valheimImage }}
-                  command: ["mv", "/internal/start-valheim-server.sh", "/valheim/start-valheim-server.sh"]
-                  volumeMounts:
-                    - mountPath: /games/valheim
-                      name: game-data
+                # - name: init-zomboid
+                #   image: {{ .Values.zomboidImage }}
+                #   command: ["cp", "-rf", "/internal/ZomboidInstall", "/games/zomboid"]
+                #   volumeMounts:
+                #     - mountPath: /games/zomboid
+                #       name: game-data
+                # - name: init-pz-json
+                #   image: {{ .Values.zomboidImage }}
+                #   command: ["cp", "-rf", "/internal/ZomboidInstall/ProjectZomboid64.json", "/games/zomboid/ProjectZomboid64.json"]
+                #   volumeMounts:
+                #     - mountPath: /games/zomboid
+                #       name: game-data
+                # - name: init-pz-save
+                #   image: {{ .Values.zomboidImage }}
+                #   command: ["cp", "-rf", "/internal/Saves", "/games/save-data/Zomboid/Saves"]
+                #   volumeMounts:
+                #     - mountPath: /games/save-data/Zomboid/Saves
+                #       name: game-data
+                # - name: init-pz-conf
+                #   image: {{ .Values.zomboidImage }}
+                #   command: ["cp", "-rf", "/internal/Server", "/games/save-data/Zomboid/Server"]
+                #   volumeMounts:
+                #     - mountPath: /games/save-data/Zomboid/Server
+                #       name: game-data
+                # - name: init-pz-db
+                #   image: {{ .Values.zomboidImage }}
+                #   command: ["cp", "-rf", "/internal/db", "/games/save-data/Zomboid/db"]
+                #   volumeMounts:
+                #     - mountPath: /games/save-data/Zomboid/db
+                #       name: game-data
+                # - name: init-valheim
+                #   image: {{ .Values.valheimImage }}
+                #   command: ["mv", "/internal/ValheimInstall", "/games/valheim"]
+                #   volumeMounts:
+                #     - mountPath: /games/valheim
+                #       name: game-data
+                # - name: init-val-script
+                #   image: {{ .Values.valheimImage }}
+                #   command: ["mv", "/internal/start-valheim-server.sh", "/games/valheim/start-valheim-server.sh"]
+                #   volumeMounts:
+                #     - mountPath: /games/valheim/start-valheim-server.sh
+                #       name: game-data
             containers:
                 - name: zomboid
                   image: {{ .Values.zomboidImage }}
                   imagePullPolicy: Always
                   command:
-                    # - "sleep"
-                    # - "9000"
                     - "./start-server.sh"
-                    - "-cachedir"
-                    - "/save-data/Zomboid"
                     - "-servername"
                     - "zomboid"
                     - "-adminpassword"
@@ -91,7 +87,7 @@ spec:
                         ephemeral-storage: 8Gi
                   volumeMounts:
                     - name: game-data
-                      mountPath: /games/zomboid
+                      mountPath: /games
                 - name: valheim
                   image: {{ .Values.valheimImage }}
                   imagePullPolicy: Always
@@ -116,5 +112,5 @@ spec:
                         ephemeral-storage: 2Gi
                   volumeMounts:
                     - name: game-data
-                      mountPath: /games/valheim
+                      mountPath: /games
               

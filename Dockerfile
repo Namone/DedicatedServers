@@ -16,8 +16,9 @@ RUN apt-get update -y
 RUN apt-get install steamcmd -y
 
 USER root
+RUN mkdir /games
+RUN mkdir /games/save-data
 RUN mkdir /internal
-RUN mkdir /save-data
 WORKDIR /
 
 FROM server-base as zomboid-server
@@ -29,9 +30,11 @@ RUN mkdir /internal/Zomboid
 
 COPY internal/Zomboid /internal
 COPY internal/ProjectZomboid64.json /internal/ZomboidInstall/ProjectZomboid64.json
-USER root
 
-WORKDIR /zomboid
+RUN mkdir /games/save-data/Zomboid
+
+RUN mkdir /games/zomboid
+WORKDIR /games/zomboid
 
 EXPOSE 16261
 EXPOSE 16262
@@ -43,7 +46,8 @@ RUN /usr/games/steamcmd +force_install_dir /internal/ValheimInstall +login anony
 COPY internal/valheim/valuser/start-valheim-server.sh /internal/start-valheim-server.sh
 COPY internal/valheim/Valheim /internal/Valheim
 
-WORKDIR /valheim
+RUN mkdir /games/valheim
+WORKDIR /games/valheim
 
 EXPOSE 2456
 EXPOSE 2457

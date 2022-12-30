@@ -31,6 +31,6 @@
 		"-Djava.security.egd=file:/dev/urandom",
 		"-XX:+UseZGC",
 		"-XX:-OmitStackTraceInFastThrow",
-		"-Duser.home=/save-data"
+		"-Duser.home=/games/save-data"
 	]
 }
